@@ -10,20 +10,15 @@ namespace FotosCopias.Entidades
     public class Eventos
     {
         [Key]
-
         public int EventoId { get; set; }
         public int ClienteId { get; set; }
-        public int DetalleArticuloId { get; set; }
         public string DescripcionEvento { get; set; }
 
-
-        public Eventos()
+        public Eventos(int eventoId, int clienteId, string descripcionEvento)
         {
-            EventoId = 0;
-            ClienteId = 0;
-            DetalleArticuloId = 0;
-            DescripcionEvento = string.Empty;
-            
+            EventoId = eventoId;
+            ClienteId = clienteId;
+            DescripcionEvento = descripcionEvento;
         }
     }
 }

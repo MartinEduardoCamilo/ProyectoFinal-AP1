@@ -18,7 +18,7 @@ namespace FotosCopias.Entidades
         public string Email { get; set; }
         public string Direccion { get; set; }
 
-        public virtual List<DetalleEvento> EventosDetalle { get; set; }
+        public virtual List<Eventos> EventosDetalle { get; set; }
 
         public Clientes()
         {
@@ -29,7 +29,7 @@ namespace FotosCopias.Entidades
             Telefono = string.Empty;
             Email = string.Empty;
             Direccion = string.Empty;
-            EventosDetalle = new List<DetalleEvento>();
+            EventosDetalle = new List<Eventos>();
         }
     }
 }

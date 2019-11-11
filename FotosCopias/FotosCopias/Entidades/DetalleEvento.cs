@@ -13,19 +13,15 @@ namespace FotosCopias.Entidades
         public int DetalleEventoId { get; set; }
         public int EventoId { get; set; }
         public int ClienteId { get; set; }
-        public int ArticulosId { get; set; }
-        public int DetalleArticuloId { get; set; }
         public string DescripcionEvento { get; set; }
         public DateTime FechaEvento { get; set; }
         public string DireccionEvento { get; set; }
 
-        public DetalleEvento(int detalleEventoId, int eventoId, int clienteId, int articulosId, int detalleArticuloId, string descripcionEvento, DateTime fechaEvento, string direccionEvento)
+        public DetalleEvento(int detalleEventoId, int eventoId, int clienteId, string descripcionEvento, DateTime fechaEvento, string direccionEvento)
         {
             DetalleEventoId = detalleEventoId;
             EventoId = eventoId;
             ClienteId = clienteId;
-            ArticulosId = articulosId;
-            DetalleArticuloId = detalleArticuloId;
             DescripcionEvento = descripcionEvento;
             FechaEvento = fechaEvento;
             DireccionEvento = direccionEvento;
