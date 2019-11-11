@@ -1,0 +1,35 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace FotosCopias.Entidades
+{
+    public class Clientes
+    {
+        [Key]
+        public int ClienteId { get; set; }
+        public string Nombre { get; set; }
+        public string Apellido { get; set; }
+        public string Cedula { get; set; }
+        public string Telefono { get; set; }
+        public string Email { get; set; }
+        public string Direccion { get; set; }
+
+        public virtual List<DetalleEvento> EventosDetalle { get; set; }
+
+        public Clientes()
+        {
+            ClienteId = 0;
+            Nombre = string.Empty;
+            Apellido = string.Empty;
+            Cedula = string.Empty;
+            Telefono = string.Empty;
+            Email = string.Empty;
+            Direccion = string.Empty;
+            EventosDetalle = new List<DetalleEvento>();
+        }
+    }
+}
