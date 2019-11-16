@@ -14,7 +14,7 @@ namespace FotosCopias.DAL
         public DbSet<Clientes> Clientes { get; set; }
         public DbSet<Eventos> Eventos { get; set; }
         public DbSet<Usuarios>Usuarios { get; set; }
-        public DbSet<Factura> Facturas { get; set; }
+        public DbSet<ArticuloDetalle> Facturas { get; set; }
         public Contexto(): base("ConStr") { }
     }
 }

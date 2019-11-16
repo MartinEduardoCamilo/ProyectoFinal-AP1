@@ -16,7 +16,7 @@ namespace FotosCopias
         public MainForm()
         {
             InitializeComponent();
-            Form U = new rUsuario();
+            Form U = new rDetalle();
             U.Show();
         }
     }

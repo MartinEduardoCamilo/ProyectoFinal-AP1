@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace FotosCopias.BLL
 {
-    class RepositorioBase<T> : IDisposable, IRepository<T> where T : class
+    public class RepositorioBase<T> : IDisposable, IRepository<T> where T : class
     {
         internal Contexto db;
 

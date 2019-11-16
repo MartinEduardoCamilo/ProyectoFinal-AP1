@@ -14,7 +14,7 @@ namespace FotosCopias.Entidades
         public int UsuarioId { get; set; }
         public string Descripcion { get; set; }       
         public int Cantidad { get; set; }
-        public virtual List<DetalleArticulos> ArticuloDetalle { get; set; }
+        public virtual List<ArticuloDetalle> ArticuloDetalles { get; set; }
 
         public Articulos()
         {
@@ -22,7 +22,7 @@ namespace FotosCopias.Entidades
             UsuarioId = 0;
             Descripcion = string.Empty;
             Cantidad = 0;
-            ArticuloDetalle = new List<DetalleArticulos>();
+            ArticuloDetalles = new List<ArticuloDetalle>();
         }
     }
 }
