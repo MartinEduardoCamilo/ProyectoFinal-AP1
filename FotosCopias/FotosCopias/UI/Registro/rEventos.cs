@@ -36,7 +36,7 @@ namespace FotosCopias.UI.Registro
             e.Tipo = TipotextBox.Text;
             e.Direccion = DirecciontextBox.Text;
             e.Fecha = FechadateTimePicker.Value;
-            getCliente(e.ClienteId);
+            
             return e;
         }
 
@@ -53,7 +53,7 @@ namespace FotosCopias.UI.Registro
         {
             bool paso = true;
 
-            if(ClienteIDnumericUpDown.Value > 0)
+            if(ClienteIDnumericUpDown.Value < 0)
             {
                 Myerror.SetError(ClienteIDnumericUpDown, "El campo cliente Id no debe ser cero");
                 ClienteIDnumericUpDown.Focus();
@@ -176,8 +176,22 @@ namespace FotosCopias.UI.Registro
         {
             string Nombre = string.Empty;
             RepositorioBase<Clientes> repositorio = new RepositorioBase<Clientes>();
-            Nombre = repositorio.Buscar(id).Nombre;
-            return (NombretextBox.Text = Nombre);
+            if( id > 0)
+            {
+                Nombre = repositorio.Buscar(id).Nombre;
+                return (NombretextBox.Text = Nombre);
+            }
+            else
+            {
+
+            return (NombretextBox.Text = string.Empty);
+            }
+            
+        }
+
+        private void ClienteIDnumericUpDown_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            getCliente((int)ClienteIDnumericUpDown.Value);
         }
     }
 }

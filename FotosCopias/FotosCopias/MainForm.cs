@@ -16,8 +16,23 @@ namespace FotosCopias
         public MainForm()
         {
             InitializeComponent();
-            Form U = new rDetalle();
-            U.Show();
+        }
+
+        private void registroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void registroDeArticuloToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void facturaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            rDetalle detalle = new rDetalle();
+            detalle.MdiParent = this;
+            detalle.Focus();
         }
     }
 }

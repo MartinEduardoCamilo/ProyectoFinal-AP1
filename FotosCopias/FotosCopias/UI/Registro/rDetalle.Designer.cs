@@ -32,12 +32,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rDetalle));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.FactutaIDnumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
             this.NombrecomboBox = new System.Windows.Forms.ComboBox();
-            this.CedulatextBox = new System.Windows.Forms.TextBox();
             this.EventotextBox = new System.Windows.Forms.TextBox();
             this.FechadateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
@@ -90,19 +88,10 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Nombre";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 128);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Cedula";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 180);
+            this.label4.Location = new System.Drawing.Point(13, 127);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(41, 13);
             this.label4.TabIndex = 3;
@@ -126,22 +115,16 @@
             // 
             // NombrecomboBox
             // 
+            this.NombrecomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.NombrecomboBox.FormattingEnabled = true;
             this.NombrecomboBox.Location = new System.Drawing.Point(63, 69);
             this.NombrecomboBox.Name = "NombrecomboBox";
             this.NombrecomboBox.Size = new System.Drawing.Size(156, 21);
             this.NombrecomboBox.TabIndex = 6;
             // 
-            // CedulatextBox
-            // 
-            this.CedulatextBox.Location = new System.Drawing.Point(63, 120);
-            this.CedulatextBox.Name = "CedulatextBox";
-            this.CedulatextBox.Size = new System.Drawing.Size(156, 20);
-            this.CedulatextBox.TabIndex = 7;
-            // 
             // EventotextBox
             // 
-            this.EventotextBox.Location = new System.Drawing.Point(63, 173);
+            this.EventotextBox.Location = new System.Drawing.Point(63, 120);
             this.EventotextBox.Name = "EventotextBox";
             this.EventotextBox.Size = new System.Drawing.Size(156, 20);
             this.EventotextBox.TabIndex = 8;
@@ -158,7 +141,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(13, 240);
+            this.label6.Location = new System.Drawing.Point(13, 175);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(91, 13);
             this.label6.TabIndex = 10;
@@ -168,7 +151,7 @@
             // 
             this.FechaEventodateTimePicker.CustomFormat = "dd/MM/yyyy";
             this.FechaEventodateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.FechaEventodateTimePicker.Location = new System.Drawing.Point(110, 233);
+            this.FechaEventodateTimePicker.Location = new System.Drawing.Point(110, 168);
             this.FechaEventodateTimePicker.Name = "FechaEventodateTimePicker";
             this.FechaEventodateTimePicker.Size = new System.Drawing.Size(109, 20);
             this.FechaEventodateTimePicker.TabIndex = 11;
@@ -196,7 +179,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(13, 288);
+            this.label7.Location = new System.Drawing.Point(13, 223);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(47, 13);
             this.label7.TabIndex = 14;
@@ -205,7 +188,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(110, 288);
+            this.label8.Location = new System.Drawing.Point(110, 223);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(46, 13);
             this.label8.TabIndex = 15;
@@ -214,7 +197,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(191, 289);
+            this.label9.Location = new System.Drawing.Point(191, 224);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(37, 13);
             this.label9.TabIndex = 16;
@@ -223,7 +206,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(276, 289);
+            this.label10.Location = new System.Drawing.Point(276, 224);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(49, 13);
             this.label10.TabIndex = 17;
@@ -232,7 +215,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(365, 289);
+            this.label11.Location = new System.Drawing.Point(365, 224);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(42, 13);
             this.label11.TabIndex = 18;
@@ -240,36 +223,38 @@
             // 
             // ArticuloscomboBox
             // 
+            this.ArticuloscomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ArticuloscomboBox.FormattingEnabled = true;
-            this.ArticuloscomboBox.Location = new System.Drawing.Point(16, 305);
+            this.ArticuloscomboBox.Location = new System.Drawing.Point(16, 240);
             this.ArticuloscomboBox.Name = "ArticuloscomboBox";
             this.ArticuloscomboBox.Size = new System.Drawing.Size(69, 21);
             this.ArticuloscomboBox.TabIndex = 19;
             // 
             // TamañotextBox
             // 
-            this.TamañotextBox.Location = new System.Drawing.Point(110, 306);
+            this.TamañotextBox.Location = new System.Drawing.Point(110, 241);
             this.TamañotextBox.Name = "TamañotextBox";
             this.TamañotextBox.Size = new System.Drawing.Size(61, 20);
             this.TamañotextBox.TabIndex = 20;
             // 
             // PreciotextBox
             // 
-            this.PreciotextBox.Location = new System.Drawing.Point(194, 305);
+            this.PreciotextBox.Location = new System.Drawing.Point(194, 240);
             this.PreciotextBox.Name = "PreciotextBox";
             this.PreciotextBox.Size = new System.Drawing.Size(59, 20);
             this.PreciotextBox.TabIndex = 21;
+            this.PreciotextBox.TextChanged += new System.EventHandler(this.PreciotextBox_TextChanged);
             // 
             // CantidadtextBox
             // 
-            this.CantidadtextBox.Location = new System.Drawing.Point(279, 305);
+            this.CantidadtextBox.Location = new System.Drawing.Point(279, 240);
             this.CantidadtextBox.Name = "CantidadtextBox";
             this.CantidadtextBox.Size = new System.Drawing.Size(64, 20);
             this.CantidadtextBox.TabIndex = 22;
             // 
             // ImportetextBox
             // 
-            this.ImportetextBox.Location = new System.Drawing.Point(368, 305);
+            this.ImportetextBox.Location = new System.Drawing.Point(368, 240);
             this.ImportetextBox.Name = "ImportetextBox";
             this.ImportetextBox.Size = new System.Drawing.Size(79, 20);
             this.ImportetextBox.TabIndex = 23;
@@ -287,7 +272,7 @@
             // Eventobutton
             // 
             this.Eventobutton.Image = ((System.Drawing.Image)(resources.GetObject("Eventobutton.Image")));
-            this.Eventobutton.Location = new System.Drawing.Point(225, 170);
+            this.Eventobutton.Location = new System.Drawing.Point(226, 117);
             this.Eventobutton.Name = "Eventobutton";
             this.Eventobutton.Size = new System.Drawing.Size(27, 23);
             this.Eventobutton.TabIndex = 25;
@@ -298,7 +283,7 @@
             // 
             this.Agregarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Agregarbutton.Image")));
             this.Agregarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Agregarbutton.Location = new System.Drawing.Point(368, 230);
+            this.Agregarbutton.Location = new System.Drawing.Point(368, 165);
             this.Agregarbutton.Name = "Agregarbutton";
             this.Agregarbutton.Size = new System.Drawing.Size(75, 23);
             this.Agregarbutton.TabIndex = 26;
@@ -310,7 +295,7 @@
             // FacturadataGridView
             // 
             this.FacturadataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.FacturadataGridView.Location = new System.Drawing.Point(16, 332);
+            this.FacturadataGridView.Location = new System.Drawing.Point(16, 267);
             this.FacturadataGridView.Name = "FacturadataGridView";
             this.FacturadataGridView.Size = new System.Drawing.Size(431, 150);
             this.FacturadataGridView.TabIndex = 27;
@@ -318,7 +303,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(312, 492);
+            this.label12.Location = new System.Drawing.Point(312, 427);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(31, 13);
             this.label12.TabIndex = 28;
@@ -326,7 +311,7 @@
             // 
             // TotaltextBox
             // 
-            this.TotaltextBox.Location = new System.Drawing.Point(347, 485);
+            this.TotaltextBox.Location = new System.Drawing.Point(347, 420);
             this.TotaltextBox.Name = "TotaltextBox";
             this.TotaltextBox.Size = new System.Drawing.Size(100, 20);
             this.TotaltextBox.TabIndex = 29;
@@ -335,7 +320,7 @@
             // 
             this.Removerbutton.Image = ((System.Drawing.Image)(resources.GetObject("Removerbutton.Image")));
             this.Removerbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Removerbutton.Location = new System.Drawing.Point(16, 492);
+            this.Removerbutton.Location = new System.Drawing.Point(16, 427);
             this.Removerbutton.Name = "Removerbutton";
             this.Removerbutton.Size = new System.Drawing.Size(75, 23);
             this.Removerbutton.TabIndex = 30;
@@ -348,7 +333,7 @@
             // 
             this.Nuevobutton.Image = ((System.Drawing.Image)(resources.GetObject("Nuevobutton.Image")));
             this.Nuevobutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Nuevobutton.Location = new System.Drawing.Point(16, 533);
+            this.Nuevobutton.Location = new System.Drawing.Point(16, 468);
             this.Nuevobutton.Name = "Nuevobutton";
             this.Nuevobutton.Size = new System.Drawing.Size(75, 59);
             this.Nuevobutton.TabIndex = 31;
@@ -361,7 +346,7 @@
             // 
             this.Guardarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Guardarbutton.Image")));
             this.Guardarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Guardarbutton.Location = new System.Drawing.Point(131, 533);
+            this.Guardarbutton.Location = new System.Drawing.Point(131, 468);
             this.Guardarbutton.Name = "Guardarbutton";
             this.Guardarbutton.Size = new System.Drawing.Size(75, 59);
             this.Guardarbutton.TabIndex = 32;
@@ -374,7 +359,7 @@
             // 
             this.Eliminarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Eliminarbutton.Image")));
             this.Eliminarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Eliminarbutton.Location = new System.Drawing.Point(250, 533);
+            this.Eliminarbutton.Location = new System.Drawing.Point(250, 468);
             this.Eliminarbutton.Name = "Eliminarbutton";
             this.Eliminarbutton.Size = new System.Drawing.Size(75, 59);
             this.Eliminarbutton.TabIndex = 33;
@@ -387,7 +372,7 @@
             // 
             this.Imprimirbutton.Image = ((System.Drawing.Image)(resources.GetObject("Imprimirbutton.Image")));
             this.Imprimirbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Imprimirbutton.Location = new System.Drawing.Point(372, 533);
+            this.Imprimirbutton.Location = new System.Drawing.Point(372, 468);
             this.Imprimirbutton.Name = "Imprimirbutton";
             this.Imprimirbutton.Size = new System.Drawing.Size(75, 59);
             this.Imprimirbutton.TabIndex = 34;
@@ -433,17 +418,16 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.FechadateTimePicker);
             this.Controls.Add(this.EventotextBox);
-            this.Controls.Add(this.CedulatextBox);
             this.Controls.Add(this.NombrecomboBox);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.FactutaIDnumericUpDown);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "rDetalle";
             this.Text = "Factura";
+            this.Load += new System.EventHandler(this.rDetalle_Load);
             ((System.ComponentModel.ISupportInitialize)(this.FactutaIDnumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FacturadataGridView)).EndInit();
@@ -457,12 +441,10 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.NumericUpDown FactutaIDnumericUpDown;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox NombrecomboBox;
-        private System.Windows.Forms.TextBox CedulatextBox;
         private System.Windows.Forms.TextBox EventotextBox;
         private System.Windows.Forms.DateTimePicker FechadateTimePicker;
         private System.Windows.Forms.Label label6;

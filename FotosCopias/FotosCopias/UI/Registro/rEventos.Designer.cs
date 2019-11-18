@@ -109,6 +109,7 @@
             this.ClienteIDnumericUpDown.Name = "ClienteIDnumericUpDown";
             this.ClienteIDnumericUpDown.Size = new System.Drawing.Size(120, 20);
             this.ClienteIDnumericUpDown.TabIndex = 6;
+            this.ClienteIDnumericUpDown.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ClienteIDnumericUpDown_KeyPress);
             // 
             // TipotextBox
             // 
