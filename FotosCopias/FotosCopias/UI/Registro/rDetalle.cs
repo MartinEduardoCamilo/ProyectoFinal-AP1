@@ -59,9 +59,12 @@ namespace FotosCopias.UI.Registro
             EventocomboBox.DataSource = lista;
             EventocomboBox.ValueMember = "EventoId";
             EventocomboBox.DisplayMember = "Tipo";
-
-            DateTime fecha = repositorio.Buscar((int)NombrecomboBox.SelectedValue).Fecha;
-             FechadateTimePicker.Value = fecha;
+            if(NombrecomboBox.SelectedIndex > 0)
+            {
+                DateTime fecha = repositorio.Buscar((int)NombrecomboBox.SelectedValue).Fecha;
+                FechadateTimePicker.Value = fecha;
+            }
+            
 
         }
 
@@ -266,7 +269,7 @@ namespace FotosCopias.UI.Registro
             this.Detalle.Add(
                 new ArticuloDetalle(
                     detalleArticuloId: 0,
-                    articulosId: (int)FactutaIDnumericUpDown.Value,
+                    articulosId: id,
                     eventoId: ID,
                     descripcion: ArticuloscomboBox.Text,
                     tamaño: Convert.ToDecimal(TamañotextBox.Text),

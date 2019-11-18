@@ -381,6 +381,7 @@
             // 
             // EventocomboBox
             // 
+            this.EventocomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.EventocomboBox.FormattingEnabled = true;
             this.EventocomboBox.Location = new System.Drawing.Point(62, 117);
             this.EventocomboBox.Name = "EventocomboBox";

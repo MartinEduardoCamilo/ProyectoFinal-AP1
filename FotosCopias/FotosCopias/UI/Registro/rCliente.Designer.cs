@@ -172,7 +172,7 @@
             // 
             // Buscarbutton
             // 
-            this.Buscarbutton.BackColor = System.Drawing.SystemColors.Window;
+            this.Buscarbutton.BackColor = System.Drawing.SystemColors.ControlLight;
             this.Buscarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Buscarbutton.Image")));
             this.Buscarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Buscarbutton.Location = new System.Drawing.Point(217, 1);
@@ -186,31 +186,40 @@
             // 
             // Nuevobutton
             // 
+            this.Nuevobutton.Image = ((System.Drawing.Image)(resources.GetObject("Nuevobutton.Image")));
+            this.Nuevobutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Nuevobutton.Location = new System.Drawing.Point(17, 294);
             this.Nuevobutton.Name = "Nuevobutton";
-            this.Nuevobutton.Size = new System.Drawing.Size(76, 43);
+            this.Nuevobutton.Size = new System.Drawing.Size(76, 60);
             this.Nuevobutton.TabIndex = 16;
             this.Nuevobutton.Text = "Nuevo";
+            this.Nuevobutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Nuevobutton.UseVisualStyleBackColor = true;
             this.Nuevobutton.Click += new System.EventHandler(this.Nuevobutton_Click);
             // 
             // Guardarbutton
             // 
+            this.Guardarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Guardarbutton.Image")));
+            this.Guardarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Guardarbutton.Location = new System.Drawing.Point(113, 294);
             this.Guardarbutton.Name = "Guardarbutton";
-            this.Guardarbutton.Size = new System.Drawing.Size(75, 43);
+            this.Guardarbutton.Size = new System.Drawing.Size(75, 60);
             this.Guardarbutton.TabIndex = 17;
             this.Guardarbutton.Text = "Guardar";
+            this.Guardarbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Guardarbutton.UseVisualStyleBackColor = true;
             this.Guardarbutton.Click += new System.EventHandler(this.Guardarbutton_Click);
             // 
             // Eliminarbutton
             // 
+            this.Eliminarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Eliminarbutton.Image")));
+            this.Eliminarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Eliminarbutton.Location = new System.Drawing.Point(209, 295);
             this.Eliminarbutton.Name = "Eliminarbutton";
-            this.Eliminarbutton.Size = new System.Drawing.Size(75, 42);
+            this.Eliminarbutton.Size = new System.Drawing.Size(75, 59);
             this.Eliminarbutton.TabIndex = 18;
             this.Eliminarbutton.Text = "Eliminar";
+            this.Eliminarbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Eliminarbutton.UseVisualStyleBackColor = true;
             this.Eliminarbutton.Click += new System.EventHandler(this.Eliminarbutton_Click);
             // 
@@ -222,7 +231,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(305, 349);
+            this.ClientSize = new System.Drawing.Size(305, 366);
             this.Controls.Add(this.Eliminarbutton);
             this.Controls.Add(this.Guardarbutton);
             this.Controls.Add(this.Nuevobutton);

@@ -73,6 +73,24 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\Consulta\cArticulos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Consulta\cArticulos.Designer.cs">
+      <DependentUpon>cArticulos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Consulta\cClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Consulta\cClientes.Designer.cs">
+      <DependentUpon>cClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Consulta\cEventos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Consulta\cEventos.Designer.cs">
+      <DependentUpon>cEventos.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Registro\rArticulos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,7 +154,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="UI\Consulta\" />
     <Folder Include="UI\Login\" />
     <Folder Include="UI\Reportes\" />
   </ItemGroup>
