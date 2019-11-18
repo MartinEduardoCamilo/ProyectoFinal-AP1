@@ -36,7 +36,6 @@
             this.FactutaIDnumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
             this.NombrecomboBox = new System.Windows.Forms.ComboBox();
-            this.EventotextBox = new System.Windows.Forms.TextBox();
             this.FechadateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.FechaEventodateTimePicker = new System.Windows.Forms.DateTimePicker();
@@ -64,6 +63,7 @@
             this.Eliminarbutton = new System.Windows.Forms.Button();
             this.Imprimirbutton = new System.Windows.Forms.Button();
             this.Myerror = new System.Windows.Forms.ErrorProvider(this.components);
+            this.EventocomboBox = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.FactutaIDnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FacturadataGridView)).BeginInit();
@@ -121,13 +121,6 @@
             this.NombrecomboBox.Name = "NombrecomboBox";
             this.NombrecomboBox.Size = new System.Drawing.Size(156, 21);
             this.NombrecomboBox.TabIndex = 6;
-            // 
-            // EventotextBox
-            // 
-            this.EventotextBox.Location = new System.Drawing.Point(63, 120);
-            this.EventotextBox.Name = "EventotextBox";
-            this.EventotextBox.Size = new System.Drawing.Size(156, 20);
-            this.EventotextBox.TabIndex = 8;
             // 
             // FechadateTimePicker
             // 
@@ -197,7 +190,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(191, 224);
+            this.label9.Location = new System.Drawing.Point(277, 223);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(37, 13);
             this.label9.TabIndex = 16;
@@ -206,7 +199,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(276, 224);
+            this.label10.Location = new System.Drawing.Point(186, 223);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(49, 13);
             this.label10.TabIndex = 17;
@@ -239,7 +232,7 @@
             // 
             // PreciotextBox
             // 
-            this.PreciotextBox.Location = new System.Drawing.Point(194, 240);
+            this.PreciotextBox.Location = new System.Drawing.Point(280, 239);
             this.PreciotextBox.Name = "PreciotextBox";
             this.PreciotextBox.Size = new System.Drawing.Size(59, 20);
             this.PreciotextBox.TabIndex = 21;
@@ -247,7 +240,7 @@
             // 
             // CantidadtextBox
             // 
-            this.CantidadtextBox.Location = new System.Drawing.Point(279, 240);
+            this.CantidadtextBox.Location = new System.Drawing.Point(189, 240);
             this.CantidadtextBox.Name = "CantidadtextBox";
             this.CantidadtextBox.Size = new System.Drawing.Size(64, 20);
             this.CantidadtextBox.TabIndex = 22;
@@ -256,6 +249,7 @@
             // 
             this.ImportetextBox.Location = new System.Drawing.Point(368, 240);
             this.ImportetextBox.Name = "ImportetextBox";
+            this.ImportetextBox.ReadOnly = true;
             this.ImportetextBox.Size = new System.Drawing.Size(79, 20);
             this.ImportetextBox.TabIndex = 23;
             // 
@@ -385,12 +379,21 @@
             // 
             this.Myerror.ContainerControl = this;
             // 
+            // EventocomboBox
+            // 
+            this.EventocomboBox.FormattingEnabled = true;
+            this.EventocomboBox.Location = new System.Drawing.Point(62, 117);
+            this.EventocomboBox.Name = "EventocomboBox";
+            this.EventocomboBox.Size = new System.Drawing.Size(157, 21);
+            this.EventocomboBox.TabIndex = 35;
+            // 
             // rDetalle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(620, 595);
+            this.Controls.Add(this.EventocomboBox);
             this.Controls.Add(this.Imprimirbutton);
             this.Controls.Add(this.Eliminarbutton);
             this.Controls.Add(this.Guardarbutton);
@@ -417,7 +420,6 @@
             this.Controls.Add(this.FechaEventodateTimePicker);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.FechadateTimePicker);
-            this.Controls.Add(this.EventotextBox);
             this.Controls.Add(this.NombrecomboBox);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.FactutaIDnumericUpDown);
@@ -427,7 +429,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "rDetalle";
             this.Text = "Factura";
-            this.Load += new System.EventHandler(this.rDetalle_Load);
             ((System.ComponentModel.ISupportInitialize)(this.FactutaIDnumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FacturadataGridView)).EndInit();
@@ -445,7 +446,6 @@
         private System.Windows.Forms.NumericUpDown FactutaIDnumericUpDown;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox NombrecomboBox;
-        private System.Windows.Forms.TextBox EventotextBox;
         private System.Windows.Forms.DateTimePicker FechadateTimePicker;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DateTimePicker FechaEventodateTimePicker;
@@ -473,5 +473,6 @@
         private System.Windows.Forms.Button Eliminarbutton;
         private System.Windows.Forms.Button Imprimirbutton;
         private System.Windows.Forms.ErrorProvider Myerror;
+        private System.Windows.Forms.ComboBox EventocomboBox;
     }
 }

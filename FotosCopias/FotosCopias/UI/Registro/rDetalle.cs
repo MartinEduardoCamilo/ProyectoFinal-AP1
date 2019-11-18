@@ -20,41 +20,111 @@ namespace FotosCopias.UI.Registro
         {
             InitializeComponent();
             this.Detalle = new List<ArticuloDetalle>();
-            LlenaCombo();
+            LlenarClienteCombobox();
+            LlenarEventoCombobox();
+            LlenarArticuloCombobox();
+        }
+
+
+        private void LlenarClienteCombobox()
+        {
+            RepositorioBase<Clientes> repositorio = new RepositorioBase<Clientes>();
+            List<Clientes> lista = new List<Clientes>();
+            lista = repositorio.GetList(p => true);
+            
+            NombrecomboBox.DataSource = lista;
+            NombrecomboBox.ValueMember = "ClienteId";
+            NombrecomboBox.DisplayMember = "Nombre";
             
         }
+
+        private void LlenarArticuloCombobox()
+        {
+            RepositorioBase<Articulos> repositorio = new RepositorioBase<Articulos>();
+            List<Articulos> lista = new List<Articulos>();
+            lista = repositorio.GetList(p => true);
+
+            ArticuloscomboBox.DataSource = lista;
+            ArticuloscomboBox.ValueMember = "ArticulosId";
+            ArticuloscomboBox.DisplayMember = "Descripcion";
+
+        }
+
+        private void LlenarEventoCombobox()
+        {
+            RepositorioBase<Eventos> repositorio = new RepositorioBase<Eventos>();
+            List<Eventos> lista = new List<Eventos>();
+            lista = repositorio.GetList(p => true);
+      
+            EventocomboBox.DataSource = lista;
+            EventocomboBox.ValueMember = "EventoId";
+            EventocomboBox.DisplayMember = "Tipo";
+
+            DateTime fecha = repositorio.Buscar((int)NombrecomboBox.SelectedValue).Fecha;
+             FechadateTimePicker.Value = fecha;
+
+        }
+
+        private string getCedula()
+        {
+            string cedula = string.Empty;
+            RepositorioBase<Clientes> repositorio = new RepositorioBase<Clientes>();
+            cedula = repositorio.Buscar((int)NombrecomboBox.SelectedValue).Cedula;
+            return cedula;
+        }
+
+        private DateTime getFecha()
+        {
+            DateTime fecha = DateTime.Now;
+            RepositorioBase<Eventos> repositorio = new RepositorioBase<Eventos>();
+            fecha = repositorio.Buscar((int)NombrecomboBox.SelectedValue).Fecha;
+            return fecha;
+        }
+
+
+        private string getCliente()
+        {
+            string cliente = string.Empty;
+            RepositorioBase<Clientes> repositorio = new RepositorioBase<Clientes>();
+            cliente = repositorio.Buscar((int)NombrecomboBox.SelectedValue).Nombre;
+            return cliente;
+        }
+
+
+        private string getEvento()
+        {
+            string evento = string.Empty;
+            RepositorioBase<Eventos> repositorio = new RepositorioBase<Eventos>();
+            evento = repositorio.Buscar((int)EventocomboBox.SelectedValue).Tipo;
+            return evento;
+        }
+
+
 
         private void CargarGrid()
         {
             FacturadataGridView.DataSource = null;
             FacturadataGridView.DataSource = this.Detalle;
         }
-       
-
-      
-        
 
         private void Limpiar()
         {
             Myerror.Clear();
             FactutaIDnumericUpDown.Value = 0;
             NombrecomboBox.ResetText();
-           
-            EventotextBox.Text = string.Empty;
+            EventocomboBox.ResetText();
             FechadateTimePicker.Value = DateTime.Now;
             FechaEventodateTimePicker.Value = DateTime.Now;
-            TamañotextBox.Text = string.Empty;
-            PreciotextBox.Text = string.Empty;
-            CantidadtextBox.Text = string.Empty;
-            ImportetextBox.Text = string.Empty;
-            TotaltextBox.Text = string.Empty;
             this.Detalle = new List<ArticuloDetalle>();
             CargarGrid();
         }
 
         private void LlenaCampo(Articulos a)
         {
-            FactutaIDnumericUpDown.Value = a.ArticulosId;   
+            FactutaIDnumericUpDown.Value = a.ArticulosId;
+            NombrecomboBox.Text = getCliente();
+            EventocomboBox.Text = getEvento();
+            FechaEventodateTimePicker.Value = getFecha();
             this.Detalle = a.ArticuloDetalles;
         }
 
@@ -99,52 +169,11 @@ namespace FotosCopias.UI.Registro
                 paso = false;
             }
 
-            if (string.IsNullOrWhiteSpace(ImportetextBox.Text))
-            {
-                Myerror.SetError(ImportetextBox, "El campo importe no debe estar vacio");
-                ImportetextBox.Focus();
-                paso = false;
-            }
 
             if (string.IsNullOrWhiteSpace(TamañotextBox.Text))
             {
                 Myerror.SetError(TamañotextBox, "El campo tamaño no debe estar vacio");
                 TamañotextBox.Focus();
-                paso = false;
-            }
-
-            if (Convert.ToDecimal(PreciotextBox.Text) < 0)
-            {
-                Myerror.SetError(PreciotextBox, "El campo precio no debe ser menor que cero");
-                PreciotextBox.Focus();
-                paso = false;
-            }
-
-            if (Convert.ToInt32(CantidadtextBox.Text) < 0)
-            {
-                Myerror.SetError(CantidadtextBox, "El campo cantidad no debe ser menor que cero");
-                CantidadtextBox.Focus();
-                paso = false;
-            }
-
-            if (Convert.ToInt32(ImportetextBox.Text) < 0)
-            {
-                Myerror.SetError(ImportetextBox, "El campo importe no debe ser menor que cero");
-                ImportetextBox.Focus();
-                paso = false;
-            }
-
-            if (Convert.ToDecimal(TamañotextBox.Text) < 0)
-            {
-                Myerror.SetError(TamañotextBox, "El campo tamaño no debe ser menor que cero");
-                TamañotextBox.Focus();
-                paso = false;
-            }
-
-            if (this.Detalle.Count == 0)
-            {
-                Myerror.SetError(Agregarbutton, "Debe agregar por lo menos un cliente");
-                Agregarbutton.Focus();
                 paso = false;
             }
 
@@ -197,48 +226,66 @@ namespace FotosCopias.UI.Registro
 
             rCliente rcliente = new rCliente();
             rcliente.ShowDialog();
-
+            LlenarClienteCombobox();
         }  
 
         private void Eventobutton_Click(object sender, EventArgs e)
         {
             rEventos reventos = new rEventos();
             reventos.ShowDialog();
+            LlenarEventoCombobox();
+        }
+
+        private decimal CalcularImporte()
+        {
+            int cantidad = Convert.ToInt32(CantidadtextBox.Text);
+            decimal precio = Convert.ToDecimal(PreciotextBox.Text);
+            decimal importe = cantidad * precio;
+            return importe;
         }
 
         private void Agregarbutton_Click(object sender, EventArgs e)
         {
+            if (FacturadataGridView.DataSource != null)
+                this.Detalle = (List<ArticuloDetalle>)FacturadataGridView.DataSource;
+
+            Myerror.Clear();
+
             if (!Validar())
                 return;
 
-            decimal total = 0;
-
-            RepositorioBase<ArticuloDetalle> repositorio = new RepositorioBase<ArticuloDetalle>();
+            RepositorioBase<Articulos> repositorio = new RepositorioBase<Articulos>();
             int id = repositorio.Buscar((int)ArticuloscomboBox.SelectedValue).ArticulosId;
 
-            int ID = repositorio.Buscar((int)ArticuloscomboBox.SelectedValue).EventoId;
+            RepositorioBase<Eventos> Base = new RepositorioBase<Eventos>();
+            int ID = Base.Buscar((int)EventocomboBox.SelectedValue).EventoId;
 
+            decimal total = 0;
+
+       
             this.Detalle.Add(
                 new ArticuloDetalle(
-                    articulosId: id,
+                    detalleArticuloId: 0,
+                    articulosId: (int)FactutaIDnumericUpDown.Value,
                     eventoId: ID,
                     descripcion: ArticuloscomboBox.Text,
-                    tamaño: TamañotextBox.Text,
-                    cantidad: CantidadtextBox.Text,
-                    precio: PreciotextBox.Text,
-                    importe: ImportetextBox.Text
+                    tamaño: Convert.ToDecimal(TamañotextBox.Text),
+                    cantidad: Convert.ToInt32(CantidadtextBox.Text),
+                    precio: Convert.ToDecimal(PreciotextBox.Text),
+                    importe: CalcularImporte()
 
                     )
                 );
             CargarGrid();
+            ImportetextBox.Text = CalcularImporte().ToString();
             NombrecomboBox.Focus();
             NombrecomboBox.ResetText();
             ArticuloscomboBox.Focus();
             ArticuloscomboBox.ResetText();
-            TamañotextBox.Text = string.Empty;
-            PreciotextBox.Text = string.Empty;
-            CantidadtextBox.Text = string.Empty;
-            ImportetextBox.Text = string.Empty;
+            TamañotextBox.Text = Convert.ToString(0);
+            PreciotextBox.Text = Convert.ToString(0);
+            CantidadtextBox.Text = Convert.ToString(0);
+            ImportetextBox.Text = Convert.ToString(0);
 
             foreach (var item in this.Detalle)
             {
@@ -250,6 +297,8 @@ namespace FotosCopias.UI.Registro
 
         private void Removerbutton_Click(object sender, EventArgs e)
         {
+            if (!ValidaRemover())
+                return;
             if (FacturadataGridView.Rows.Count > 0 && FacturadataGridView.CurrentRow != null)
             {
                 Detalle.RemoveAt(FacturadataGridView.CurrentRow.Index);
@@ -321,42 +370,18 @@ namespace FotosCopias.UI.Registro
 
         }
 
-        private void rDetalle_Load(object sender, EventArgs e)
-        {
 
-            RepositorioBase<Articulos> repositorio = new RepositorioBase<Articulos>();
-         
-            ArticuloscomboBox.Items.Clear();
-            foreach (var item in repositorio.GetList(c => true))
-            {
-                ArticuloscomboBox.Items.Add(item.Descripcion);
-            }     
-        }
+       
 
-        private void LlenaCombo()
-        {
-            RepositorioBase<Clientes> repositorios = new RepositorioBase<Clientes>();
-
-            NombrecomboBox.Items.Clear();
-            foreach (var item in repositorios.GetList(c => true))
-            {
-                NombrecomboBox.Items.Add(item.Nombre);
-            }
-        }
-
-      
         private void PreciotextBox_TextChanged(object sender, EventArgs e)
         {
-            if (!(string.IsNullOrWhiteSpace(PreciotextBox.Text) || string.IsNullOrWhiteSpace(CantidadtextBox.Text)))
-            {
-                if (!(PreciotextBox.Text == "-" || CantidadtextBox.Text == "-"))
-                {
-                    ImportetextBox.Text = Convert.ToString(Convert.ToDecimal(PreciotextBox.Text) * Convert.ToInt32(CantidadtextBox.Text));
-                }
-            }
+            if (!Validar())
+                return;
+            int cantidad = Convert.ToInt32(CantidadtextBox.Text);
+            decimal precio = Convert.ToDecimal(PreciotextBox.Text);
+            decimal importe = cantidad * precio;
+            ImportetextBox.Text = importe.ToString();
         }
-
-        
     }
    
 }

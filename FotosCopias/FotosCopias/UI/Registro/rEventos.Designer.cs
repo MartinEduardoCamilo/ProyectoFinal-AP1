@@ -44,8 +44,6 @@
             this.Guardarbutton = new System.Windows.Forms.Button();
             this.Eliminarbutton = new System.Windows.Forms.Button();
             this.Myerror = new System.Windows.Forms.ErrorProvider(this.components);
-            this.label6 = new System.Windows.Forms.Label();
-            this.NombretextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.EventoIdnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ClienteIDnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Myerror)).BeginInit();
@@ -109,7 +107,7 @@
             this.ClienteIDnumericUpDown.Name = "ClienteIDnumericUpDown";
             this.ClienteIDnumericUpDown.Size = new System.Drawing.Size(120, 20);
             this.ClienteIDnumericUpDown.TabIndex = 6;
-            this.ClienteIDnumericUpDown.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ClienteIDnumericUpDown_KeyPress);
+         
             // 
             // TipotextBox
             // 
@@ -178,30 +176,11 @@
             // 
             this.Myerror.ContainerControl = this;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(16, 345);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(39, 13);
-            this.label6.TabIndex = 14;
-            this.label6.Text = "Cliente";
-            // 
-            // NombretextBox
-            // 
-            this.NombretextBox.Location = new System.Drawing.Point(61, 342);
-            this.NombretextBox.Name = "NombretextBox";
-            this.NombretextBox.ReadOnly = true;
-            this.NombretextBox.Size = new System.Drawing.Size(176, 20);
-            this.NombretextBox.TabIndex = 15;
-            // 
             // rEventos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(297, 370);
-            this.Controls.Add(this.NombretextBox);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.Eliminarbutton);
             this.Controls.Add(this.Guardarbutton);
             this.Controls.Add(this.Nuevobutton);
@@ -243,7 +222,5 @@
         private System.Windows.Forms.Button Guardarbutton;
         private System.Windows.Forms.Button Eliminarbutton;
         private System.Windows.Forms.ErrorProvider Myerror;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox NombretextBox;
     }
 }
