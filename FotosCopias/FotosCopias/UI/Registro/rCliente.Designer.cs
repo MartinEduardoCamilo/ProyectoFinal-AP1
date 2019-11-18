@@ -129,6 +129,7 @@
             this.NombretextBox.Name = "NombretextBox";
             this.NombretextBox.Size = new System.Drawing.Size(171, 20);
             this.NombretextBox.TabIndex = 8;
+            this.NombretextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NombretextBox_KeyPress);
             // 
             // ApellidotextBox
             // 
@@ -136,6 +137,7 @@
             this.ApellidotextBox.Name = "ApellidotextBox";
             this.ApellidotextBox.Size = new System.Drawing.Size(171, 20);
             this.ApellidotextBox.TabIndex = 9;
+            this.ApellidotextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ApellidotextBox_KeyPress);
             // 
             // CedulamaskedTextBox
             // 
@@ -159,6 +161,7 @@
             this.EmailtextBox.Name = "EmailtextBox";
             this.EmailtextBox.Size = new System.Drawing.Size(171, 20);
             this.EmailtextBox.TabIndex = 13;
+            this.EmailtextBox.TextChanged += new System.EventHandler(this.EmailtextBox_TextChanged);
             // 
             // DirecciontextBox
             // 

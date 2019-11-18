@@ -24,5 +24,9 @@ namespace FotosCopias.Entidades
             Direccion = direccion;
             Fecha = fecha;
         }
+
+        public Eventos()
+        {
+        }
     }
 }
