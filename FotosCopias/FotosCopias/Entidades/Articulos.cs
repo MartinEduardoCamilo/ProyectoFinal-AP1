@@ -11,7 +11,6 @@ namespace FotosCopias.Entidades
     {
         [Key]
         public int ArticulosId { get; set; }
-        public int UsuarioId { get; set; }
         public string Descripcion { get; set; }       
         public int Cantidad { get; set; }
         public virtual List<ArticuloDetalle> ArticuloDetalles { get; set; }

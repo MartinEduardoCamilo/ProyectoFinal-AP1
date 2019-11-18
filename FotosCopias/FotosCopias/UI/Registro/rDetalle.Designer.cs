@@ -408,7 +408,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "rDetalle";
             this.Text = "Factura";
-            this.Load += new System.EventHandler(this.rDetalle_Load);
             ((System.ComponentModel.ISupportInitialize)(this.FactutaIDnumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FacturadataGridView)).EndInit();

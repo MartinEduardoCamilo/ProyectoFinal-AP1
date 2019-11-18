@@ -31,7 +31,6 @@ namespace FotosCopias.UI.Registro
             RepositorioBase<Clientes> repositorio = new RepositorioBase<Clientes>();
             List<Clientes> lista = new List<Clientes>();
             lista = repositorio.GetList(p => true);
-            
             NombrecomboBox.DataSource = lista;
             NombrecomboBox.ValueMember = "ClienteId";
             NombrecomboBox.DisplayMember = "Nombre";
@@ -43,7 +42,6 @@ namespace FotosCopias.UI.Registro
             RepositorioBase<Articulos> repositorio = new RepositorioBase<Articulos>();
             List<Articulos> lista = new List<Articulos>();
             lista = repositorio.GetList(p => true);
-
             ArticuloscomboBox.DataSource = lista;
             ArticuloscomboBox.ValueMember = "ArticulosId";
             ArticuloscomboBox.DisplayMember = "Descripcion";
@@ -55,7 +53,6 @@ namespace FotosCopias.UI.Registro
             RepositorioBase<Eventos> repositorio = new RepositorioBase<Eventos>();
             List<Eventos> lista = new List<Eventos>();
             lista = repositorio.GetList(p => true);
-      
             EventocomboBox.DataSource = lista;
             EventocomboBox.ValueMember = "EventoId";
             EventocomboBox.DisplayMember = "Tipo";
@@ -126,7 +123,6 @@ namespace FotosCopias.UI.Registro
             Articulos articulos = new Articulos();
             articulos.ArticulosId = (int)FactutaIDnumericUpDown.Value;
             articulos.ArticuloDetalles = this.Detalle;
-          
             CargarGrid();
             return articulos;
         }
@@ -164,11 +160,17 @@ namespace FotosCopias.UI.Registro
                 paso = false;
             }
 
-
             if (string.IsNullOrWhiteSpace(TamañotextBox.Text))
             {
                 Myerror.SetError(TamañotextBox, "El campo tamaño no debe estar vacio");
                 TamañotextBox.Focus();
+                paso = false;
+            }
+
+            if (this.Detalle.Count == 0)
+            {
+                Myerror.SetError(Agregarbutton, "Debe de agregar al detalle");
+                Agregarbutton.Focus();
                 paso = false;
             }
 
@@ -243,16 +245,15 @@ namespace FotosCopias.UI.Registro
             decimal total = 0;
        
             this.Detalle.Add(
-                new ArticuloDetalle(
-                    detalleArticuloId:0,
-                    eventoId:ID,
-                    articulosId:id,
-                    descripcion:ArticuloscomboBox.Text,
+                item: new ArticuloDetalle(
+                    detalleArticuloId: 0,
+                    eventoId: ID,
+                    articulosId: id,
+                    descripcion: ArticuloscomboBox.Text,
                     tamaño: TamañotextBox.Text,
                     cantidad: Convert.ToInt32(CantidadtextBox.Text),
                     precio: Convert.ToDecimal(PreciotextBox.Text),
-                    importe: Convert.ToDecimal(ImportetextBox.Text) 
-                    )
+                    importe: Convert.ToDecimal(ImportetextBox.Text))
                 );
             CargarGrid();
             ImportetextBox.Text = CalcularImporte().ToString();
@@ -345,9 +346,6 @@ namespace FotosCopias.UI.Registro
 
         }
 
-
-       
-
         private void PreciotextBox_TextChanged(object sender, EventArgs e)
         {
             if (!Validar())
@@ -356,11 +354,6 @@ namespace FotosCopias.UI.Registro
             decimal precio = Convert.ToDecimal(PreciotextBox.Text);
             decimal importe = cantidad * precio;
             ImportetextBox.Text = importe.ToString();
-        }
-
-        private void rDetalle_Load(object sender, EventArgs e)
-        {
-            
         }
 
         private void CantidadtextBox_KeyPress(object sender, KeyPressEventArgs e)

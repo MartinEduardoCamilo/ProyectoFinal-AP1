@@ -164,7 +164,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "rArticulos";
-            this.Text = "rArticulos";
+            this.Text = "Registro de articulos";
             ((System.ComponentModel.ISupportInitialize)(this.IDnumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Myerror)).EndInit();
             this.ResumeLayout(false);
