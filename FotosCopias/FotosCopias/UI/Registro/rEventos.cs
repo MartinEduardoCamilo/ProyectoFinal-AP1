@@ -23,7 +23,7 @@ namespace FotosCopias.UI.Registro
         {
             Myerror.Clear();
             EventoIdnumericUpDown.Value = 0;
-            ClienteIDnumericUpDown.Value = 0;
+     
             TipotextBox.Text = string.Empty;
             DirecciontextBox.Text = string.Empty;
             FechadateTimePicker.Value = DateTime.Now;
@@ -51,12 +51,7 @@ namespace FotosCopias.UI.Registro
         {
             bool paso = true;
 
-            if(ClienteIDnumericUpDown.Value < 0)
-            {
-                Myerror.SetError(ClienteIDnumericUpDown, "El campo cliente Id no debe ser cero");
-                ClienteIDnumericUpDown.Focus();
-                paso = false;
-            }
+           
 
             if (string.IsNullOrEmpty(TipotextBox.Text))
             {

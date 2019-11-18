@@ -127,6 +127,15 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UI\Consulta\cArticulos.resx">
+      <DependentUpon>cArticulos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Consulta\cClientes.resx">
+      <DependentUpon>cClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Consulta\cEventos.resx">
+      <DependentUpon>cEventos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Registro\rArticulos.resx">
       <DependentUpon>rArticulos.cs</DependentUpon>
     </EmbeddedResource>

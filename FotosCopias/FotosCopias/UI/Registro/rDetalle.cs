@@ -59,13 +59,7 @@ namespace FotosCopias.UI.Registro
             EventocomboBox.DataSource = lista;
             EventocomboBox.ValueMember = "EventoId";
             EventocomboBox.DisplayMember = "Tipo";
-            if(NombrecomboBox.SelectedIndex > 0)
-            {
-                DateTime fecha = repositorio.Buscar((int)NombrecomboBox.SelectedValue).Fecha;
-                FechadateTimePicker.Value = fecha;
-            }
-            
-
+           
         }
 
         private string getCedula()
@@ -80,7 +74,7 @@ namespace FotosCopias.UI.Registro
         {
             DateTime fecha = DateTime.Now;
             RepositorioBase<Eventos> repositorio = new RepositorioBase<Eventos>();
-            fecha = repositorio.Buscar((int)NombrecomboBox.SelectedValue).Fecha;
+            fecha = repositorio.Buscar((int)EventocomboBox.SelectedValue).Fecha;
             return fecha;
         }
 
@@ -101,8 +95,6 @@ namespace FotosCopias.UI.Registro
             evento = repositorio.Buscar((int)EventocomboBox.SelectedValue).Tipo;
             return evento;
         }
-
-
 
         private void CargarGrid()
         {
@@ -125,10 +117,8 @@ namespace FotosCopias.UI.Registro
         private void LlenaCampo(Articulos a)
         {
             FactutaIDnumericUpDown.Value = a.ArticulosId;
-            NombrecomboBox.Text = getCliente();
-            EventocomboBox.Text = getEvento();
-            FechaEventodateTimePicker.Value = getFecha();
             this.Detalle = a.ArticuloDetalles;
+            CargarGrid();
         }
 
         private Articulos Llenaclase()
@@ -136,6 +126,8 @@ namespace FotosCopias.UI.Registro
             Articulos articulos = new Articulos();
             articulos.ArticulosId = (int)FactutaIDnumericUpDown.Value;
             articulos.ArticuloDetalles = this.Detalle;
+          
+            CargarGrid();
             return articulos;
         }
 
@@ -224,21 +216,6 @@ namespace FotosCopias.UI.Registro
             }
         }
 
-        private void Clientebutton_Click(object sender, EventArgs e)
-        {
-
-            rCliente rcliente = new rCliente();
-            rcliente.ShowDialog();
-            LlenarClienteCombobox();
-        }  
-
-        private void Eventobutton_Click(object sender, EventArgs e)
-        {
-            rEventos reventos = new rEventos();
-            reventos.ShowDialog();
-            LlenarEventoCombobox();
-        }
-
         private decimal CalcularImporte()
         {
             int cantidad = Convert.ToInt32(CantidadtextBox.Text);
@@ -264,19 +241,18 @@ namespace FotosCopias.UI.Registro
             int ID = Base.Buscar((int)EventocomboBox.SelectedValue).EventoId;
 
             decimal total = 0;
-
        
             this.Detalle.Add(
                 new ArticuloDetalle(
-                    detalleArticuloId: 0,
-                    articulosId: id,
-                    eventoId: ID,
-                    descripcion: ArticuloscomboBox.Text,
-                    tamaño: Convert.ToDecimal(TamañotextBox.Text),
+                    detalleArticuloId:0,
+                    usuarioId: 0,
+                    eventoId:ID,
+                    articulosId:id,
+                    descripcion:ArticuloscomboBox.Text,
+                    tamaño: TamañotextBox.Text,
                     cantidad: Convert.ToInt32(CantidadtextBox.Text),
                     precio: Convert.ToDecimal(PreciotextBox.Text),
-                    importe: CalcularImporte()
-
+                    importe: Convert.ToDecimal(ImportetextBox.Text) 
                     )
                 );
             CargarGrid();
@@ -285,10 +261,7 @@ namespace FotosCopias.UI.Registro
             NombrecomboBox.ResetText();
             ArticuloscomboBox.Focus();
             ArticuloscomboBox.ResetText();
-            TamañotextBox.Text = Convert.ToString(0);
-            PreciotextBox.Text = Convert.ToString(0);
-            CantidadtextBox.Text = Convert.ToString(0);
-            ImportetextBox.Text = Convert.ToString(0);
+         
 
             foreach (var item in this.Detalle)
             {
@@ -384,6 +357,71 @@ namespace FotosCopias.UI.Registro
             decimal precio = Convert.ToDecimal(PreciotextBox.Text);
             decimal importe = cantidad * precio;
             ImportetextBox.Text = importe.ToString();
+        }
+
+        private void rDetalle_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void CantidadtextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 8)
+            {
+                e.Handled = false;
+                return;
+            }
+
+            bool paso = false;
+            decimal numero = 0;
+
+            for (int i = 0; i < CantidadtextBox.Text.Length; i++)
+            {
+                if (CantidadtextBox.Text[i] == '.')
+                    paso = true;
+                if (paso && numero++ >= 2)
+                {
+                    e.Handled = true;
+                    return;
+                }
+            }
+
+            if (e.KeyChar >= 48 && e.KeyChar <= 57)
+                e.Handled = false;
+            else if (e.KeyChar == 46)
+                e.Handled = (paso) ? true : false;
+            else
+                e.Handled = true;
+        }
+
+        private void PreciotextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 8)
+            {
+                e.Handled = false;
+                return;
+            }
+
+            bool paso = false;
+            decimal numero = 0;
+
+            for (int i = 0; i < PreciotextBox.Text.Length; i++)
+            {
+                if (PreciotextBox.Text[i] == '.')
+                    paso = true;
+                if (paso && numero++ >= 2)
+                {
+                    e.Handled = true;
+                    return;
+                }
+            }
+
+            if (e.KeyChar >= 48 && e.KeyChar <= 57)
+                e.Handled = false;
+            else if (e.KeyChar == 46)
+                e.Handled = (paso) ? true : false;
+            else
+                e.Handled = true;
         }
     }
    

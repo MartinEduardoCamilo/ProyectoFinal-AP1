@@ -51,8 +51,6 @@
             this.PreciotextBox = new System.Windows.Forms.TextBox();
             this.CantidadtextBox = new System.Windows.Forms.TextBox();
             this.ImportetextBox = new System.Windows.Forms.TextBox();
-            this.Clientebutton = new System.Windows.Forms.Button();
-            this.Eventobutton = new System.Windows.Forms.Button();
             this.Agregarbutton = new System.Windows.Forms.Button();
             this.FacturadataGridView = new System.Windows.Forms.DataGridView();
             this.label12 = new System.Windows.Forms.Label();
@@ -225,25 +223,27 @@
             // 
             // TamañotextBox
             // 
-            this.TamañotextBox.Location = new System.Drawing.Point(110, 241);
+            this.TamañotextBox.Location = new System.Drawing.Point(113, 241);
             this.TamañotextBox.Name = "TamañotextBox";
             this.TamañotextBox.Size = new System.Drawing.Size(61, 20);
             this.TamañotextBox.TabIndex = 20;
             // 
             // PreciotextBox
             // 
-            this.PreciotextBox.Location = new System.Drawing.Point(280, 239);
+            this.PreciotextBox.Location = new System.Drawing.Point(280, 241);
             this.PreciotextBox.Name = "PreciotextBox";
             this.PreciotextBox.Size = new System.Drawing.Size(59, 20);
             this.PreciotextBox.TabIndex = 21;
             this.PreciotextBox.TextChanged += new System.EventHandler(this.PreciotextBox_TextChanged);
+            this.PreciotextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PreciotextBox_KeyPress);
             // 
             // CantidadtextBox
             // 
-            this.CantidadtextBox.Location = new System.Drawing.Point(189, 240);
+            this.CantidadtextBox.Location = new System.Drawing.Point(189, 241);
             this.CantidadtextBox.Name = "CantidadtextBox";
             this.CantidadtextBox.Size = new System.Drawing.Size(64, 20);
             this.CantidadtextBox.TabIndex = 22;
+            this.CantidadtextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CantidadtextBox_KeyPress);
             // 
             // ImportetextBox
             // 
@@ -253,31 +253,11 @@
             this.ImportetextBox.Size = new System.Drawing.Size(79, 20);
             this.ImportetextBox.TabIndex = 23;
             // 
-            // Clientebutton
-            // 
-            this.Clientebutton.Image = ((System.Drawing.Image)(resources.GetObject("Clientebutton.Image")));
-            this.Clientebutton.Location = new System.Drawing.Point(226, 69);
-            this.Clientebutton.Name = "Clientebutton";
-            this.Clientebutton.Size = new System.Drawing.Size(27, 24);
-            this.Clientebutton.TabIndex = 24;
-            this.Clientebutton.UseVisualStyleBackColor = true;
-            this.Clientebutton.Click += new System.EventHandler(this.Clientebutton_Click);
-            // 
-            // Eventobutton
-            // 
-            this.Eventobutton.Image = ((System.Drawing.Image)(resources.GetObject("Eventobutton.Image")));
-            this.Eventobutton.Location = new System.Drawing.Point(226, 117);
-            this.Eventobutton.Name = "Eventobutton";
-            this.Eventobutton.Size = new System.Drawing.Size(27, 23);
-            this.Eventobutton.TabIndex = 25;
-            this.Eventobutton.UseVisualStyleBackColor = true;
-            this.Eventobutton.Click += new System.EventHandler(this.Eventobutton_Click);
-            // 
             // Agregarbutton
             // 
             this.Agregarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Agregarbutton.Image")));
             this.Agregarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Agregarbutton.Location = new System.Drawing.Point(368, 165);
+            this.Agregarbutton.Location = new System.Drawing.Point(467, 236);
             this.Agregarbutton.Name = "Agregarbutton";
             this.Agregarbutton.Size = new System.Drawing.Size(75, 23);
             this.Agregarbutton.TabIndex = 26;
@@ -291,13 +271,13 @@
             this.FacturadataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.FacturadataGridView.Location = new System.Drawing.Point(16, 267);
             this.FacturadataGridView.Name = "FacturadataGridView";
-            this.FacturadataGridView.Size = new System.Drawing.Size(431, 150);
+            this.FacturadataGridView.Size = new System.Drawing.Size(526, 150);
             this.FacturadataGridView.TabIndex = 27;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(312, 427);
+            this.label12.Location = new System.Drawing.Point(407, 430);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(31, 13);
             this.label12.TabIndex = 28;
@@ -305,7 +285,7 @@
             // 
             // TotaltextBox
             // 
-            this.TotaltextBox.Location = new System.Drawing.Point(347, 420);
+            this.TotaltextBox.Location = new System.Drawing.Point(442, 423);
             this.TotaltextBox.Name = "TotaltextBox";
             this.TotaltextBox.Size = new System.Drawing.Size(100, 20);
             this.TotaltextBox.TabIndex = 29;
@@ -340,7 +320,7 @@
             // 
             this.Guardarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Guardarbutton.Image")));
             this.Guardarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Guardarbutton.Location = new System.Drawing.Point(131, 468);
+            this.Guardarbutton.Location = new System.Drawing.Point(160, 468);
             this.Guardarbutton.Name = "Guardarbutton";
             this.Guardarbutton.Size = new System.Drawing.Size(75, 59);
             this.Guardarbutton.TabIndex = 32;
@@ -353,7 +333,7 @@
             // 
             this.Eliminarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Eliminarbutton.Image")));
             this.Eliminarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Eliminarbutton.Location = new System.Drawing.Point(250, 468);
+            this.Eliminarbutton.Location = new System.Drawing.Point(315, 468);
             this.Eliminarbutton.Name = "Eliminarbutton";
             this.Eliminarbutton.Size = new System.Drawing.Size(75, 59);
             this.Eliminarbutton.TabIndex = 33;
@@ -366,7 +346,7 @@
             // 
             this.Imprimirbutton.Image = ((System.Drawing.Image)(resources.GetObject("Imprimirbutton.Image")));
             this.Imprimirbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Imprimirbutton.Location = new System.Drawing.Point(372, 468);
+            this.Imprimirbutton.Location = new System.Drawing.Point(467, 468);
             this.Imprimirbutton.Name = "Imprimirbutton";
             this.Imprimirbutton.Size = new System.Drawing.Size(75, 59);
             this.Imprimirbutton.TabIndex = 34;
@@ -404,8 +384,6 @@
             this.Controls.Add(this.label12);
             this.Controls.Add(this.FacturadataGridView);
             this.Controls.Add(this.Agregarbutton);
-            this.Controls.Add(this.Eventobutton);
-            this.Controls.Add(this.Clientebutton);
             this.Controls.Add(this.ImportetextBox);
             this.Controls.Add(this.CantidadtextBox);
             this.Controls.Add(this.PreciotextBox);
@@ -430,6 +408,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "rDetalle";
             this.Text = "Factura";
+            this.Load += new System.EventHandler(this.rDetalle_Load);
             ((System.ComponentModel.ISupportInitialize)(this.FactutaIDnumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FacturadataGridView)).EndInit();
@@ -462,8 +441,6 @@
         private System.Windows.Forms.TextBox PreciotextBox;
         private System.Windows.Forms.TextBox CantidadtextBox;
         private System.Windows.Forms.TextBox ImportetextBox;
-        private System.Windows.Forms.Button Clientebutton;
-        private System.Windows.Forms.Button Eventobutton;
         private System.Windows.Forms.Button Agregarbutton;
         private System.Windows.Forms.DataGridView FacturadataGridView;
         private System.Windows.Forms.Label label12;
