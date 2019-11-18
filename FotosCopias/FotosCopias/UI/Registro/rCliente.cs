@@ -250,11 +250,7 @@ namespace FotosCopias.UI.Registro
         private void EmailtextBox_TextChanged(object sender, EventArgs e)
         {
             Myerror.Clear();
-            if(ValidarEmail(EmailtextBox.Text))
-            {
-
-            }
-            else
+            if(!ValidarEmail(EmailtextBox.Text))
             {
                 Myerror.SetError(EmailtextBox, "El formato del correo no es valido");
                 EmailtextBox.Focus();

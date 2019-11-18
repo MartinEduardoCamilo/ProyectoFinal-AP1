@@ -245,7 +245,6 @@ namespace FotosCopias.UI.Registro
             this.Detalle.Add(
                 new ArticuloDetalle(
                     detalleArticuloId:0,
-                    usuarioId: 0,
                     eventoId:ID,
                     articulosId:id,
                     descripcion:ArticuloscomboBox.Text,

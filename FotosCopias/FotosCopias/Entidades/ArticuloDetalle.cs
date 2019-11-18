@@ -11,7 +11,6 @@ namespace FotosCopias.Entidades
     {
         [Key]
         public int DetalleArticuloId { get; set; }
-        public int UsuarioId { get; set; }
         public int EventoId { get; set; }
         public int ArticulosId { get; set; }
         public string Descripcion { get; set; }
@@ -21,10 +20,9 @@ namespace FotosCopias.Entidades
 
         public decimal Importe { get; set; }
 
-        public ArticuloDetalle(int detalleArticuloId, int usuarioId, int eventoId, int articulosId, string descripcion, string tamaño, int cantidad, decimal precio, decimal importe)
+        public ArticuloDetalle(int detalleArticuloId, int eventoId, int articulosId, string descripcion, string tamaño, int cantidad, decimal precio, decimal importe)
         {
             DetalleArticuloId = detalleArticuloId;
-            UsuarioId = usuarioId;
             EventoId = eventoId;
             ArticulosId = articulosId;
             Descripcion = descripcion;
