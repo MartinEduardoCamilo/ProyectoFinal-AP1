@@ -268,9 +268,11 @@
             // 
             // FacturadataGridView
             // 
+            this.FacturadataGridView.AllowUserToAddRows = false;
             this.FacturadataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.FacturadataGridView.Location = new System.Drawing.Point(16, 267);
             this.FacturadataGridView.Name = "FacturadataGridView";
+            this.FacturadataGridView.ReadOnly = true;
             this.FacturadataGridView.Size = new System.Drawing.Size(526, 150);
             this.FacturadataGridView.TabIndex = 27;
             // 

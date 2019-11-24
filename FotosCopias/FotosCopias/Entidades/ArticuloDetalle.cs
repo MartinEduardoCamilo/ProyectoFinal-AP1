@@ -10,6 +10,18 @@ namespace FotosCopias.Entidades
 {
     public class ArticuloDetalle
     {
+        public ArticuloDetalle(int detalleArticuloId, int eventoId, int articulosId, string descripcion, string tamaño, int cantidad, decimal precio, decimal importe)
+        {
+            DetalleArticuloId = detalleArticuloId;
+            EventoId = eventoId;
+            ArticulosId = articulosId;
+            Descripcion = descripcion;
+            Tamaño = tamaño;
+            Cantidad = cantidad;
+            Precio = precio;
+            Importe = importe;
+        }
+
         [Key]
         public int DetalleArticuloId { get; set; }
         public int EventoId { get; set; }
@@ -25,30 +37,6 @@ namespace FotosCopias.Entidades
         public decimal Precio { get; set; }
         public decimal Importe { get; set; }
 
-        public ArticuloDetalle(int detalleArticuloId, int eventoId, Eventos eventos, int articulosId, Articulos articulos, string descripcion, string tamaño, int cantidad, decimal precio, decimal importe)
-        {
-            DetalleArticuloId = detalleArticuloId;
-            EventoId = eventoId;
-            this.eventos = eventos;
-            ArticulosId = articulosId;
-            this.articulos = articulos;
-            Descripcion = descripcion;
-            Tamaño = tamaño;
-            Cantidad = cantidad;
-            Precio = precio;
-            Importe = importe;
-        }y
-
-        public ArticuloDetalle(int detalleArticuloId, int eventoId, int articulosId, string descripcion, string tamaño, int cantidad, decimal precio, decimal importe)
-        {
-            DetalleArticuloId = detalleArticuloId;
-            EventoId = eventoId;
-            ArticulosId = articulosId;
-            Descripcion = descripcion;
-            Tamaño = tamaño;
-            Cantidad = cantidad;
-            Precio = precio;
-            Importe = importe;
-        }
+       
     }
 }

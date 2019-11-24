@@ -85,7 +85,7 @@ namespace FotosCopias.UI.Registro
         }
 
 
-        private string getEvento()
+         private string getEvento()
         {
             string evento = string.Empty;
             RepositorioBase<Eventos> repositorio = new RepositorioBase<Eventos>();
@@ -114,7 +114,7 @@ namespace FotosCopias.UI.Registro
         private void LlenaCampo(Articulos a)
         {
             FactutaIDnumericUpDown.Value = a.ArticulosId;
-            this.Detalle = a.ArticuloDetalles;
+            Detalle = a.ArticuloDetalles;
             CargarGrid();
         }
 
@@ -123,7 +123,7 @@ namespace FotosCopias.UI.Registro
             Articulos articulos = new Articulos();
             articulos.ArticulosId = (int)FactutaIDnumericUpDown.Value;
             articulos.ArticuloDetalles = this.Detalle;
-            CargarGrid();
+
             return articulos;
         }
 
@@ -167,12 +167,6 @@ namespace FotosCopias.UI.Registro
                 paso = false;
             }
 
-            if (this.Detalle.Count == 0)
-            {
-                Myerror.SetError(Agregarbutton, "Debe de agregar al detalle");
-                Agregarbutton.Focus();
-                paso = false;
-            }
 
             return paso;
         }
@@ -200,6 +194,7 @@ namespace FotosCopias.UI.Registro
         private void Buscarbutton_Click(object sender, EventArgs e)
         {
             RepositorioBase<Articulos> repositorio = new RepositorioBase<Articulos>();
+
             int ID = Convert.ToInt32(FactutaIDnumericUpDown.Value);
             Articulos articulos;
 

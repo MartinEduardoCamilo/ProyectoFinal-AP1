@@ -35,10 +35,12 @@
             this.registroClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registroEventosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consutasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarArticulosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarEventosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nombreuser = new System.Windows.Forms.Label();
+            this.Nivellabel = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -104,43 +106,61 @@
             this.consutasToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
             this.consutasToolStripMenuItem.Text = "Consutas";
             // 
-            // reportesToolStripMenuItem
-            // 
-            this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
-            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
-            this.reportesToolStripMenuItem.Text = "Reportes";
-            // 
             // consultarClienteToolStripMenuItem
             // 
             this.consultarClienteToolStripMenuItem.Name = "consultarClienteToolStripMenuItem";
-            this.consultarClienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.consultarClienteToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.consultarClienteToolStripMenuItem.Text = "Consultar Cliente";
             this.consultarClienteToolStripMenuItem.Click += new System.EventHandler(this.consultarClienteToolStripMenuItem_Click);
             // 
             // consultarArticulosToolStripMenuItem
             // 
             this.consultarArticulosToolStripMenuItem.Name = "consultarArticulosToolStripMenuItem";
-            this.consultarArticulosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.consultarArticulosToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.consultarArticulosToolStripMenuItem.Text = "Consultar Articulos";
             this.consultarArticulosToolStripMenuItem.Click += new System.EventHandler(this.consultarArticulosToolStripMenuItem_Click);
             // 
             // consultarEventosToolStripMenuItem
             // 
             this.consultarEventosToolStripMenuItem.Name = "consultarEventosToolStripMenuItem";
-            this.consultarEventosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.consultarEventosToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.consultarEventosToolStripMenuItem.Text = "Consultar Eventos";
             this.consultarEventosToolStripMenuItem.Click += new System.EventHandler(this.consultarEventosToolStripMenuItem_Click);
+            // 
+            // reportesToolStripMenuItem
+            // 
+            this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
+            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.reportesToolStripMenuItem.Text = "Reportes";
+            // 
+            // nombreuser
+            // 
+            this.nombreuser.AutoSize = true;
+            this.nombreuser.Location = new System.Drawing.Point(13, 505);
+            this.nombreuser.Name = "nombreuser";
+            this.nombreuser.Size = new System.Drawing.Size(0, 13);
+            this.nombreuser.TabIndex = 2;
+            // 
+            // Nivellabel
+            // 
+            this.Nivellabel.AutoSize = true;
+            this.Nivellabel.Location = new System.Drawing.Point(13, 534);
+            this.Nivellabel.Name = "Nivellabel";
+            this.Nivellabel.Size = new System.Drawing.Size(0, 13);
+            this.Nivellabel.TabIndex = 3;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(952, 630);
+            this.ClientSize = new System.Drawing.Size(952, 608);
+            this.Controls.Add(this.Nivellabel);
+            this.Controls.Add(this.nombreuser);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
-            this.Text = "Form1";
+            this.Text = "Menu";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -161,6 +181,8 @@
         private System.Windows.Forms.ToolStripMenuItem consultarClienteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultarArticulosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultarEventosToolStripMenuItem;
+        private System.Windows.Forms.Label nombreuser;
+        private System.Windows.Forms.Label Nivellabel;
     }
 }
 

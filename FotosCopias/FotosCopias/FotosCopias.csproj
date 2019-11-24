@@ -67,6 +67,7 @@
     <Compile Include="Entidades\Clientes.cs" />
     <Compile Include="Entidades\ArticuloDetalle.cs" />
     <Compile Include="Entidades\Eventos.cs" />
+    <Compile Include="Entidades\Usuarios.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +118,18 @@
     <Compile Include="UI\Registro\rEventos.Designer.cs">
       <DependentUpon>rEventos.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Registro\rLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Registro\rLogin.Designer.cs">
+      <DependentUpon>rLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Registro\rUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Registro\rUsuario.Designer.cs">
+      <DependentUpon>rUsuario.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -150,6 +163,12 @@
     <EmbeddedResource Include="UI\Registro\rEventos.resx">
       <DependentUpon>rEventos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Registro\rLogin.resx">
+      <DependentUpon>rLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Registro\rUsuario.resx">
+      <DependentUpon>rUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -165,21 +184,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="UI\Login\" />
     <Folder Include="UI\Reportes\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\Add_32.png" />
-    <Content Include="Resources\Add_User_Male_16.png" />
-    <Content Include="Resources\Add_User_Male_32.png" />
     <Content Include="Resources\fotografia-estudio-logo_1057-436.jpg" />
-    <Content Include="Resources\Plus_Math_16.png" />
-    <Content Include="Resources\Plus_Math_32.png" />
-    <Content Include="Resources\Save_32.png" />
     <Content Include="Resources\search_102938.png" />
-    <Content Include="Resources\Search_32.png" />
-    <Content Include="Resources\Search_50px.png" />
-    <Content Include="Resources\Trash_32.png" />
     <Content Include="Resources\users_group_customers_clients_icon-icons.com_72448.ico" />
   </ItemGroup>
   <ItemGroup>

@@ -11,14 +11,17 @@ namespace FotosCopias.Entidades
     {
         [Key]
         public int UsuarioId { get; set; }
-        public string NombreUsuario { get; set; }
+        public string Nombre { get; set; }
+        public string Usuario { get; set; }
         public string Contraseña { get; set; }
         public DateTime FechaIngreso { get; set; }
 
         public Usuarios()
         {
             UsuarioId = 0;
-            NombreUsuario = string.Empty;
+            Nombre = string.Empty;
+            Usuario = string.Empty;
+            Contraseña = string.Empty;
             Contraseña = string.Empty;
             FechaIngreso = DateTime.Now;
         }

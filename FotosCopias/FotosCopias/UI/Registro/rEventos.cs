@@ -23,7 +23,7 @@ namespace FotosCopias.UI.Registro
         {
             Myerror.Clear();
             EventoIdnumericUpDown.Value = 0;
-     
+            ClienteidnumericUpDown = 0;
             TipotextBox.Text = string.Empty;
             DirecciontextBox.Text = string.Empty;
             FechadateTimePicker.Value = DateTime.Now;
@@ -32,6 +32,7 @@ namespace FotosCopias.UI.Registro
         {
             Eventos e = new Eventos();
             e.EventoId = (int)EventoIdnumericUpDown.Value;
+            e.ClienteId = (int)ClienteidnumericUpDown.Value;
             e.Tipo = TipotextBox.Text;
             e.Direccion = DirecciontextBox.Text;
             e.Fecha = FechadateTimePicker.Value;
@@ -42,6 +43,7 @@ namespace FotosCopias.UI.Registro
         private void LlenaCampo(Eventos e)
         {
             EventoIdnumericUpDown.Value = e.EventoId;
+            ClienteidnumericUpDown.Value = e.ClienteId;
             TipotextBox.Text = e.Tipo;
             DirecciontextBox.Text = e.Direccion;
             FechadateTimePicker.Value = e.Fecha;
@@ -165,6 +167,22 @@ namespace FotosCopias.UI.Registro
             }
         }
 
-        
+        private void ClienteidnumericUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            RepositorioBase<Clientes> repositorio = new RepositorioBase<Clientes>();
+   
+            int id = (int)ClienteidnumericUpDown.Value;
+
+            if(id > 0)
+            {
+                ClientetextBox.Text = repositorio.Buscar(id).Nombre;
+            }
+            else
+            {
+                ClientetextBox.Text = string.Empty;
+            }
+
+            
+        }
     }
 }

@@ -18,7 +18,6 @@ namespace FotosCopias.Entidades
         public Articulos()
         {
             ArticulosId = 0;
-            UsuarioId = 0;
             Descripcion = string.Empty;
             Cantidad = 0;
             ArticuloDetalles = new List<ArticuloDetalle>();

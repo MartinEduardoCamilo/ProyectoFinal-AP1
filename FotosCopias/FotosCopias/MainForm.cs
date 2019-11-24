@@ -1,4 +1,6 @@
-﻿using FotosCopias.UI.Consulta;
+﻿using FotosCopias.BLL;
+using FotosCopias.Entidades;
+using FotosCopias.UI.Consulta;
 using FotosCopias.UI.Registro;
 using System;
 using System.Collections.Generic;
@@ -14,9 +16,32 @@ namespace FotosCopias
 {
     public partial class MainForm : Form
     {
-        public MainForm()
+        public int iduser;
+        public MainForm(int iduser)
         {
             InitializeComponent();
+            this.iduser = iduser;
+            MostrarUsuario(iduser);
+        }
+
+        public void MostrarUsuario(int id)
+        {
+
+
+            if (id > 0)
+            {
+                RepositorioBase<Usuarios> repositorio = new RepositorioBase<Usuarios>();
+                Usuarios usuario = repositorio.Buscar(id);
+
+                nombreuser.Text = usuario.Nombre.ToString();
+                Nivellabel.Text = usuario.Usuario.ToString();
+            }
+            else
+            {
+                nombreuser.Text = "Solo Usuarios";
+                Nivellabel.Text = "Nuevo";
+            }
+
         }
 
         private void registroToolStripMenuItem_Click(object sender, EventArgs e)

@@ -43,8 +43,13 @@
             this.Guardarbutton = new System.Windows.Forms.Button();
             this.Eliminarbutton = new System.Windows.Forms.Button();
             this.Myerror = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label2 = new System.Windows.Forms.Label();
+            this.ClienteidnumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.label6 = new System.Windows.Forms.Label();
+            this.ClientetextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.EventoIdnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Myerror)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ClienteidnumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -59,7 +64,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 64);
+            this.label3.Location = new System.Drawing.Point(13, 127);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(28, 13);
             this.label3.TabIndex = 2;
@@ -68,7 +73,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(13, 108);
+            this.label4.Location = new System.Drawing.Point(13, 171);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(52, 13);
             this.label4.TabIndex = 3;
@@ -77,7 +82,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(13, 152);
+            this.label5.Location = new System.Drawing.Point(12, 254);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(37, 13);
             this.label5.TabIndex = 4;
@@ -92,23 +97,24 @@
             // 
             // TipotextBox
             // 
-            this.TipotextBox.Location = new System.Drawing.Point(70, 56);
+            this.TipotextBox.Location = new System.Drawing.Point(69, 124);
             this.TipotextBox.Name = "TipotextBox";
             this.TipotextBox.Size = new System.Drawing.Size(200, 20);
             this.TipotextBox.TabIndex = 7;
             // 
             // DirecciontextBox
             // 
-            this.DirecciontextBox.Location = new System.Drawing.Point(70, 100);
+            this.DirecciontextBox.Location = new System.Drawing.Point(69, 164);
+            this.DirecciontextBox.Multiline = true;
             this.DirecciontextBox.Name = "DirecciontextBox";
-            this.DirecciontextBox.Size = new System.Drawing.Size(200, 20);
+            this.DirecciontextBox.Size = new System.Drawing.Size(200, 77);
             this.DirecciontextBox.TabIndex = 8;
             // 
             // FechadateTimePicker
             // 
             this.FechadateTimePicker.CustomFormat = "dd/MM/yyyy";
             this.FechadateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.FechadateTimePicker.Location = new System.Drawing.Point(70, 145);
+            this.FechadateTimePicker.Location = new System.Drawing.Point(69, 247);
             this.FechadateTimePicker.Name = "FechadateTimePicker";
             this.FechadateTimePicker.Size = new System.Drawing.Size(86, 20);
             this.FechadateTimePicker.TabIndex = 9;
@@ -127,7 +133,7 @@
             // 
             this.Nuevobutton.Image = ((System.Drawing.Image)(resources.GetObject("Nuevobutton.Image")));
             this.Nuevobutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Nuevobutton.Location = new System.Drawing.Point(12, 205);
+            this.Nuevobutton.Location = new System.Drawing.Point(11, 307);
             this.Nuevobutton.Name = "Nuevobutton";
             this.Nuevobutton.Size = new System.Drawing.Size(75, 57);
             this.Nuevobutton.TabIndex = 11;
@@ -140,7 +146,7 @@
             // 
             this.Guardarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Guardarbutton.Image")));
             this.Guardarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Guardarbutton.Location = new System.Drawing.Point(115, 205);
+            this.Guardarbutton.Location = new System.Drawing.Point(114, 307);
             this.Guardarbutton.Name = "Guardarbutton";
             this.Guardarbutton.Size = new System.Drawing.Size(75, 57);
             this.Guardarbutton.TabIndex = 12;
@@ -153,7 +159,7 @@
             // 
             this.Eliminarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Eliminarbutton.Image")));
             this.Eliminarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Eliminarbutton.Location = new System.Drawing.Point(210, 205);
+            this.Eliminarbutton.Location = new System.Drawing.Point(209, 307);
             this.Eliminarbutton.Name = "Eliminarbutton";
             this.Eliminarbutton.Size = new System.Drawing.Size(75, 57);
             this.Eliminarbutton.TabIndex = 13;
@@ -166,11 +172,49 @@
             // 
             this.Myerror.ContainerControl = this;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(13, 59);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(48, 13);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "ClienteId";
+            // 
+            // ClienteidnumericUpDown
+            // 
+            this.ClienteidnumericUpDown.Location = new System.Drawing.Point(70, 52);
+            this.ClienteidnumericUpDown.Name = "ClienteidnumericUpDown";
+            this.ClienteidnumericUpDown.Size = new System.Drawing.Size(120, 20);
+            this.ClienteidnumericUpDown.TabIndex = 15;
+            this.ClienteidnumericUpDown.ValueChanged += new System.EventHandler(this.ClienteidnumericUpDown_ValueChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(13, 97);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(39, 13);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "Cliente";
+            // 
+            // ClientetextBox
+            // 
+            this.ClientetextBox.Location = new System.Drawing.Point(69, 90);
+            this.ClientetextBox.Name = "ClientetextBox";
+            this.ClientetextBox.ReadOnly = true;
+            this.ClientetextBox.Size = new System.Drawing.Size(200, 20);
+            this.ClientetextBox.TabIndex = 17;
+            // 
             // rEventos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(297, 280);
+            this.ClientSize = new System.Drawing.Size(303, 384);
+            this.Controls.Add(this.ClientetextBox);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.ClienteidnumericUpDown);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.Eliminarbutton);
             this.Controls.Add(this.Guardarbutton);
             this.Controls.Add(this.Nuevobutton);
@@ -187,6 +231,7 @@
             this.Text = "Registro de eventos";
             ((System.ComponentModel.ISupportInitialize)(this.EventoIdnumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Myerror)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ClienteidnumericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -207,5 +252,9 @@
         private System.Windows.Forms.Button Guardarbutton;
         private System.Windows.Forms.Button Eliminarbutton;
         private System.Windows.Forms.ErrorProvider Myerror;
+        private System.Windows.Forms.TextBox ClientetextBox;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.NumericUpDown ClienteidnumericUpDown;
+        private System.Windows.Forms.Label label2;
     }
 }
