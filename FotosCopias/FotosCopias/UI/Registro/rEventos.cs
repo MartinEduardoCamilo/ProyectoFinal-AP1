@@ -23,7 +23,7 @@ namespace FotosCopias.UI.Registro
         {
             Myerror.Clear();
             EventoIdnumericUpDown.Value = 0;
-            ClienteidnumericUpDown = 0;
+            ClienteidnumericUpDown.Value = 0;
             TipotextBox.Text = string.Empty;
             DirecciontextBox.Text = string.Empty;
             FechadateTimePicker.Value = DateTime.Now;

@@ -23,7 +23,6 @@ namespace FotosCopias
             this.iduser = iduser;
             MostrarUsuario(iduser);
         }
-
         public void MostrarUsuario(int id)
         {
 

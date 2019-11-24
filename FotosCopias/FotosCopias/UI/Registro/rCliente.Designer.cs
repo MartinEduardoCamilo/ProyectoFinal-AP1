@@ -166,8 +166,9 @@
             // DirecciontextBox
             // 
             this.DirecciontextBox.Location = new System.Drawing.Point(68, 252);
+            this.DirecciontextBox.Multiline = true;
             this.DirecciontextBox.Name = "DirecciontextBox";
-            this.DirecciontextBox.Size = new System.Drawing.Size(170, 20);
+            this.DirecciontextBox.Size = new System.Drawing.Size(170, 73);
             this.DirecciontextBox.TabIndex = 14;
             // 
             // Buscarbutton
@@ -188,7 +189,7 @@
             // 
             this.Nuevobutton.Image = ((System.Drawing.Image)(resources.GetObject("Nuevobutton.Image")));
             this.Nuevobutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Nuevobutton.Location = new System.Drawing.Point(17, 294);
+            this.Nuevobutton.Location = new System.Drawing.Point(12, 355);
             this.Nuevobutton.Name = "Nuevobutton";
             this.Nuevobutton.Size = new System.Drawing.Size(76, 60);
             this.Nuevobutton.TabIndex = 16;
@@ -201,7 +202,7 @@
             // 
             this.Guardarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Guardarbutton.Image")));
             this.Guardarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Guardarbutton.Location = new System.Drawing.Point(113, 294);
+            this.Guardarbutton.Location = new System.Drawing.Point(108, 355);
             this.Guardarbutton.Name = "Guardarbutton";
             this.Guardarbutton.Size = new System.Drawing.Size(75, 60);
             this.Guardarbutton.TabIndex = 17;
@@ -214,7 +215,7 @@
             // 
             this.Eliminarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Eliminarbutton.Image")));
             this.Eliminarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Eliminarbutton.Location = new System.Drawing.Point(209, 295);
+            this.Eliminarbutton.Location = new System.Drawing.Point(204, 356);
             this.Eliminarbutton.Name = "Eliminarbutton";
             this.Eliminarbutton.Size = new System.Drawing.Size(75, 59);
             this.Eliminarbutton.TabIndex = 18;
@@ -231,7 +232,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(305, 366);
+            this.ClientSize = new System.Drawing.Size(294, 446);
             this.Controls.Add(this.Eliminarbutton);
             this.Controls.Add(this.Guardarbutton);
             this.Controls.Add(this.Nuevobutton);

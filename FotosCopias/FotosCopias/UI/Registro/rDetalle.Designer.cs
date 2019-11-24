@@ -37,8 +37,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.NombrecomboBox = new System.Windows.Forms.ComboBox();
             this.FechadateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.label6 = new System.Windows.Forms.Label();
-            this.FechaEventodateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Buscarbutton = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
@@ -62,6 +60,11 @@
             this.Imprimirbutton = new System.Windows.Forms.Button();
             this.Myerror = new System.Windows.Forms.ErrorProvider(this.components);
             this.EventocomboBox = new System.Windows.Forms.ComboBox();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tamaño = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Importe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.FactutaIDnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FacturadataGridView)).BeginInit();
@@ -129,24 +132,6 @@
             this.FechadateTimePicker.Size = new System.Drawing.Size(92, 20);
             this.FechadateTimePicker.TabIndex = 9;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(13, 175);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(91, 13);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Fecha del Evento";
-            // 
-            // FechaEventodateTimePicker
-            // 
-            this.FechaEventodateTimePicker.CustomFormat = "dd/MM/yyyy";
-            this.FechaEventodateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.FechaEventodateTimePicker.Location = new System.Drawing.Point(110, 168);
-            this.FechaEventodateTimePicker.Name = "FechaEventodateTimePicker";
-            this.FechaEventodateTimePicker.Size = new System.Drawing.Size(109, 20);
-            this.FechaEventodateTimePicker.TabIndex = 11;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -170,7 +155,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(13, 223);
+            this.label7.Location = new System.Drawing.Point(13, 167);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(47, 13);
             this.label7.TabIndex = 14;
@@ -179,7 +164,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(110, 223);
+            this.label8.Location = new System.Drawing.Point(99, 167);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(46, 13);
             this.label8.TabIndex = 15;
@@ -188,7 +173,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(277, 223);
+            this.label9.Location = new System.Drawing.Point(277, 167);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(37, 13);
             this.label9.TabIndex = 16;
@@ -197,7 +182,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(186, 223);
+            this.label10.Location = new System.Drawing.Point(186, 167);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(49, 13);
             this.label10.TabIndex = 17;
@@ -206,7 +191,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(365, 224);
+            this.label11.Location = new System.Drawing.Point(365, 167);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(42, 13);
             this.label11.TabIndex = 18;
@@ -216,48 +201,48 @@
             // 
             this.ArticuloscomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ArticuloscomboBox.FormattingEnabled = true;
-            this.ArticuloscomboBox.Location = new System.Drawing.Point(16, 240);
+            this.ArticuloscomboBox.Location = new System.Drawing.Point(16, 183);
             this.ArticuloscomboBox.Name = "ArticuloscomboBox";
             this.ArticuloscomboBox.Size = new System.Drawing.Size(69, 21);
             this.ArticuloscomboBox.TabIndex = 19;
             // 
             // TamañotextBox
             // 
-            this.TamañotextBox.Location = new System.Drawing.Point(113, 241);
+            this.TamañotextBox.Location = new System.Drawing.Point(102, 183);
             this.TamañotextBox.Name = "TamañotextBox";
-            this.TamañotextBox.Size = new System.Drawing.Size(61, 20);
+            this.TamañotextBox.Size = new System.Drawing.Size(69, 20);
             this.TamañotextBox.TabIndex = 20;
             // 
             // PreciotextBox
             // 
-            this.PreciotextBox.Location = new System.Drawing.Point(280, 241);
+            this.PreciotextBox.Location = new System.Drawing.Point(280, 184);
             this.PreciotextBox.Name = "PreciotextBox";
-            this.PreciotextBox.Size = new System.Drawing.Size(59, 20);
+            this.PreciotextBox.Size = new System.Drawing.Size(69, 20);
             this.PreciotextBox.TabIndex = 21;
             this.PreciotextBox.TextChanged += new System.EventHandler(this.PreciotextBox_TextChanged);
             this.PreciotextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PreciotextBox_KeyPress);
             // 
             // CantidadtextBox
             // 
-            this.CantidadtextBox.Location = new System.Drawing.Point(189, 241);
+            this.CantidadtextBox.Location = new System.Drawing.Point(189, 184);
             this.CantidadtextBox.Name = "CantidadtextBox";
-            this.CantidadtextBox.Size = new System.Drawing.Size(64, 20);
+            this.CantidadtextBox.Size = new System.Drawing.Size(69, 20);
             this.CantidadtextBox.TabIndex = 22;
             this.CantidadtextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CantidadtextBox_KeyPress);
             // 
             // ImportetextBox
             // 
-            this.ImportetextBox.Location = new System.Drawing.Point(368, 240);
+            this.ImportetextBox.Location = new System.Drawing.Point(368, 183);
             this.ImportetextBox.Name = "ImportetextBox";
             this.ImportetextBox.ReadOnly = true;
-            this.ImportetextBox.Size = new System.Drawing.Size(79, 20);
+            this.ImportetextBox.Size = new System.Drawing.Size(70, 20);
             this.ImportetextBox.TabIndex = 23;
             // 
             // Agregarbutton
             // 
             this.Agregarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Agregarbutton.Image")));
             this.Agregarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Agregarbutton.Location = new System.Drawing.Point(467, 236);
+            this.Agregarbutton.Location = new System.Drawing.Point(456, 180);
             this.Agregarbutton.Name = "Agregarbutton";
             this.Agregarbutton.Size = new System.Drawing.Size(75, 23);
             this.Agregarbutton.TabIndex = 26;
@@ -270,16 +255,22 @@
             // 
             this.FacturadataGridView.AllowUserToAddRows = false;
             this.FacturadataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.FacturadataGridView.Location = new System.Drawing.Point(16, 267);
+            this.FacturadataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Descripcion,
+            this.Tamaño,
+            this.Cantidad,
+            this.Precio,
+            this.Importe});
+            this.FacturadataGridView.Location = new System.Drawing.Point(16, 221);
             this.FacturadataGridView.Name = "FacturadataGridView";
             this.FacturadataGridView.ReadOnly = true;
-            this.FacturadataGridView.Size = new System.Drawing.Size(526, 150);
+            this.FacturadataGridView.Size = new System.Drawing.Size(515, 170);
             this.FacturadataGridView.TabIndex = 27;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(407, 430);
+            this.label12.Location = new System.Drawing.Point(396, 407);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(31, 13);
             this.label12.TabIndex = 28;
@@ -287,7 +278,7 @@
             // 
             // TotaltextBox
             // 
-            this.TotaltextBox.Location = new System.Drawing.Point(442, 423);
+            this.TotaltextBox.Location = new System.Drawing.Point(431, 400);
             this.TotaltextBox.Name = "TotaltextBox";
             this.TotaltextBox.Size = new System.Drawing.Size(100, 20);
             this.TotaltextBox.TabIndex = 29;
@@ -296,7 +287,7 @@
             // 
             this.Removerbutton.Image = ((System.Drawing.Image)(resources.GetObject("Removerbutton.Image")));
             this.Removerbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Removerbutton.Location = new System.Drawing.Point(16, 427);
+            this.Removerbutton.Location = new System.Drawing.Point(16, 397);
             this.Removerbutton.Name = "Removerbutton";
             this.Removerbutton.Size = new System.Drawing.Size(75, 23);
             this.Removerbutton.TabIndex = 30;
@@ -348,7 +339,7 @@
             // 
             this.Imprimirbutton.Image = ((System.Drawing.Image)(resources.GetObject("Imprimirbutton.Image")));
             this.Imprimirbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Imprimirbutton.Location = new System.Drawing.Point(467, 468);
+            this.Imprimirbutton.Location = new System.Drawing.Point(456, 468);
             this.Imprimirbutton.Name = "Imprimirbutton";
             this.Imprimirbutton.Size = new System.Drawing.Size(75, 59);
             this.Imprimirbutton.TabIndex = 34;
@@ -369,6 +360,36 @@
             this.EventocomboBox.Name = "EventocomboBox";
             this.EventocomboBox.Size = new System.Drawing.Size(157, 21);
             this.EventocomboBox.TabIndex = 35;
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.HeaderText = "Descripcion";
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.ReadOnly = true;
+            // 
+            // Tamaño
+            // 
+            this.Tamaño.HeaderText = "Tamaño";
+            this.Tamaño.Name = "Tamaño";
+            this.Tamaño.ReadOnly = true;
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.ReadOnly = true;
+            // 
+            // Precio
+            // 
+            this.Precio.HeaderText = "Precio";
+            this.Precio.Name = "Precio";
+            this.Precio.ReadOnly = true;
+            // 
+            // Importe
+            // 
+            this.Importe.HeaderText = "Importe";
+            this.Importe.Name = "Importe";
+            this.Importe.ReadOnly = true;
             // 
             // rDetalle
             // 
@@ -398,8 +419,6 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.Buscarbutton);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.FechaEventodateTimePicker);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.FechadateTimePicker);
             this.Controls.Add(this.NombrecomboBox);
             this.Controls.Add(this.label5);
@@ -410,6 +429,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "rDetalle";
             this.Text = "Factura";
+            this.Load += new System.EventHandler(this.rDetalle_Load);
             ((System.ComponentModel.ISupportInitialize)(this.FactutaIDnumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FacturadataGridView)).EndInit();
@@ -428,8 +448,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox NombrecomboBox;
         private System.Windows.Forms.DateTimePicker FechadateTimePicker;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DateTimePicker FechaEventodateTimePicker;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button Buscarbutton;
         private System.Windows.Forms.Label label7;
@@ -453,5 +471,10 @@
         private System.Windows.Forms.Button Imprimirbutton;
         private System.Windows.Forms.ErrorProvider Myerror;
         private System.Windows.Forms.ComboBox EventocomboBox;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tamaño;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Importe;
     }
 }

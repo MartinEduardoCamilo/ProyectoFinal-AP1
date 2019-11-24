@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +12,8 @@ namespace FotosCopias.Entidades
     {
         [Key]
         public int ClienteId { get; set; }
+        public int UsuarioId { get; set; }
+       
         public string Nombre { get; set; }
         public string Apellido { get; set; }
         public string Cedula { get; set; }
@@ -30,6 +33,18 @@ namespace FotosCopias.Entidades
             Email = string.Empty;
             Direccion = string.Empty;
             
+        }
+
+        public Clientes(int clienteId, int usuarioId, string nombre, string apellido, string cedula, string telefono, string email, string direccion)
+        {
+            ClienteId = clienteId;
+            UsuarioId = usuarioId;
+            Nombre = nombre ?? throw new ArgumentNullException(nameof(nombre));
+            Apellido = apellido ?? throw new ArgumentNullException(nameof(apellido));
+            Cedula = cedula ?? throw new ArgumentNullException(nameof(cedula));
+            Telefono = telefono ?? throw new ArgumentNullException(nameof(telefono));
+            Email = email ?? throw new ArgumentNullException(nameof(email));
+            Direccion = direccion ?? throw new ArgumentNullException(nameof(direccion));
         }
     }
 }
