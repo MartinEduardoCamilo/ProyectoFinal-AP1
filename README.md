@@ -35,5 +35,8 @@ Este registro permite crear los Articulos en el programa.
 
 En este registro se registrara los eventos del cliemte, este posee un campo que busca el cliente y lo muestra en un textbox.
 
+# Factura
 
+![rFactura](https://user-images.githubusercontent.com/54560181/69543053-24b14e00-0f63-11ea-96fd-9572ebb98952.jpg)
 
+Este registro te permite crear las facturas a nombre de los clientes, los eventos activos del cliente. Para hacerlo solo debes elegir un cliente, un evento y en articulos eliges el nombre del articulos, se coloca el precio, el tamaño y colocas la cantidad y luego presionas Agregar para hacer efectiva la factura la debes Guardar. 
