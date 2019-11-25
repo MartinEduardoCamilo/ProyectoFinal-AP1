@@ -23,3 +23,10 @@ Este registro permite crear usuarios los cuales podrás darle diferentes niveles
 
 Este registro permite crear los clientes en el programa.
 
+# Articulos
+
+![rArticulos](https://user-images.githubusercontent.com/54560181/69542650-4a8a2300-0f62-11ea-8bd2-f4cb4e909d5c.jpg)
+
+Este registro permite crear los Articulos en el programa.
+
+
