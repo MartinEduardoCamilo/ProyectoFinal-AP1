@@ -14,13 +14,15 @@ namespace FotosCopias.UI.Registro
 {
     public partial class rUsuario : Form
     {
-        public int ID;
-        public rUsuario(int ID)
+        
+        public rUsuario()
         {
             InitializeComponent();
-            this.ID = ID;
+            
         }
-        
+
+       
+
         private void Limpiar()
         {
             Myerror.Clear();
@@ -229,7 +231,7 @@ namespace FotosCopias.UI.Registro
             int id = Convert.ToInt32(IDusuarionumericUpDown.Value);
             Myerror.Clear();
 
-            if (IDusuarionumericUpDown.Value == ID)
+            if (IDusuarionumericUpDown.Value == 0)
             {
                 MessageBox.Show("No se puede eliminar este usuario", "Fallo!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;

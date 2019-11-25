@@ -13,14 +13,14 @@ namespace FotosCopias.Entidades
         public int ArticulosId { get; set; }
         public string Descripcion { get; set; }       
         public int Cantidad { get; set; }
-        public virtual List<ArticuloDetalle> ArticuloDetalles { get; set; }
+        public virtual List<ArticuloDetalle> DetalleArticulos { get; set; }
 
         public Articulos()
         {
             ArticulosId = 0;
             Descripcion = string.Empty;
             Cantidad = 0;
-            ArticuloDetalles = new List<ArticuloDetalle>();
+            DetalleArticulos = new List<ArticuloDetalle>();
         }
     }
 }

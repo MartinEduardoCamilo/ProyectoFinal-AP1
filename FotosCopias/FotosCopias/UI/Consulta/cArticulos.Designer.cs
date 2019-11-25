@@ -35,6 +35,7 @@
             this.CriteriotextBox = new System.Windows.Forms.TextBox();
             this.Buscarbutton = new System.Windows.Forms.Button();
             this.ArticulodataGridView = new System.Windows.Forms.DataGridView();
+            this.Imprimirbutton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ArticulodataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -94,11 +95,25 @@
             this.ArticulodataGridView.Size = new System.Drawing.Size(531, 390);
             this.ArticulodataGridView.TabIndex = 5;
             // 
+            // Imprimirbutton
+            // 
+            this.Imprimirbutton.Image = ((System.Drawing.Image)(resources.GetObject("Imprimirbutton.Image")));
+            this.Imprimirbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Imprimirbutton.Location = new System.Drawing.Point(234, 444);
+            this.Imprimirbutton.Name = "Imprimirbutton";
+            this.Imprimirbutton.Size = new System.Drawing.Size(75, 58);
+            this.Imprimirbutton.TabIndex = 6;
+            this.Imprimirbutton.Text = "Imprimir";
+            this.Imprimirbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Imprimirbutton.UseVisualStyleBackColor = true;
+            this.Imprimirbutton.Click += new System.EventHandler(this.Imprimirbutton_Click);
+            // 
             // cArticulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(554, 450);
+            this.ClientSize = new System.Drawing.Size(554, 505);
+            this.Controls.Add(this.Imprimirbutton);
             this.Controls.Add(this.ArticulodataGridView);
             this.Controls.Add(this.Buscarbutton);
             this.Controls.Add(this.CriteriotextBox);
@@ -121,5 +136,6 @@
         private System.Windows.Forms.TextBox CriteriotextBox;
         private System.Windows.Forms.Button Buscarbutton;
         private System.Windows.Forms.DataGridView ArticulodataGridView;
+        private System.Windows.Forms.Button Imprimirbutton;
     }
 }

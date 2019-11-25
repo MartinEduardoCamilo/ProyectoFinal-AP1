@@ -1,5 +1,6 @@
 ﻿using FotosCopias.BLL;
 using FotosCopias.Entidades;
+using FotosCopias.UI.Reportes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +15,7 @@ namespace FotosCopias.UI.Consulta
 {
     public partial class cArticulos : Form
     {
+        private List<Articulos> listado;
         public cArticulos()
         {
             InitializeComponent();
@@ -51,6 +53,12 @@ namespace FotosCopias.UI.Consulta
 
             ArticulodataGridView.DataSource = null;
             ArticulodataGridView.DataSource = listado;
+        }
+
+        private void Imprimirbutton_Click(object sender, EventArgs e)
+        {
+            ArticulosReports reporte = new ArticulosReports(listado);
+            reporte.ShowDialog();
         }
     }
 }

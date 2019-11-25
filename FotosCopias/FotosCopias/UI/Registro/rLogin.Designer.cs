@@ -70,6 +70,7 @@
             this.contraseñatextBox.Name = "contraseñatextBox";
             this.contraseñatextBox.Size = new System.Drawing.Size(114, 20);
             this.contraseñatextBox.TabIndex = 3;
+            this.contraseñatextBox.UseSystemPasswordChar = true;
             // 
             // Limpiarbutton
             // 
@@ -99,7 +100,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(217, 137);
+            this.ClientSize = new System.Drawing.Size(348, 119);
             this.Controls.Add(this.Ingresarbutton);
             this.Controls.Add(this.Limpiarbutton);
             this.Controls.Add(this.contraseñatextBox);

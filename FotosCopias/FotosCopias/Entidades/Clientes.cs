@@ -12,8 +12,6 @@ namespace FotosCopias.Entidades
     {
         [Key]
         public int ClienteId { get; set; }
-        public int UsuarioId { get; set; }
-       
         public string Nombre { get; set; }
         public string Apellido { get; set; }
         public string Cedula { get; set; }
@@ -35,10 +33,10 @@ namespace FotosCopias.Entidades
             
         }
 
-        public Clientes(int clienteId, int usuarioId, string nombre, string apellido, string cedula, string telefono, string email, string direccion)
+        public Clientes(int clienteId,  string nombre, string apellido, string cedula, string telefono, string email, string direccion)
         {
             ClienteId = clienteId;
-            UsuarioId = usuarioId;
+            
             Nombre = nombre ?? throw new ArgumentNullException(nameof(nombre));
             Apellido = apellido ?? throw new ArgumentNullException(nameof(apellido));
             Cedula = cedula ?? throw new ArgumentNullException(nameof(cedula));

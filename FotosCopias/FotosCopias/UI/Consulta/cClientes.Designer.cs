@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(cClientes));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -35,7 +36,10 @@
             this.CriteriotextBox = new System.Windows.Forms.TextBox();
             this.Buscarbutton = new System.Windows.Forms.Button();
             this.ClientedataGridView = new System.Windows.Forms.DataGridView();
+            this.Imprimirbutton = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ClientedataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -82,7 +86,7 @@
             // Buscarbutton
             // 
             this.Buscarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Buscarbutton.Image")));
-            this.Buscarbutton.Location = new System.Drawing.Point(479, 1);
+            this.Buscarbutton.Location = new System.Drawing.Point(479, 4);
             this.Buscarbutton.Name = "Buscarbutton";
             this.Buscarbutton.Size = new System.Drawing.Size(75, 23);
             this.Buscarbutton.TabIndex = 4;
@@ -97,11 +101,29 @@
             this.ClientedataGridView.Size = new System.Drawing.Size(538, 380);
             this.ClientedataGridView.TabIndex = 5;
             // 
+            // Imprimirbutton
+            // 
+            this.Imprimirbutton.Image = ((System.Drawing.Image)(resources.GetObject("Imprimirbutton.Image")));
+            this.Imprimirbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Imprimirbutton.Location = new System.Drawing.Point(228, 435);
+            this.Imprimirbutton.Name = "Imprimirbutton";
+            this.Imprimirbutton.Size = new System.Drawing.Size(88, 53);
+            this.Imprimirbutton.TabIndex = 6;
+            this.Imprimirbutton.Text = "Imprimir";
+            this.Imprimirbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Imprimirbutton.UseVisualStyleBackColor = true;
+            this.Imprimirbutton.Click += new System.EventHandler(this.Imprimirbutton_Click);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // cClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(573, 450);
+            this.ClientSize = new System.Drawing.Size(573, 500);
+            this.Controls.Add(this.Imprimirbutton);
             this.Controls.Add(this.ClientedataGridView);
             this.Controls.Add(this.Buscarbutton);
             this.Controls.Add(this.CriteriotextBox);
@@ -111,6 +133,7 @@
             this.Name = "cClientes";
             this.Text = "cClientes";
             ((System.ComponentModel.ISupportInitialize)(this.ClientedataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -124,5 +147,7 @@
         private System.Windows.Forms.TextBox CriteriotextBox;
         private System.Windows.Forms.Button Buscarbutton;
         private System.Windows.Forms.DataGridView ClientedataGridView;
+        private System.Windows.Forms.Button Imprimirbutton;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

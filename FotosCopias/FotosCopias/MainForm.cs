@@ -32,13 +32,13 @@ namespace FotosCopias
                 RepositorioBase<Usuarios> repositorio = new RepositorioBase<Usuarios>();
                 Usuarios usuario = repositorio.Buscar(id);
 
-                nombreuser.Text = usuario.Nombre.ToString();
+                
                 Nivellabel.Text = usuario.Usuario.ToString();
             }
             else
             {
-                nombreuser.Text = "Solo Usuarios";
-                Nivellabel.Text = "Nuevo";
+                
+                Nivellabel.Text = "Prueba";
             }
 
         }
@@ -57,7 +57,7 @@ namespace FotosCopias
 
         private void facturaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            rDetalle detalle = new rDetalle();
+            rFactura detalle = new rFactura();
             detalle.MdiParent = this;
             detalle.Show();
         }
@@ -95,6 +95,18 @@ namespace FotosCopias
             cEventos eventos = new cEventos();
             eventos.MdiParent = this;
             eventos.Show();
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void usuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            rUsuario usuario = new rUsuario();
+            usuario.MdiParent = this;
+            usuario.Show();
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using FotosCopias.BLL;
 using FotosCopias.Entidades;
+using FotosCopias.UI.Reportes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +15,7 @@ namespace FotosCopias.UI.Consulta
 {
     public partial class cClientes : Form
     {
+        private List<Clientes> Listado;
         public cClientes()
         {
             InitializeComponent();
@@ -59,6 +61,31 @@ namespace FotosCopias.UI.Consulta
 
             ClientedataGridView.DataSource = null;
             ClientedataGridView.DataSource = listado;
+        }
+
+        private void Imprimirbutton_Click(object sender, EventArgs e)
+        {
+            //if (Listado == null || Listado.Count <= 0)
+            //{
+            //   errorProvider1.Clear();
+            //    errorProvider1.SetError(Imprimirbutton, "No hay datos para imprimir.");
+            //    return;
+            //}
+            //else
+            //{
+            //    if (Listado.Count > 0)
+            //    {
+                    ClienteReports reporte = new ClienteReports(Listado);
+                    reporte.ShowDialog();
+            //    }
+            //    else
+            //    {
+            //        errorProvider1.Clear();
+            //        errorProvider1.SetError(Imprimirbutton, "No hay datos para imprimir.");
+            //        return;
+            //    }
+
+            //}
         }
     }
 }
