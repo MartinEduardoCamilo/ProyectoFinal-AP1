@@ -47,4 +47,32 @@ Necesitan computadoras al menos los siguientes requisitos para un apto funcionam
 
 # Requisito
 
+• Windows 10 64 bits.
 
+• Procesador: Procesador a 2.4 GHz o más rápido.
+
+• Memoria RAM: 4 gigabyte (GB).
+
+• Espacio en disco duro: 250gigabyte (GB).
+
+# Instalación
+
+Primero sería conseguir las computadoras los siguientes seria empezar a montar las computadoras. En caso de que ya hubiera un sistema seria primero poder hacer una migración de la información ya distribuida, para pasarla al nuevo sistema.
+
+# Construido con:
+
+ Visual Studio C#
+
+ SQL Server
+
+ Paint
+
+ Google Chrome
+
+# Autor
+
+Martín Eduardo Camilo de la Cruz
+
+# Licencia
+ 
+ Martín Eduardo Camilo de la Cruz
