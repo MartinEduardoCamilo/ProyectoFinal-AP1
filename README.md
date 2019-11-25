@@ -40,3 +40,11 @@ En este registro se registrara los eventos del cliemte, este posee un campo que 
 ![rFactura](https://user-images.githubusercontent.com/54560181/69543053-24b14e00-0f63-11ea-96fd-9572ebb98952.jpg)
 
 Este registro te permite crear las facturas a nombre de los clientes, los eventos activos del cliente. Para hacerlo solo debes elegir un cliente, un evento y en articulos eliges el nombre del articulos, se coloca el precio, el tamaño y colocas la cantidad y luego presionas Agregar para hacer efectiva la factura la debes Guardar. 
+
+# pre-requisito
+
+Necesitan computadoras al menos los siguientes requisitos para un apto funcionamiento del sistema propuesto.
+
+# Requisito
+
+
