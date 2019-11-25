@@ -65,27 +65,20 @@ namespace FotosCopias.UI.Consulta
 
         private void Imprimirbutton_Click(object sender, EventArgs e)
         {
-            //if (Listado == null || Listado.Count <= 0)
-            //{
-            //   errorProvider1.Clear();
-            //    errorProvider1.SetError(Imprimirbutton, "No hay datos para imprimir.");
-            //    return;
-            //}
-            //else
-            //{
-            //    if (Listado.Count > 0)
-            //    {
-                    ClienteReports reporte = new ClienteReports(Listado);
-                    reporte.ShowDialog();
-            //    }
-            //    else
-            //    {
-            //        errorProvider1.Clear();
-            //        errorProvider1.SetError(Imprimirbutton, "No hay datos para imprimir.");
-            //        return;
-            //    }
+            if (ClientedataGridView != null )
+            {
+                ClienteReports reporte = new ClienteReports(Listado);
+                reporte.ShowDialog();
+              
+            }
+            else
+            {
+                errorProvider1.Clear();
+                errorProvider1.SetError(Imprimirbutton, "No hay datos para imprimir.");
+                return;
 
-            //}
+            }
+            
         }
     }
 }

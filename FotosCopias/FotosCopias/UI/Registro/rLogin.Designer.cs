@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rLogin));
             this.userlabel = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.usuariotextBox = new System.Windows.Forms.TextBox();
@@ -36,7 +37,9 @@
             this.Limpiarbutton = new System.Windows.Forms.Button();
             this.Ingresarbutton = new System.Windows.Forms.Button();
             this.Myerror = new System.Windows.Forms.ErrorProvider(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Myerror)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // userlabel
@@ -96,20 +99,33 @@
             // 
             this.Myerror.ContainerControl = this;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(236, 6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(63, 68);
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
             // rLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(348, 119);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Ingresarbutton);
             this.Controls.Add(this.Limpiarbutton);
             this.Controls.Add(this.contraseñatextBox);
             this.Controls.Add(this.usuariotextBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.userlabel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "rLogin";
             this.Text = "Login";
             ((System.ComponentModel.ISupportInitialize)(this.Myerror)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -124,5 +140,6 @@
         private System.Windows.Forms.Button Limpiarbutton;
         private System.Windows.Forms.Button Ingresarbutton;
         private System.Windows.Forms.ErrorProvider Myerror;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

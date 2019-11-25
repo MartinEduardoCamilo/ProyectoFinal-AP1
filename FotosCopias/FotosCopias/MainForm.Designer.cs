@@ -28,19 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.registroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registroDeArticuloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.facturaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registroClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registroEventosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consutasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarArticulosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarEventosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Nivellabel = new System.Windows.Forms.Label();
-            this.usuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,6 +72,7 @@
             // 
             // registroDeArticuloToolStripMenuItem
             // 
+            this.registroDeArticuloToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("registroDeArticuloToolStripMenuItem.Image")));
             this.registroDeArticuloToolStripMenuItem.Name = "registroDeArticuloToolStripMenuItem";
             this.registroDeArticuloToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.registroDeArticuloToolStripMenuItem.Text = "Articulo";
@@ -78,6 +80,7 @@
             // 
             // facturaToolStripMenuItem
             // 
+            this.facturaToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("facturaToolStripMenuItem.Image")));
             this.facturaToolStripMenuItem.Name = "facturaToolStripMenuItem";
             this.facturaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.facturaToolStripMenuItem.Text = "Factura";
@@ -85,6 +88,7 @@
             // 
             // registroClienteToolStripMenuItem
             // 
+            this.registroClienteToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("registroClienteToolStripMenuItem.Image")));
             this.registroClienteToolStripMenuItem.Name = "registroClienteToolStripMenuItem";
             this.registroClienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.registroClienteToolStripMenuItem.Text = "Cliente";
@@ -92,10 +96,19 @@
             // 
             // registroEventosToolStripMenuItem
             // 
+            this.registroEventosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("registroEventosToolStripMenuItem.Image")));
             this.registroEventosToolStripMenuItem.Name = "registroEventosToolStripMenuItem";
             this.registroEventosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.registroEventosToolStripMenuItem.Text = "Eventos";
             this.registroEventosToolStripMenuItem.Click += new System.EventHandler(this.registroEventosToolStripMenuItem_Click);
+            // 
+            // usuarioToolStripMenuItem
+            // 
+            this.usuarioToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("usuarioToolStripMenuItem.Image")));
+            this.usuarioToolStripMenuItem.Name = "usuarioToolStripMenuItem";
+            this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.usuarioToolStripMenuItem.Text = "Usuario";
+            this.usuarioToolStripMenuItem.Click += new System.EventHandler(this.usuarioToolStripMenuItem_Click);
             // 
             // consutasToolStripMenuItem
             // 
@@ -130,9 +143,10 @@
             // 
             // reportesToolStripMenuItem
             // 
+            this.reportesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("reportesToolStripMenuItem.Image")));
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
-            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
-            this.reportesToolStripMenuItem.Text = "Reportes";
+            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
+            this.reportesToolStripMenuItem.Text = "Salida";
             // 
             // Nivellabel
             // 
@@ -142,13 +156,6 @@
             this.Nivellabel.Name = "Nivellabel";
             this.Nivellabel.Size = new System.Drawing.Size(0, 13);
             this.Nivellabel.TabIndex = 2;
-            // 
-            // usuarioToolStripMenuItem
-            // 
-            this.usuarioToolStripMenuItem.Name = "usuarioToolStripMenuItem";
-            this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.usuarioToolStripMenuItem.Text = "Usuario";
-            this.usuarioToolStripMenuItem.Click += new System.EventHandler(this.usuarioToolStripMenuItem_Click);
             // 
             // MainForm
             // 

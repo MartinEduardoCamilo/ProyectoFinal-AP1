@@ -1,5 +1,6 @@
 ﻿using FotosCopias.BLL;
 using FotosCopias.Entidades;
+using FotosCopias.UI.Reportes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +15,7 @@ namespace FotosCopias.UI.Consulta
 {
     public partial class cEventos : Form
     {
+        private List<Eventos> Listado;
         public cEventos()
         {
             InitializeComponent();
@@ -51,6 +53,12 @@ namespace FotosCopias.UI.Consulta
 
             EventodataGridView.DataSource = null;
             EventodataGridView.DataSource = listado;
+        }
+
+        private void Imprimirbutton_Click(object sender, EventArgs e)
+        {
+            EventoReports reporte = new EventoReports(Listado);
+            reporte.ShowDialog();
         }
     }
 }
