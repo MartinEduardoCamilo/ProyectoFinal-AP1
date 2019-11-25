@@ -16,3 +16,10 @@ La siguiente ventana que se le mostrará será la de Menú Principal, en ella en
 ![rUsuario](https://user-images.githubusercontent.com/54560181/69542192-4c9fb200-0f61-11ea-97bb-aff39bcc1013.jpg)
 
 Este registro permite crear usuarios los cuales podrás darle diferentes niveles de acceso al programa, los de nivel Administrador tendrán accedo a todo el programa mientras que los de nivel Factura solo podrán acceder a Facturación y los registro, pero tambien los usuario de Alamcen solo tendra acceso al registro de articulos. De igual manera, todos los campos deben ser llenados para que pueda ser registrado el usuario.
+
+# Clientes
+
+![rClientes](https://user-images.githubusercontent.com/54560181/69542468-e6675f00-0f61-11ea-89bd-329770a8a889.jpg)
+
+Este registro permite crear los clientes en el programa.
+
