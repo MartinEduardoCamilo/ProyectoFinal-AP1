@@ -131,7 +131,7 @@
             // 
             this.ContraseñatextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.ContraseñatextBox.Location = new System.Drawing.Point(86, 76);
+            this.ContraseñatextBox.Location = new System.Drawing.Point(86, 77);
             this.ContraseñatextBox.Name = "ContraseñatextBox";
             this.ContraseñatextBox.Size = new System.Drawing.Size(169, 20);
             this.ContraseñatextBox.TabIndex = 7;

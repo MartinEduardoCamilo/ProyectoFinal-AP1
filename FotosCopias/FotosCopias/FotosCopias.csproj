@@ -80,6 +80,8 @@
     <Compile Include="Entidades\Clientes.cs" />
     <Compile Include="Entidades\ArticuloDetalle.cs" />
     <Compile Include="Entidades\Eventos.cs" />
+    <Compile Include="Entidades\Factura.cs" />
+    <Compile Include="Entidades\FacturaDetalle.cs" />
     <Compile Include="Entidades\Usuarios.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>

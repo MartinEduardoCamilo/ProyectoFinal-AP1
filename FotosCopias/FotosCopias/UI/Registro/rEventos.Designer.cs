@@ -54,6 +54,8 @@
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(13, 24);
             this.label1.Name = "label1";
@@ -63,6 +65,8 @@
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(13, 127);
             this.label3.Name = "label3";
@@ -72,6 +76,8 @@
             // 
             // label4
             // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(13, 171);
             this.label4.Name = "label4";
@@ -81,6 +87,8 @@
             // 
             // label5
             // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(12, 254);
             this.label5.Name = "label5";
@@ -90,47 +98,63 @@
             // 
             // EventoIdnumericUpDown
             // 
-            this.EventoIdnumericUpDown.Location = new System.Drawing.Point(70, 16);
+            this.EventoIdnumericUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.EventoIdnumericUpDown.Location = new System.Drawing.Point(78, 16);
             this.EventoIdnumericUpDown.Name = "EventoIdnumericUpDown";
-            this.EventoIdnumericUpDown.Size = new System.Drawing.Size(120, 20);
+            this.EventoIdnumericUpDown.Size = new System.Drawing.Size(104, 20);
             this.EventoIdnumericUpDown.TabIndex = 5;
             // 
             // TipotextBox
             // 
-            this.TipotextBox.Location = new System.Drawing.Point(69, 124);
+            this.TipotextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.TipotextBox.Location = new System.Drawing.Point(77, 124);
             this.TipotextBox.Name = "TipotextBox";
-            this.TipotextBox.Size = new System.Drawing.Size(200, 20);
+            this.TipotextBox.Size = new System.Drawing.Size(184, 20);
             this.TipotextBox.TabIndex = 7;
             // 
             // DirecciontextBox
             // 
-            this.DirecciontextBox.Location = new System.Drawing.Point(69, 164);
+            this.DirecciontextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.DirecciontextBox.Location = new System.Drawing.Point(77, 164);
             this.DirecciontextBox.Multiline = true;
             this.DirecciontextBox.Name = "DirecciontextBox";
-            this.DirecciontextBox.Size = new System.Drawing.Size(200, 77);
+            this.DirecciontextBox.Size = new System.Drawing.Size(184, 77);
             this.DirecciontextBox.TabIndex = 8;
             // 
             // FechadateTimePicker
             // 
+            this.FechadateTimePicker.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.FechadateTimePicker.CustomFormat = "dd/MM/yyyy";
             this.FechadateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.FechadateTimePicker.Location = new System.Drawing.Point(69, 247);
+            this.FechadateTimePicker.Location = new System.Drawing.Point(77, 247);
             this.FechadateTimePicker.Name = "FechadateTimePicker";
-            this.FechadateTimePicker.Size = new System.Drawing.Size(86, 20);
+            this.FechadateTimePicker.Size = new System.Drawing.Size(70, 20);
             this.FechadateTimePicker.TabIndex = 9;
             // 
             // Buscarbutton
             // 
+            this.Buscarbutton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Buscarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Buscarbutton.Image")));
-            this.Buscarbutton.Location = new System.Drawing.Point(210, 14);
+            this.Buscarbutton.Location = new System.Drawing.Point(187, 14);
             this.Buscarbutton.Name = "Buscarbutton";
-            this.Buscarbutton.Size = new System.Drawing.Size(75, 23);
+            this.Buscarbutton.Size = new System.Drawing.Size(90, 23);
             this.Buscarbutton.TabIndex = 10;
             this.Buscarbutton.UseVisualStyleBackColor = true;
             this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
             // 
             // Nuevobutton
             // 
+            this.Nuevobutton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Nuevobutton.Image = ((System.Drawing.Image)(resources.GetObject("Nuevobutton.Image")));
             this.Nuevobutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Nuevobutton.Location = new System.Drawing.Point(11, 307);
@@ -144,6 +168,8 @@
             // 
             // Guardarbutton
             // 
+            this.Guardarbutton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Guardarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Guardarbutton.Image")));
             this.Guardarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Guardarbutton.Location = new System.Drawing.Point(114, 307);
@@ -157,6 +183,8 @@
             // 
             // Eliminarbutton
             // 
+            this.Eliminarbutton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Eliminarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Eliminarbutton.Image")));
             this.Eliminarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Eliminarbutton.Location = new System.Drawing.Point(209, 307);
@@ -174,6 +202,8 @@
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(13, 59);
             this.label2.Name = "label2";
@@ -183,14 +213,19 @@
             // 
             // ClienteidnumericUpDown
             // 
-            this.ClienteidnumericUpDown.Location = new System.Drawing.Point(70, 52);
+            this.ClienteidnumericUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ClienteidnumericUpDown.Location = new System.Drawing.Point(78, 52);
             this.ClienteidnumericUpDown.Name = "ClienteidnumericUpDown";
-            this.ClienteidnumericUpDown.Size = new System.Drawing.Size(120, 20);
+            this.ClienteidnumericUpDown.Size = new System.Drawing.Size(104, 20);
             this.ClienteidnumericUpDown.TabIndex = 15;
             this.ClienteidnumericUpDown.ValueChanged += new System.EventHandler(this.ClienteidnumericUpDown_ValueChanged);
             // 
             // label6
             // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(13, 97);
             this.label6.Name = "label6";
@@ -200,17 +235,20 @@
             // 
             // ClientetextBox
             // 
-            this.ClientetextBox.Location = new System.Drawing.Point(69, 90);
+            this.ClientetextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ClientetextBox.Location = new System.Drawing.Point(77, 90);
             this.ClientetextBox.Name = "ClientetextBox";
             this.ClientetextBox.ReadOnly = true;
-            this.ClientetextBox.Size = new System.Drawing.Size(200, 20);
+            this.ClientetextBox.Size = new System.Drawing.Size(184, 20);
             this.ClientetextBox.TabIndex = 17;
             // 
             // rEventos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(303, 384);
+            this.ClientSize = new System.Drawing.Size(295, 384);
             this.Controls.Add(this.ClientetextBox);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.ClienteidnumericUpDown);
