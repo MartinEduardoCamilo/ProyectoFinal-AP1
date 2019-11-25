@@ -21,8 +21,9 @@ namespace FotosCopias.Entidades
         public int Cantidad { get; set; }
         public decimal Precio { get; set; }
         public decimal Importe { get; set; }
+        public DateTime Fecha { get; set; }
 
-        public ArticuloDetalle(int detalleArticuloId, int clienteId, int articulosId, int eventoId, string descripcion, string tamaño, int cantidad, decimal precio, decimal importe)
+        public ArticuloDetalle(int detalleArticuloId, int clienteId, int articulosId, int eventoId, string descripcion, string tamaño, int cantidad, decimal precio, decimal importe, DateTime fecha)
         {
             DetalleArticuloId = detalleArticuloId;
             ClienteId = clienteId;
@@ -33,10 +34,24 @@ namespace FotosCopias.Entidades
             Cantidad = cantidad;
             Precio = precio;
             Importe = importe;
+            Fecha = fecha;
         }
 
         public ArticuloDetalle()
         {
+        }
+
+        public ArticuloDetalle(int detalleArticuloId, int clienteId, int articulosId, int eventoId, string descripcion, string tamaño, int cantidad, decimal precio, decimal importe)
+        {
+            DetalleArticuloId = detalleArticuloId;
+            ClienteId = clienteId;
+            ArticulosId = articulosId;
+            EventoId = eventoId;
+            Descripcion = descripcion;
+            Tamaño = tamaño;
+            Cantidad = cantidad;
+            Precio = precio;
+            Importe = importe;
         }
     }
 }

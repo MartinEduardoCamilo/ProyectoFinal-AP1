@@ -91,10 +91,15 @@ namespace FotosCopias.UI.Registro
             return articulos;
         }
 
-        private void LlenaCampo(Articulos a)
+        private void LlenaCampo(Articulos a, ArticuloDetalle ad)
         {
             FacturaIDnumericUpDown.Value = a.ArticulosId;
             this.Detalles = a.DetalleArticulos;
+            TamañotextBox.Text = ad.Tamaño;
+            CantidadtextBox.Text = ad.Cantidad.ToString();
+            PreciotextBox.Text = ad.Precio.ToString();
+            ImportetextBox.Text = ad.Importe.ToString();
+            dateTimePicker1.Value = ad.Fecha;
             CargarGrid();
         }
         private Articulos LlenaClase()
@@ -209,11 +214,12 @@ namespace FotosCopias.UI.Registro
             Articulos entrada = new Articulos();
             FacturaBLL repositorio = new FacturaBLL();
             entrada = repositorio.Buscar(ID);
+            ArticuloDetalle articuloDetalle = new ArticuloDetalle();
 
             if (entrada != null)
             {
                 Limpiar();
-                LlenaCampo(entrada);
+                LlenaCampo(entrada,articuloDetalle);
                 //getDetalle(ID);
             }
             else
@@ -261,11 +267,7 @@ namespace FotosCopias.UI.Registro
             {
                 total += Convert.ToDecimal(item.Importe);
             }
-
-            
             TotaltextBox.Text = Convert.ToString(total);
-
-            //Limpiar();
         }
 
         private bool ValidaRemover()
