@@ -29,4 +29,11 @@ Este registro permite crear los clientes en el programa.
 
 Este registro permite crear los Articulos en el programa.
 
+# Eventos
+
+![rEventos](https://user-images.githubusercontent.com/54560181/69542865-ae145080-0f62-11ea-83ab-1ab5a6f6b9e0.jpg)
+
+En este registro se registrara los eventos del cliemte, este posee un campo que busca el cliente y lo muestra en un textbox.
+
+
 
