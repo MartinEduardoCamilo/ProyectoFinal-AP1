@@ -143,7 +143,7 @@
     <Compile Include="UI\Registro\rUsuario.Designer.cs">
       <DependentUpon>rUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Reportes\ArticulosCrystalReport.cs">
+    <Compile Include="UI\Reportes\ArticulosCrystalReport1.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ArticulosCrystalReport.rpt</DependentUpon>
@@ -178,6 +178,12 @@
     </Compile>
     <Compile Include="UI\Reportes\EventoReports.Designer.cs">
       <DependentUpon>EventoReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Reportes\FacturaCrystalReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FacturaCrystalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -220,7 +226,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Reportes\ArticulosCrystalReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>ArticulosCrystalReport.cs</LastGenOutput>
+      <LastGenOutput>ArticulosCrystalReport1.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Reportes\ArticulosReports.resx">
       <DependentUpon>ArticulosReports.cs</DependentUpon>
@@ -238,6 +244,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Reportes\EventoReports.resx">
       <DependentUpon>EventoReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Reportes\FacturaCrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>FacturaCrystalReport.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

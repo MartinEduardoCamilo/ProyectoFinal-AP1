@@ -50,31 +50,62 @@ namespace FotosCopias
 
         private void registroDeArticuloToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //if(Nivellabel.Text == "Almacen")
-            rArticulos articulos = new rArticulos();
-            articulos.MdiParent = this;
-            articulos.Show();
+            if ((Nivellabel.Text == "Almacen" || Nivellabel.Text == "Administrador"))
+            {
+                rArticulos articulos = new rArticulos();
+                articulos.MdiParent = this;
+                articulos.Show();
+            }
+            else
+            {
+                MessageBox.Show("No se puede acceder con este usuario", "No tiene los Permiso!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            
         }
 
         private void facturaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            rFactura detalle = new rFactura();
-            detalle.MdiParent = this;
-            detalle.Show();
+            if(Nivellabel.Text == "Facturador" || Nivellabel.Text == "Administrador")
+            {
+                rFactura detalle = new rFactura();
+                detalle.MdiParent = this;
+                detalle.Show();
+            }
+            else
+            {
+                MessageBox.Show("No se puede acceder con este usuario", "No tiene los Permiso!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+
         }
 
         private void registroClienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            rCliente cliente = new rCliente();
-            cliente.MdiParent = this;
-            cliente.Show();
+            if (Nivellabel.Text == "Facturador" || Nivellabel.Text == "Administrador")
+            {
+                rCliente cliente = new rCliente();
+                cliente.MdiParent = this;
+                cliente.Show();
+            }
+            else
+            {
+                MessageBox.Show("No se puede acceder con este usuario", "No tiene los Permiso!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+
         }
 
         private void registroEventosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            rEventos eventos = new rEventos();
-            eventos.MdiParent = this;
-            eventos.Show();
+            if (Nivellabel.Text == "Facturador" || Nivellabel.Text == "Administrador")
+            {
+                rEventos eventos = new rEventos();
+                eventos.MdiParent = this;
+                eventos.Show();
+            }
+            else
+            {
+                MessageBox.Show("No se puede acceder con este usuario", "No tiene los Permiso!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+
         }
 
         private void consultarClienteToolStripMenuItem_Click(object sender, EventArgs e)
@@ -105,9 +136,24 @@ namespace FotosCopias
 
         private void usuarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            rUsuario usuario = new rUsuario();
-            usuario.MdiParent = this;
-            usuario.Show();
+            if (Nivellabel.Text == "Facturador" || Nivellabel.Text == "Administrador"|| Nivellabel.Text == "Prueba")
+            {
+                rUsuario usuario = new rUsuario();
+                usuario.MdiParent = this;
+                usuario.Show();
+            }
+            else
+            {
+                MessageBox.Show("No se puede acceder con este usuario", "No tiene los Permiso!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+
+        }
+
+        private void reportesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            rLogin login = new rLogin();
+            Dispose();
+            login.ShowDialog();
         }
     }
 }

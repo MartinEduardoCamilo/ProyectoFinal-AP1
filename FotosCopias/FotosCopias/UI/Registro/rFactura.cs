@@ -86,6 +86,7 @@ namespace FotosCopias.UI.Registro
             id = Convert.ToInt32(FacturaIDnumericUpDown.Value);
             RepositorioBase<ArticuloDetalle> repositorio = new RepositorioBase<ArticuloDetalle>();
             List<ArticuloDetalle> articulos = repositorio.GetList(d => d.DetalleArticuloId == id );
+            this.Detalles = articulos;
             CargarGrid();
             return articulos;
         }
@@ -186,6 +187,19 @@ namespace FotosCopias.UI.Registro
                 Myerror.SetError(CantidadtextBox, "El campo cantidad no debe ser negativo");
             }
 
+            //if (paso)
+            //{
+            //    foreach (var objeto in this.Detalles)
+            //    {
+            //        if (objeto.DetalleArticuloId == (int)(ArticuloscomboBox.SelectedValue))
+            //        {
+            //            Myerror.SetError(ArticuloscomboBox, "Ya existe un articulo");
+            //            ArticuloscomboBox.Focus();
+            //            return paso = false;
+            //        }
+            //    }
+            //}
+
             return paso;
         }
 
@@ -200,7 +214,7 @@ namespace FotosCopias.UI.Registro
             {
                 Limpiar();
                 LlenaCampo(entrada);
-                getDetalle(ID);
+                //getDetalle(ID);
             }
             else
             {
@@ -232,7 +246,7 @@ namespace FotosCopias.UI.Registro
             this.Detalles.Add(new ArticuloDetalle(
                 detalleArticuloId: 0,
                 clienteId: Convert.ToInt32(ClientecomboBox.SelectedValue),
-                articulosId: ArticuloscomboBox.SelectedIndex,
+                articulosId: Convert.ToInt32(FacturaIDnumericUpDown.Value),
                 eventoId: Convert.ToInt32(EventocomboBox.SelectedValue), 
                 descripcion: ArticuloscomboBox.Text,
                 tamaño: TamañotextBox.Text,
@@ -248,6 +262,7 @@ namespace FotosCopias.UI.Registro
                 total += Convert.ToDecimal(item.Importe);
             }
 
+            
             TotaltextBox.Text = Convert.ToString(total);
 
             //Limpiar();
@@ -264,6 +279,16 @@ namespace FotosCopias.UI.Registro
             }
 
             return paso;
+        }
+
+        private void PreciotextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (!Validar())
+                return;
+            int cantidad = Convert.ToInt32(CantidadtextBox.Text);
+            decimal precio = Convert.ToDecimal(PreciotextBox.Text);
+            decimal importe = cantidad * precio;
+            ImportetextBox.Text = importe.ToString();
         }
 
         private void Nuevobutton_Click(object sender, EventArgs e)
@@ -349,15 +374,7 @@ namespace FotosCopias.UI.Registro
             return (a != null);
         }
 
-        private void PreciotextBox_TextChanged(object sender, EventArgs e)
-        {
-            if (!Validar())
-                return;
-            int cantidad = Convert.ToInt32(CantidadtextBox.Text);
-            decimal precio = Convert.ToDecimal(PreciotextBox.Text);
-            decimal importe = cantidad * precio;
-            ImportetextBox.Text = importe.ToString();
-        }
+        
 
         private void rFactura_Load(object sender, EventArgs e)
         {

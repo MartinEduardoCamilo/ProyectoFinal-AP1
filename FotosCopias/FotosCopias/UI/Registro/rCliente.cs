@@ -252,7 +252,7 @@ namespace FotosCopias.UI.Registro
 
             if (paso)
             {
-                MessageBox.Show("Cliente Guardar", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Cliente Guardado", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Limpiar();
             }
             else

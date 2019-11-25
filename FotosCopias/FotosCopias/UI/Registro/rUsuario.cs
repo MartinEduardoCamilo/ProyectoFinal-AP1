@@ -21,8 +21,6 @@ namespace FotosCopias.UI.Registro
             
         }
 
-       
-
         private void Limpiar()
         {
             Myerror.Clear();
@@ -83,7 +81,7 @@ namespace FotosCopias.UI.Registro
                 nivel = "Administrador";
 
             if (FacturacheckBox.Checked)
-                nivel = "Contador";
+                nivel = "Facturador";
 
             if (almacencheckBox.Checked)
                 nivel = "Almacen";
