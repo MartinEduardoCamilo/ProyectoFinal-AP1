@@ -10,3 +10,9 @@ Esta ventana es la primera que veras el iniciar el programa. En ella deberás el
 La siguiente ventana que se le mostrará será la de Menú Principal, en ella encontraras diferentes registros para que puedas comenzar a utilizar el programa. Cabe destacar que los usuarios que ingresen en modo Administrador son los que tendrán el acceso completo al programa, en caso de que ingreses con un usuario con nivel de acceso distinto, solo podrás utilizar las consultas y el Registro de Facturación. Cabe destacar que debajo del menu abra un label donde se mostrara el nivel de acceso del usuario
 
 ![menu](https://user-images.githubusercontent.com/54560181/69509147-4a603800-0f0e-11ea-81e1-f8ec0f5f5660.jpg)
+
+# Usuarios
+
+![rUsuario](https://user-images.githubusercontent.com/54560181/69542192-4c9fb200-0f61-11ea-97bb-aff39bcc1013.jpg)
+
+Este registro permite crear usuarios los cuales podrás darle diferentes niveles de acceso al programa, los de nivel Administrador tendrán accedo a todo el programa mientras que los de nivel Factura solo podrán acceder a Facturación y los registro, pero tambien los usuario de Alamcen solo tendra acceso al registro de articulos. De igual manera, todos los campos deben ser llenados para que pueda ser registrado el usuario.
