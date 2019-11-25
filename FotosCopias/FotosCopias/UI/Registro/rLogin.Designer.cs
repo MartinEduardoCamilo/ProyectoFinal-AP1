@@ -44,6 +44,8 @@
             // 
             // userlabel
             // 
+            this.userlabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.userlabel.AutoSize = true;
             this.userlabel.Location = new System.Drawing.Point(13, 13);
             this.userlabel.Name = "userlabel";
@@ -53,6 +55,8 @@
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(13, 52);
             this.label2.Name = "label2";
@@ -62,6 +66,7 @@
             // 
             // usuariotextBox
             // 
+            this.usuariotextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.usuariotextBox.Location = new System.Drawing.Point(62, 6);
             this.usuariotextBox.Name = "usuariotextBox";
             this.usuariotextBox.Size = new System.Drawing.Size(137, 20);
@@ -69,6 +74,7 @@
             // 
             // contraseñatextBox
             // 
+            this.contraseñatextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.contraseñatextBox.Location = new System.Drawing.Point(85, 45);
             this.contraseñatextBox.Name = "contraseñatextBox";
             this.contraseñatextBox.Size = new System.Drawing.Size(114, 20);
@@ -87,6 +93,8 @@
             // 
             // Ingresarbutton
             // 
+            this.Ingresarbutton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Ingresarbutton.Location = new System.Drawing.Point(124, 82);
             this.Ingresarbutton.Name = "Ingresarbutton";
             this.Ingresarbutton.Size = new System.Drawing.Size(75, 23);
@@ -101,6 +109,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(236, 6);
             this.pictureBox1.Name = "pictureBox1";
@@ -123,6 +132,7 @@
             this.Controls.Add(this.userlabel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "rLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             ((System.ComponentModel.ISupportInitialize)(this.Myerror)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

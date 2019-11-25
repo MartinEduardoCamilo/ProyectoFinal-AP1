@@ -71,14 +71,14 @@
             "Apellido",
             "Cedula",
             "Email"});
-            this.FiltrocomboBox.Location = new System.Drawing.Point(49, 4);
+            this.FiltrocomboBox.Location = new System.Drawing.Point(49, 10);
             this.FiltrocomboBox.Name = "FiltrocomboBox";
             this.FiltrocomboBox.Size = new System.Drawing.Size(159, 21);
             this.FiltrocomboBox.TabIndex = 2;
             // 
             // CriteriotextBox
             // 
-            this.CriteriotextBox.Location = new System.Drawing.Point(260, 5);
+            this.CriteriotextBox.Location = new System.Drawing.Point(259, 10);
             this.CriteriotextBox.Name = "CriteriotextBox";
             this.CriteriotextBox.Size = new System.Drawing.Size(202, 20);
             this.CriteriotextBox.TabIndex = 3;
@@ -86,7 +86,7 @@
             // Buscarbutton
             // 
             this.Buscarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Buscarbutton.Image")));
-            this.Buscarbutton.Location = new System.Drawing.Point(479, 4);
+            this.Buscarbutton.Location = new System.Drawing.Point(479, 8);
             this.Buscarbutton.Name = "Buscarbutton";
             this.Buscarbutton.Size = new System.Drawing.Size(75, 23);
             this.Buscarbutton.TabIndex = 4;

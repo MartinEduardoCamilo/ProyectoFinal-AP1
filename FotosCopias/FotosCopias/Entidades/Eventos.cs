@@ -12,7 +12,7 @@ namespace FotosCopias.Entidades
     {
         [Key]
         public int EventoId { get; set; }
-        public int UsuarioId { get; set; }
+        
        
         public int ClienteId { get; set; }
        
@@ -23,16 +23,6 @@ namespace FotosCopias.Entidades
         public Eventos(int eventoId, int clienteId, string tipo, string direccion, DateTime fecha)
         {
             EventoId = eventoId;
-            ClienteId = clienteId;
-            Tipo = tipo;
-            Direccion = direccion;
-            Fecha = fecha;
-        }
-
-        public Eventos(int eventoId, int usuarioId, int clienteId, string tipo, string direccion, DateTime fecha)
-        {
-            EventoId = eventoId;
-            UsuarioId = usuarioId;
             ClienteId = clienteId;
             Tipo = tipo ?? throw new ArgumentNullException(nameof(tipo));
             Direccion = direccion ?? throw new ArgumentNullException(nameof(direccion));

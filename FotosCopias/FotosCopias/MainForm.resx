@@ -121,6 +121,16 @@
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="reportesToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADnSURBVFhH7Ze9DcIwEIVdMQIgsQEMEsEEtDAB2YAZ6FIj
+        SiqGgBEYgYIVELzDpX8V5d01edInOVIUf5J9sc8hW/AGXwIfcAdzkIxMfgINgQ14giNIRkzlZVauoPPD
+        eEYBtsAFmApIBbR+GA9boBimwBRICU7+T4kwBRbgBW4gKcFegiXISmjsgayE1iZMSmgJSFYgkNAUkAQS
+        tQI7cB6IB5B5RaJaYA9iH+tDL4GhEmxGTYFoJWgJmJah6Y8oO7mEKWB+GM2A6XFcFbaAXMkOfhgPW8D8
+        Ujr2BUUBZnO6BsXm1LA9d+4HQYKkGd0diAQAAAAASUVORK5CYII=
+</value>
+  </data>
   <data name="registroDeArticuloToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -266,16 +276,6 @@
         gr+3p9xhzA2nu4fg+P3G5aEh9h55BbgsqfIlrqBskdo3R/WV3TCD11x8yMotEbovWC09buqstfnE3h8x
         8kRiMhoimIi1fcsljm3gIj8QM/kZNqEhC52dDfBc5oJNuVj+uNm4YFNGPszErHLBplz8XMBIa1ywKQP/
         V8AFmvb/QTZht/EHBxq3eSeWDw8AAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="reportesToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADnSURBVFhH7Ze9DcIwEIVdMQIgsQEMEsEEtDAB2YAZ6FIj
-        SiqGgBEYgYIVELzDpX8V5d01edInOVIUf5J9sc8hW/AGXwIfcAdzkIxMfgINgQ14giNIRkzlZVauoPPD
-        eEYBtsAFmApIBbR+GA9boBimwBRICU7+T4kwBRbgBW4gKcFegiXISmjsgayE1iZMSmgJSFYgkNAUkAQS
-        tQI7cB6IB5B5RaJaYA9iH+tDL4GhEmxGTYFoJWgJmJah6Y8oO7mEKWB+GM2A6XFcFbaAXMkOfhgPW8D8
-        Ujr2BUUBZnO6BsXm1LA9d+4HQYKkGd0diAQAAAAASUVORK5CYII=
 </value>
   </data>
 </root>

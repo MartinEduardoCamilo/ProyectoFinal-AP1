@@ -57,6 +57,10 @@ namespace FotosCopias.UI.Registro
         {
             dataGridView.DataSource = null;
             dataGridView.DataSource = this.Detalles;
+            dataGridView.Columns[0].Visible = false;
+            dataGridView.Columns[1].Visible = false;
+            dataGridView.Columns[2].Visible = false;
+            dataGridView.Columns[3].Visible = false;
 
         }
 
@@ -75,6 +79,15 @@ namespace FotosCopias.UI.Registro
             TotaltextBox.Text = string.Empty;
             this.Detalles = new List<ArticuloDetalle>();
             CargarGrid();
+        }
+
+        public List<ArticuloDetalle> getDetalle(int id)
+        {
+            id = Convert.ToInt32(FacturaIDnumericUpDown.Value);
+            RepositorioBase<ArticuloDetalle> repositorio = new RepositorioBase<ArticuloDetalle>();
+            List<ArticuloDetalle> articulos = repositorio.GetList(d => d.DetalleArticuloId == id );
+            CargarGrid();
+            return articulos;
         }
 
         private void LlenaCampo(Articulos a)
@@ -115,8 +128,8 @@ namespace FotosCopias.UI.Registro
 
             if (this.Detalles.Count == 0)
             {
-                //Myerror.SetError(dataGridView, "Debe agregar al menos un producto.");
-                //paso = false;
+                Myerror.SetError(dataGridView, "Debe agregar al menos un producto.");
+                paso = false;
             }
 
             if (ClientecomboBox.SelectedIndex == -1)
@@ -187,11 +200,20 @@ namespace FotosCopias.UI.Registro
             {
                 Limpiar();
                 LlenaCampo(entrada);
+                getDetalle(ID);
             }
             else
             {
-                MessageBox.Show("Entrada de Productos no encontrada.");
+                MessageBox.Show("no encontrada.");
             }
+        }
+
+        private Decimal Importe()
+        {
+            int cantidad = Convert.ToInt32(CantidadtextBox.Text);
+            decimal precio = Convert.ToDecimal(PreciotextBox.Text);
+            decimal importe = cantidad * precio;
+            return importe;
         }
 
         private void Agregarbutton_Click(object sender, EventArgs e)
@@ -205,15 +227,18 @@ namespace FotosCopias.UI.Registro
             if (!ValidarAgregar())
                 return;
 
+            
+
             this.Detalles.Add(new ArticuloDetalle(
                 detalleArticuloId: 0,
-                clienteId: (int)ClientecomboBox.SelectedValue,
-                articulosId: (int)FacturaIDnumericUpDown.Value,
+                clienteId: Convert.ToInt32(ClientecomboBox.SelectedValue),
+                articulosId: ArticuloscomboBox.SelectedIndex,
+                eventoId: Convert.ToInt32(EventocomboBox.SelectedValue), 
                 descripcion: ArticuloscomboBox.Text,
                 tamaño: TamañotextBox.Text,
                 cantidad: Convert.ToInt32(CantidadtextBox.Text),
                 precio: Convert.ToDecimal(PreciotextBox.Text),
-                importe: Convert.ToDecimal(ImportetextBox.Text)
+                importe: Importe()
 
                 ));
             CargarGrid();

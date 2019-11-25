@@ -58,6 +58,59 @@ namespace FotosCopias.UI.Registro
 
         }
 
+        private bool ValidarNombre()
+        {
+            bool paso = true;
+            RepositorioBase<Clientes> repositorio = new RepositorioBase<Clientes>();
+            List<Clientes> clientes = repositorio.GetList(d => d.Nombre.Contains(NombretextBox.Text));
+
+            if (clientes != null)
+            {
+                paso = false;
+            }
+            return paso;
+        }
+
+        private bool ValidarCedula ()
+        {
+            bool paso = true;
+            RepositorioBase<Clientes> repositorio = new RepositorioBase<Clientes>();
+            List<Clientes> clientes = repositorio.GetList(d => d.Cedula.Contains(CedulamaskedTextBox.Text));
+
+            if (clientes != null)
+            {
+                paso = false;
+            }
+            return paso;
+        }
+
+        private bool ValidarTelefono()
+        {
+            bool paso = true;
+            RepositorioBase<Clientes> repositorio = new RepositorioBase<Clientes>();
+            List<Clientes> clientes = repositorio.GetList(d => d.Telefono.Contains(TelefonomaskedTextBox.Text));
+
+            if (clientes != null)
+            {
+                paso = false;
+            }
+            return paso;
+        }
+
+        private bool EmailValido()
+        {
+            bool paso = true;
+            RepositorioBase<Clientes> repositorio = new RepositorioBase<Clientes>();
+            List<Clientes> clientes = repositorio.GetList(d => d.Email.Contains(EmailtextBox.Text));
+
+            if (clientes != null)
+            {
+                paso = false;
+            }
+            return paso;
+        }
+
+
         private bool Validar()
         {
             bool paso = true;
@@ -70,6 +123,30 @@ namespace FotosCopias.UI.Registro
                 paso = false;
             }
 
+            if (ValidarNombre())
+            {
+                Myerror.SetError(NombretextBox, "Ya existe un cliente con el mismo nombre");
+                paso = false;
+            }
+
+            if (ValidarCedula())
+            {
+                Myerror.SetError(CedulamaskedTextBox, "Ya existe un cliente con la misma cedula");
+                paso = false;
+            }
+
+            if (ValidarTelefono())
+            {
+                Myerror.SetError(TelefonomaskedTextBox, "Ya existe un cliente con el mismo telefono");
+                paso = false;
+            }
+
+            if (EmailValido())
+            {
+                Myerror.SetError(EmailtextBox, "Ya existe un cliente con el mismo email");
+                paso = false;
+            }
+          
             if (string.IsNullOrWhiteSpace(ApellidotextBox.Text))
             {
                 Myerror.SetError(ApellidotextBox, "El campo apellido no debe estar vacio!");
@@ -77,14 +154,14 @@ namespace FotosCopias.UI.Registro
                 paso = false;
             }
 
-            if (string.IsNullOrWhiteSpace(CedulamaskedTextBox.Text.Replace("-", "")))
+            if (string.IsNullOrWhiteSpace(CedulamaskedTextBox.Text.Replace("-", "")) || CedulamaskedTextBox.MaskFull == false)
             {
                 Myerror.SetError(CedulamaskedTextBox, "El campo cedula no puede estar vacio!");
                 CedulamaskedTextBox.Focus();
                 paso = false;
             }
 
-            if (string.IsNullOrWhiteSpace(TelefonomaskedTextBox.Text.Replace("-", "")))
+            if (string.IsNullOrWhiteSpace(TelefonomaskedTextBox.Text.Replace("-", "")) || TelefonomaskedTextBox.MaskFull == false)
             {
                 Myerror.SetError(TelefonomaskedTextBox, "El campo teléfono no puede estar vacio!");
                 TelefonomaskedTextBox.Focus();
@@ -103,6 +180,12 @@ namespace FotosCopias.UI.Registro
                 Myerror.SetError(DirecciontextBox, "El campo dirección no puede estar vacio!");
                 DirecciontextBox.Focus();
                 paso = false;
+            }
+
+            if (!ValidarEmail(EmailtextBox.Text))
+            {
+                Myerror.SetError(EmailtextBox, "El formato del correo no es valido");
+                EmailtextBox.Focus();
             }
 
             return paso;
@@ -164,6 +247,8 @@ namespace FotosCopias.UI.Registro
                 }
                 paso = repositorio.Modificar(clientes);
             }
+
+            
 
             if (paso)
             {
@@ -250,11 +335,7 @@ namespace FotosCopias.UI.Registro
         private void EmailtextBox_TextChanged(object sender, EventArgs e)
         {
             Myerror.Clear();
-            if(!ValidarEmail(EmailtextBox.Text))
-            {
-                Myerror.SetError(EmailtextBox, "El formato del correo no es valido");
-                EmailtextBox.Focus();
-            }
+           
         }
     }
 }

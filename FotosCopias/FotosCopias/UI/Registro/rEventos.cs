@@ -169,20 +169,27 @@ namespace FotosCopias.UI.Registro
 
         private void ClienteidnumericUpDown_ValueChanged(object sender, EventArgs e)
         {
-            RepositorioBase<Clientes> repositorio = new RepositorioBase<Clientes>();
-   
+            RepositorioBase<Clientes> repositorio = new RepositorioBase<Clientes>(); 
             int id = (int)ClienteidnumericUpDown.Value;
-
-            if(id > 0)
+            if(Existes())
             {
                 ClientetextBox.Text = repositorio.Buscar(id).Nombre;
             }
             else
             {
+                Myerror.Clear();
+                Myerror.SetError(ClienteidnumericUpDown, "No existe este cliente");
                 ClientetextBox.Text = string.Empty;
             }
 
             
+        }
+
+        private bool Existes()
+        {
+            RepositorioBase<Clientes> repositorio = new RepositorioBase<Clientes>();
+            Clientes a = repositorio.Buscar((int)ClienteidnumericUpDown.Value);
+            return (a != null);
         }
     }
 }

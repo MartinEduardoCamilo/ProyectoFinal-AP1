@@ -55,6 +55,8 @@
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(13, 13);
             this.label1.Name = "label1";
@@ -64,6 +66,8 @@
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(13, 49);
             this.label2.Name = "label2";
@@ -73,6 +77,8 @@
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(13, 84);
             this.label3.Name = "label3";
@@ -82,6 +88,8 @@
             // 
             // label4
             // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(13, 121);
             this.label4.Name = "label4";
@@ -92,6 +100,8 @@
             // 
             // label5
             // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(13, 217);
             this.label5.Name = "label5";
@@ -101,6 +111,8 @@
             // 
             // IDusuarionumericUpDown
             // 
+            this.IDusuarionumericUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.IDusuarionumericUpDown.Location = new System.Drawing.Point(71, 6);
             this.IDusuarionumericUpDown.Name = "IDusuarionumericUpDown";
             this.IDusuarionumericUpDown.Size = new System.Drawing.Size(77, 20);
@@ -108,6 +120,8 @@
             // 
             // NombretextBox
             // 
+            this.NombretextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.NombretextBox.Location = new System.Drawing.Point(71, 42);
             this.NombretextBox.Name = "NombretextBox";
             this.NombretextBox.Size = new System.Drawing.Size(184, 20);
@@ -115,6 +129,8 @@
             // 
             // ContraseñatextBox
             // 
+            this.ContraseñatextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.ContraseñatextBox.Location = new System.Drawing.Point(86, 76);
             this.ContraseñatextBox.Name = "ContraseñatextBox";
             this.ContraseñatextBox.Size = new System.Drawing.Size(169, 20);
@@ -122,6 +138,8 @@
             // 
             // NivelflowLayoutPanel
             // 
+            this.NivelflowLayoutPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.NivelflowLayoutPanel.Controls.Add(this.admincheckBox);
             this.NivelflowLayoutPanel.Controls.Add(this.almacencheckBox);
             this.NivelflowLayoutPanel.Controls.Add(this.FacturacheckBox);
@@ -162,6 +180,8 @@
             // 
             // FechadateTimePicker
             // 
+            this.FechadateTimePicker.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.FechadateTimePicker.CustomFormat = "dd/MM/yyyy";
             this.FechadateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.FechadateTimePicker.Location = new System.Drawing.Point(55, 210);
@@ -171,8 +191,9 @@
             // 
             // Buscarbutton
             // 
+            this.Buscarbutton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.Buscarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Buscarbutton.Image")));
-            this.Buscarbutton.Location = new System.Drawing.Point(179, 6);
+            this.Buscarbutton.Location = new System.Drawing.Point(179, 3);
             this.Buscarbutton.Name = "Buscarbutton";
             this.Buscarbutton.Size = new System.Drawing.Size(76, 23);
             this.Buscarbutton.TabIndex = 10;
@@ -181,6 +202,7 @@
             // 
             // Nuevobutton
             // 
+            this.Nuevobutton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.Nuevobutton.Image = ((System.Drawing.Image)(resources.GetObject("Nuevobutton.Image")));
             this.Nuevobutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Nuevobutton.Location = new System.Drawing.Point(16, 272);
@@ -194,6 +216,7 @@
             // 
             // Guardarbutton
             // 
+            this.Guardarbutton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.Guardarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Guardarbutton.Image")));
             this.Guardarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Guardarbutton.Location = new System.Drawing.Point(103, 272);
@@ -207,6 +230,7 @@
             // 
             // Eliminarbutton3
             // 
+            this.Eliminarbutton3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.Eliminarbutton3.Image = ((System.Drawing.Image)(resources.GetObject("Eliminarbutton3.Image")));
             this.Eliminarbutton3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Eliminarbutton3.Location = new System.Drawing.Point(190, 272);

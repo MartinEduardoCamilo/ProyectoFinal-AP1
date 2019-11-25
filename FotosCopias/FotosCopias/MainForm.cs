@@ -50,6 +50,7 @@ namespace FotosCopias
 
         private void registroDeArticuloToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //if(Nivellabel.Text == "Almacen")
             rArticulos articulos = new rArticulos();
             articulos.MdiParent = this;
             articulos.Show();

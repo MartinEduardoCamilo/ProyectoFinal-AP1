@@ -42,6 +42,7 @@
             this.consultarEventosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Nivellabel = new System.Windows.Forms.Label();
+            this.facturaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -115,30 +116,31 @@
             this.consutasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.consultarClienteToolStripMenuItem,
             this.consultarArticulosToolStripMenuItem,
-            this.consultarEventosToolStripMenuItem});
+            this.consultarEventosToolStripMenuItem,
+            this.facturaToolStripMenuItem1});
             this.consutasToolStripMenuItem.Name = "consutasToolStripMenuItem";
-            this.consutasToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
-            this.consutasToolStripMenuItem.Text = "Consutas";
+            this.consutasToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
+            this.consutasToolStripMenuItem.Text = "Consutar";
             // 
             // consultarClienteToolStripMenuItem
             // 
             this.consultarClienteToolStripMenuItem.Name = "consultarClienteToolStripMenuItem";
-            this.consultarClienteToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
-            this.consultarClienteToolStripMenuItem.Text = "Consultar Cliente";
+            this.consultarClienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.consultarClienteToolStripMenuItem.Text = "Cliente";
             this.consultarClienteToolStripMenuItem.Click += new System.EventHandler(this.consultarClienteToolStripMenuItem_Click);
             // 
             // consultarArticulosToolStripMenuItem
             // 
             this.consultarArticulosToolStripMenuItem.Name = "consultarArticulosToolStripMenuItem";
-            this.consultarArticulosToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
-            this.consultarArticulosToolStripMenuItem.Text = "Consultar Articulos";
+            this.consultarArticulosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.consultarArticulosToolStripMenuItem.Text = "Articulos";
             this.consultarArticulosToolStripMenuItem.Click += new System.EventHandler(this.consultarArticulosToolStripMenuItem_Click);
             // 
             // consultarEventosToolStripMenuItem
             // 
             this.consultarEventosToolStripMenuItem.Name = "consultarEventosToolStripMenuItem";
-            this.consultarEventosToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
-            this.consultarEventosToolStripMenuItem.Text = "Consultar Eventos";
+            this.consultarEventosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.consultarEventosToolStripMenuItem.Text = "Eventos";
             this.consultarEventosToolStripMenuItem.Click += new System.EventHandler(this.consultarEventosToolStripMenuItem_Click);
             // 
             // reportesToolStripMenuItem
@@ -156,6 +158,12 @@
             this.Nivellabel.Name = "Nivellabel";
             this.Nivellabel.Size = new System.Drawing.Size(0, 13);
             this.Nivellabel.TabIndex = 2;
+            // 
+            // facturaToolStripMenuItem1
+            // 
+            this.facturaToolStripMenuItem1.Name = "facturaToolStripMenuItem1";
+            this.facturaToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.facturaToolStripMenuItem1.Text = "Factura";
             // 
             // MainForm
             // 
@@ -192,6 +200,7 @@
         private System.Windows.Forms.ToolStripMenuItem consultarEventosToolStripMenuItem;
         private System.Windows.Forms.Label Nivellabel;
         private System.Windows.Forms.ToolStripMenuItem usuarioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem facturaToolStripMenuItem1;
     }
 }
 

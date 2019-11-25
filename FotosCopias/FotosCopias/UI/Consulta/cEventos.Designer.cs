@@ -78,7 +78,7 @@
             "Todo",
             "Id",
             "Tipo"});
-            this.FiltrocomboBox.Location = new System.Drawing.Point(345, 4);
+            this.FiltrocomboBox.Location = new System.Drawing.Point(345, 5);
             this.FiltrocomboBox.Name = "FiltrocomboBox";
             this.FiltrocomboBox.Size = new System.Drawing.Size(121, 21);
             this.FiltrocomboBox.TabIndex = 3;
@@ -86,7 +86,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(485, 12);
+            this.label4.Location = new System.Drawing.Point(486, 13);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(39, 13);
             this.label4.TabIndex = 4;
@@ -94,7 +94,7 @@
             // 
             // CriteriotextBox
             // 
-            this.CriteriotextBox.Location = new System.Drawing.Point(531, 5);
+            this.CriteriotextBox.Location = new System.Drawing.Point(531, 6);
             this.CriteriotextBox.Name = "CriteriotextBox";
             this.CriteriotextBox.Size = new System.Drawing.Size(247, 20);
             this.CriteriotextBox.TabIndex = 5;
@@ -102,7 +102,7 @@
             // Buscarbutton
             // 
             this.Buscarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Buscarbutton.Image")));
-            this.Buscarbutton.Location = new System.Drawing.Point(802, 2);
+            this.Buscarbutton.Location = new System.Drawing.Point(802, 4);
             this.Buscarbutton.Name = "Buscarbutton";
             this.Buscarbutton.Size = new System.Drawing.Size(75, 23);
             this.Buscarbutton.TabIndex = 6;
@@ -150,7 +150,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(900, 503);
+            this.ClientSize = new System.Drawing.Size(892, 503);
             this.Controls.Add(this.Imprimirbutton);
             this.Controls.Add(this.EventodataGridView);
             this.Controls.Add(this.HastadateTimePicker);
