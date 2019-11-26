@@ -1,5 +1,5 @@
-﻿using FotosCopias.BLL;
-using FotosCopias.Entidades;
+﻿using BLL;
+using Entidades;
 using FotosCopias.UI.Consulta;
 using FotosCopias.UI.Registro;
 using System;
@@ -154,6 +154,13 @@ namespace FotosCopias
             rLogin login = new rLogin();
             Dispose();
             login.ShowDialog();
+        }
+
+        private void facturaToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            cFactura factura = new cFactura();
+            factura.MdiParent = this;
+            factura.Show();
         }
     }
 }

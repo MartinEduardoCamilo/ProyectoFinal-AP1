@@ -1,4 +1,4 @@
-﻿using FotosCopias.DAL;
+﻿using DAL;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -7,7 +7,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FotosCopias.BLL
+namespace BLL
 {
     public class RepositorioBase<T> : IDisposable, IRepository<T> where T : class
     {

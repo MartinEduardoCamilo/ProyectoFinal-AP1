@@ -1,5 +1,5 @@
-﻿using FotosCopias.BLL;
-using FotosCopias.Entidades;
+﻿using BLL;
+using Entidades;
 using FotosCopias.UI.Reportes;
 using System;
 using System.Collections.Generic;

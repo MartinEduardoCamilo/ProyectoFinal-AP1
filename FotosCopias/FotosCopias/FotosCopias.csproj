@@ -72,17 +72,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BLL\FacturaBLL.cs" />
-    <Compile Include="BLL\IRepository.cs" />
-    <Compile Include="BLL\RepositorioBase.cs" />
-    <Compile Include="DAL\Contexto.cs" />
-    <Compile Include="Entidades\Articulos.cs" />
-    <Compile Include="Entidades\Clientes.cs" />
-    <Compile Include="Entidades\ArticuloDetalle.cs" />
-    <Compile Include="Entidades\Eventos.cs" />
-    <Compile Include="Entidades\Factura.cs" />
-    <Compile Include="Entidades\FacturaDetalle.cs" />
-    <Compile Include="Entidades\Usuarios.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,6 +97,12 @@
     </Compile>
     <Compile Include="UI\Consulta\cEventos.Designer.cs">
       <DependentUpon>cEventos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Consulta\cFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Consulta\cFactura.Designer.cs">
+      <DependentUpon>cFactura.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Registro\rArticulos.cs">
       <SubType>Form</SubType>
@@ -187,6 +182,12 @@
       <DependentUpon>FacturaCrystalReport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="UI\Reportes\FacturaReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Reportes\FacturaReports.Designer.cs">
+      <DependentUpon>FacturaReports.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -207,6 +208,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Consulta\cEventos.resx">
       <DependentUpon>cEventos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Consulta\cFactura.resx">
+      <DependentUpon>cFactura.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Registro\rArticulos.resx">
       <DependentUpon>rArticulos.cs</DependentUpon>
@@ -251,6 +255,9 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>FacturaCrystalReport.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Reportes\FacturaReports.resx">
+      <DependentUpon>FacturaReports.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -265,7 +272,16 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{A84F7572-2839-4E3C-96C2-05C8A67F4F20}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entidades\Entidades.csproj">
+      <Project>{B0AA11BF-FBB1-40A8-8C6B-D17C39363640}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\fotografia-estudio-logo_1057-436.jpg" />
     <Content Include="Resources\search_102938.png" />

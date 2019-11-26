@@ -1,5 +1,6 @@
-﻿using FotosCopias.BLL;
-using FotosCopias.Entidades;
+﻿using BLL;
+using Entidades;
+using FotosCopias.UI.Reportes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,7 +19,7 @@ namespace FotosCopias.UI.Registro
         public List<ArticuloDetalle> Detalles { get; set; }
         public rFactura()
         {
-           
+
             InitializeComponent();
             this.Detalles = new List<ArticuloDetalle>();
         }
@@ -85,21 +86,17 @@ namespace FotosCopias.UI.Registro
         {
             id = Convert.ToInt32(FacturaIDnumericUpDown.Value);
             RepositorioBase<ArticuloDetalle> repositorio = new RepositorioBase<ArticuloDetalle>();
-            List<ArticuloDetalle> articulos = repositorio.GetList(d => d.DetalleArticuloId == id );
+            List<ArticuloDetalle> articulos = repositorio.GetList(d => d.DetalleArticuloId == id);
             this.Detalles = articulos;
             CargarGrid();
             return articulos;
         }
 
-        private void LlenaCampo(Articulos a, ArticuloDetalle ad)
+        private void LlenaCampo(Articulos a)
         {
             FacturaIDnumericUpDown.Value = a.ArticulosId;
             this.Detalles = a.DetalleArticulos;
-            TamañotextBox.Text = ad.Tamaño;
-            CantidadtextBox.Text = ad.Cantidad.ToString();
-            PreciotextBox.Text = ad.Precio.ToString();
-            ImportetextBox.Text = ad.Importe.ToString();
-            dateTimePicker1.Value = ad.Fecha;
+            
             CargarGrid();
         }
         private Articulos LlenaClase()
@@ -134,8 +131,8 @@ namespace FotosCopias.UI.Registro
 
             if (this.Detalles.Count == 0)
             {
-                Myerror.SetError(dataGridView, "Debe agregar al menos un producto.");
-                paso = false;
+                //Myerror.SetError(dataGridView, "Debe agregar al menos un producto.");
+                //  paso = false;
             }
 
             if (ClientecomboBox.SelectedIndex == -1)
@@ -214,12 +211,11 @@ namespace FotosCopias.UI.Registro
             Articulos entrada = new Articulos();
             FacturaBLL repositorio = new FacturaBLL();
             entrada = repositorio.Buscar(ID);
-            ArticuloDetalle articuloDetalle = new ArticuloDetalle();
 
             if (entrada != null)
             {
                 Limpiar();
-                LlenaCampo(entrada,articuloDetalle);
+                LlenaCampo(entrada);
                 //getDetalle(ID);
             }
             else
@@ -247,13 +243,13 @@ namespace FotosCopias.UI.Registro
             if (!ValidarAgregar())
                 return;
 
-            
+
 
             this.Detalles.Add(new ArticuloDetalle(
                 detalleArticuloId: 0,
                 clienteId: Convert.ToInt32(ClientecomboBox.SelectedValue),
                 articulosId: Convert.ToInt32(FacturaIDnumericUpDown.Value),
-                eventoId: Convert.ToInt32(EventocomboBox.SelectedValue), 
+                eventoId: Convert.ToInt32(EventocomboBox.SelectedValue),
                 descripcion: ArticuloscomboBox.Text,
                 tamaño: TamañotextBox.Text,
                 cantidad: Convert.ToInt32(CantidadtextBox.Text),
@@ -262,7 +258,7 @@ namespace FotosCopias.UI.Registro
 
                 ));
             CargarGrid();
-            
+
             foreach (var item in this.Detalles)
             {
                 total += Convert.ToDecimal(item.Importe);
@@ -354,7 +350,9 @@ namespace FotosCopias.UI.Registro
 
         private void Imprimirbutton_Click(object sender, EventArgs e)
         {
-
+            List<ArticuloDetalle> listado = new List<ArticuloDetalle>();
+            FacturaReports reporte = new FacturaReports(listado);
+            reporte.ShowDialog();
         }
 
         private void Removerbutton_Click(object sender, EventArgs e)
@@ -376,7 +374,7 @@ namespace FotosCopias.UI.Registro
             return (a != null);
         }
 
-        
+
 
         private void rFactura_Load(object sender, EventArgs e)
         {
@@ -384,5 +382,46 @@ namespace FotosCopias.UI.Registro
             EventoCombo();
             ArticuloCombo();
         }
+
+        private void CantidadtextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void PreciotextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
     }
 }
+

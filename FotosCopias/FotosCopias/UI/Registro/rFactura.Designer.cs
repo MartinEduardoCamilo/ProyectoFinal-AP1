@@ -274,6 +274,7 @@
             this.CantidadtextBox.Name = "CantidadtextBox";
             this.CantidadtextBox.Size = new System.Drawing.Size(60, 20);
             this.CantidadtextBox.TabIndex = 17;
+            this.CantidadtextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CantidadtextBox_KeyPress);
             // 
             // PreciotextBox
             // 
@@ -285,6 +286,7 @@
             this.PreciotextBox.Size = new System.Drawing.Size(76, 20);
             this.PreciotextBox.TabIndex = 18;
             this.PreciotextBox.TextChanged += new System.EventHandler(this.PreciotextBox_TextChanged);
+            this.PreciotextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PreciotextBox_KeyPress);
             // 
             // ImportetextBox
             // 

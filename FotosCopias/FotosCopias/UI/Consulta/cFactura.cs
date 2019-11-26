@@ -14,23 +14,24 @@ using System.Windows.Forms;
 
 namespace FotosCopias.UI.Consulta
 {
-    public partial class cArticulos : Form
+    public partial class cFactura : Form
     {
-        private List<Articulos> listado;
-        public cArticulos()
+        //private List<ArticuloDetalle> Listado;
+        public cFactura()
         {
             InitializeComponent();
         }
 
         private void Buscarbutton_Click(object sender, EventArgs e)
         {
-            RepositorioBase<Articulos> repositorio = new RepositorioBase<Articulos>();
-            var listado = new List<Articulos>();
+
+            RepositorioBase<ArticuloDetalle> repositorio = new RepositorioBase<ArticuloDetalle>();
+            var listado = new List<ArticuloDetalle>();
 
 
             if (CriteriotextBox.Text.Trim().Length > 0)
             {
-                switch (FiltrocomboBox.SelectedIndex)
+                switch (comboBox1.SelectedIndex)
                 {
                     case 0:
                         listado = repositorio.GetList(p => true);
@@ -38,27 +39,26 @@ namespace FotosCopias.UI.Consulta
 
                     case 1:
                         int id = Convert.ToInt32(CriteriotextBox.Text);
-                        listado = repositorio.GetList(p => p.ArticulosId == id);
-                        break;
-                    case 2:
-                        listado = repositorio.GetList(p => p.Descripcion.Contains(CriteriotextBox.Text));
+                        listado = repositorio.GetList(p => p.EventoId == id);
                         break;
                     
-                }
 
+                }
+                //listado = listado.Where(c => c.).ToList();
             }
             else
             {
                 listado = repositorio.GetList(p => true);
             }
 
-            ArticulodataGridView.DataSource = null;
-            ArticulodataGridView.DataSource = listado;
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = listado;
         }
 
         private void Imprimirbutton_Click(object sender, EventArgs e)
         {
-            ArticulosReports reporte = new ArticulosReports(listado);
+            List<ArticuloDetalle> listado = new List<ArticuloDetalle>();
+            FacturaReports reporte = new FacturaReports(listado);
             reporte.ShowDialog();
         }
     }

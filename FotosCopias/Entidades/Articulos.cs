@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FotosCopias.Entidades
+namespace Entidades
 {
     public class Articulos
     {

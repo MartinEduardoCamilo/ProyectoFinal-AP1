@@ -1,5 +1,5 @@
-﻿using FotosCopias.BLL;
-using FotosCopias.Entidades;
+﻿using BLL;
+using Entidades;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -291,7 +291,7 @@ namespace FotosCopias.UI.Registro
         private void NombretextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             Myerror.Clear();
-            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar == (char)Keys.Back))
             {
                 Myerror.SetError(NombretextBox, "Solo se permiten letras");
                 NombretextBox.Focus();
@@ -303,7 +303,7 @@ namespace FotosCopias.UI.Registro
         private void ApellidotextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             Myerror.Clear();
-            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar == (char)Keys.Back))
             {
                 Myerror.SetError(ApellidotextBox, "Solo se permiten letras");
                 ApellidotextBox.Focus();
