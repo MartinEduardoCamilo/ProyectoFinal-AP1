@@ -1,4 +1,4 @@
-﻿using System;
+﻿    using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -15,17 +15,22 @@ namespace Entidades
         public int DetalleFacturaId { get; set; }
         public int FacturaId { get; set; }
         public int ArticulosId { get; set; }
-        public string Tamaño { get; set; }
+        public int Tamaño { get; set; }
         public int Cantidad { get; set; }
         public decimal Precio { get; set; }
         public decimal Importe { get; set; }
 
-        public DetalleFactura(int detalleFacturaId, int facturaId, int articulosId, string tamaño, int cantidad, decimal precio, decimal importe)
+        public DetalleFactura()
+        {
+
+        }
+
+        public DetalleFactura(int detalleFacturaId, int facturaId, int articulosId, int tamaño, int cantidad, decimal precio, decimal importe)
         {
             DetalleFacturaId = detalleFacturaId;
             FacturaId = facturaId;
             ArticulosId = articulosId;
-            Tamaño = tamaño ?? throw new ArgumentNullException(nameof(tamaño));
+            Tamaño = tamaño;
             Cantidad = cantidad;
             Precio = precio;
             Importe = importe;

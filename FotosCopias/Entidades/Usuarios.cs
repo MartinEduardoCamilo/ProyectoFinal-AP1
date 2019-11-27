@@ -25,5 +25,14 @@ namespace Entidades
             Contraseña = string.Empty;
             FechaIngreso = DateTime.Now;
         }
+
+        public Usuarios(int usuarioId, string nombre, string usuario, string contraseña, DateTime fechaIngreso)
+        {
+            UsuarioId = usuarioId;
+            Nombre = nombre ?? throw new ArgumentNullException(nameof(nombre));
+            Usuario = usuario ?? throw new ArgumentNullException(nameof(usuario));
+            Contraseña = contraseña ?? throw new ArgumentNullException(nameof(contraseña));
+            FechaIngreso = fechaIngreso;
+        }
     }
 }

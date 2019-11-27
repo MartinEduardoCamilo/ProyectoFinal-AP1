@@ -55,6 +55,7 @@ namespace FotoStudio.UI.Registro
             TelefonomaskedTextBox.Text = c.Telefono;
             EmailtextBox.Text = c.Email;
             DirecciontextBox.Text = c.Direccion;
+            ConsumotextBox.Text = c.Consumo.ToString();
 
         }
 

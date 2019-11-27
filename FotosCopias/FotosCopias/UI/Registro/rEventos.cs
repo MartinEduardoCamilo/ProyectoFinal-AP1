@@ -23,7 +23,6 @@ namespace FotoStudio.UI.Registro
         {
             Myerror.Clear();
             EventoIdnumericUpDown.Value = 0;
-            ClienteidnumericUpDown.Value = 0;
             TipotextBox.Text = string.Empty;
             DirecciontextBox.Text = string.Empty;
             FechadateTimePicker.Value = DateTime.Now;
@@ -32,7 +31,7 @@ namespace FotoStudio.UI.Registro
         {
             Eventos e = new Eventos();
             e.EventoId = (int)EventoIdnumericUpDown.Value;
-            e.ClienteId = (int)ClienteidnumericUpDown.Value;
+            e.ClienteId = ClientescomboBox.SelectedIndex;
             e.Tipo = TipotextBox.Text;
             e.Direccion = DirecciontextBox.Text;
             e.Fecha = FechadateTimePicker.Value;
@@ -43,7 +42,7 @@ namespace FotoStudio.UI.Registro
         private void LlenaCampo(Eventos e)
         {
             EventoIdnumericUpDown.Value = e.EventoId;
-            ClienteidnumericUpDown.Value = e.ClienteId;
+            ClientescomboBox.SelectedIndex = e.ClienteId;
             TipotextBox.Text = e.Tipo;
             DirecciontextBox.Text = e.Direccion;
             FechadateTimePicker.Value = e.Fecha;
@@ -167,29 +166,20 @@ namespace FotoStudio.UI.Registro
             }
         }
 
-        private void ClienteidnumericUpDown_ValueChanged(object sender, EventArgs e)
-        {
-            RepositorioBase<Clientes> repositorio = new RepositorioBase<Clientes>(); 
-            int id = (int)ClienteidnumericUpDown.Value;
-            if(Existes())
-            {
-                ClientetextBox.Text = repositorio.Buscar(id).Nombre;
-            }
-            else
-            {
-                Myerror.Clear();
-                Myerror.SetError(ClienteidnumericUpDown, "No existe este cliente");
-                ClientetextBox.Text = string.Empty;
-            }
-
-            
-        }
-
-        private bool Existes()
+        private void CargarComboCliente()
         {
             RepositorioBase<Clientes> repositorio = new RepositorioBase<Clientes>();
-            Clientes a = repositorio.Buscar((int)ClienteidnumericUpDown.Value);
-            return (a != null);
+            List<Clientes> lista = new List<Clientes>();
+            lista = repositorio.GetList(p => true);
+            ClientescomboBox.DataSource = lista;
+            ClientescomboBox.ValueMember = "ClienteId";
+            ClientescomboBox.DisplayMember = "Nombre";
+
+        }
+
+        private void rEventos_Load(object sender, EventArgs e)
+        {
+            CargarComboCliente();
         }
     }
 }

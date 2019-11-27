@@ -64,7 +64,7 @@ namespace FotoStudio.UI.Registro
                 nombre = eventos.Tipo;
             return nombre;
         }
-
+ 
         private string GetDescripcion(int id)
         {
             string nombre;
@@ -130,6 +130,7 @@ namespace FotoStudio.UI.Registro
             ClientescomboBox.DataSource = lista;
             ClientescomboBox.ValueMember = "ClienteId";
             ClientescomboBox.DisplayMember = "Nombre";
+            
         }
 
         private void CargarComboEventos()
@@ -138,12 +139,12 @@ namespace FotoStudio.UI.Registro
             List<Eventos> lista = new List<Eventos>();
             lista = repositorio.GetList(p => true);
             EventoscomboBox.DataSource = lista;
-            
-            EventoscomboBox.ValueMember = "ClienteId";
-            
-            
+            EventoscomboBox.ValueMember = "EventoId";
             EventoscomboBox.DisplayMember = "Tipo";
         }
+
+        
+
 
         private void LlenaCampos(Facturas facturas)
         {
@@ -239,9 +240,27 @@ namespace FotoStudio.UI.Registro
                 paso = false;
             }
 
+            if (string.IsNullOrWhiteSpace(TamañotextBox.Text))
+            {
+                Myerror.SetError(TamañotextBox, "Este campo no puede estar vacio.");
+                paso = false;
+            }
+
+            if (Convert.ToInt32(PreciotextBox.Text) <= 0)
+            {
+                Myerror.SetError(PreciotextBox, "La precio no puede ser cero ni menor que cero.");
+                paso = false;
+            }
+
             if (Convert.ToInt32(CantidadtextBox.Text) <= 0)
             {
                 Myerror.SetError(CantidadtextBox, "La cantidad no puede ser cero ni menor que cero.");
+                paso = false;
+            }
+
+            if (Convert.ToInt32(TamañotextBox.Text) <= 0)
+            {
+                Myerror.SetError(TamañotextBox, "La Tamaño no puede ser cero ni menor que cero.");
                 paso = false;
             }
 
@@ -257,10 +276,12 @@ namespace FotoStudio.UI.Registro
 
         private void Buscarbutton_Click(object sender, EventArgs e)
         {
-            int ID = Convert.ToInt32(FacturaIDnumericUpDown.Value);
+            int id = 0;
+            id = (int)FacturaIDnumericUpDown.Value;
             Facturas facturas = new Facturas();
             FacturaBLL repositorio = new FacturaBLL();
-            facturas = repositorio.Buscar(ID);
+
+            facturas = repositorio.Buscar(id);
 
             if (facturas != null)
             {
@@ -288,7 +309,7 @@ namespace FotoStudio.UI.Registro
                         detalleFacturaId: 0,
                         facturaId: Convert.ToInt32(FacturaIDnumericUpDown.Value),
                         articulosId: Convert.ToInt32(ArticuloscomboBox.SelectedValue),
-                        tamaño: TamañotextBox.Text,
+                        tamaño: Convert.ToInt32(TamañotextBox.Text),
                         cantidad: Convert.ToInt32(CantidadtextBox.Text),
                         precio: Convert.ToDecimal(PreciotextBox.Text),
                         importe: Convert.ToDecimal(ImportetextBox.Text)
@@ -385,7 +406,7 @@ namespace FotoStudio.UI.Registro
 
         private void Imprimirbutton_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void PreciotextBox_TextChanged(object sender, EventArgs e)
@@ -419,6 +440,60 @@ namespace FotoStudio.UI.Registro
                 }
             }
             
+        }
+
+        private void TamañotextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            if (Char.IsControl(e.KeyChar)) //permitir teclas de control como retroceso
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                //el resto de teclas pulsadas se desactivan
+                e.Handled = true;
+            }
+        }
+
+        private void CantidadtextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            if (Char.IsControl(e.KeyChar)) //permitir teclas de control como retroceso
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                //el resto de teclas pulsadas se desactivan
+                e.Handled = true;
+            }
+        }
+
+        private void PreciotextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            if (Char.IsControl(e.KeyChar)) //permitir teclas de control como retroceso
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                //el resto de teclas pulsadas se desactivan
+                e.Handled = true;
+            }
         }
     }
 }

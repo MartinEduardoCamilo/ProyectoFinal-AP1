@@ -41,6 +41,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.EventoscomboBox = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.TamañotextBox = new System.Windows.Forms.TextBox();
             this.Agregarbutton = new System.Windows.Forms.Button();
             this.ImportetextBox = new System.Windows.Forms.TextBox();
             this.PreciotextBox = new System.Windows.Forms.TextBox();
@@ -60,7 +61,6 @@
             this.Guardarbutton = new System.Windows.Forms.Button();
             this.Eliminarbutton = new System.Windows.Forms.Button();
             this.Imprimirbutton = new System.Windows.Forms.Button();
-            this.TamañotextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.Myerror)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FacturaIDnumericUpDown)).BeginInit();
             this.panel1.SuspendLayout();
@@ -173,6 +173,14 @@
             this.panel1.Size = new System.Drawing.Size(502, 52);
             this.panel1.TabIndex = 9;
             // 
+            // TamañotextBox
+            // 
+            this.TamañotextBox.Location = new System.Drawing.Point(85, 20);
+            this.TamañotextBox.Name = "TamañotextBox";
+            this.TamañotextBox.Size = new System.Drawing.Size(60, 20);
+            this.TamañotextBox.TabIndex = 11;
+            this.TamañotextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TamañotextBox_KeyPress);
+            // 
             // Agregarbutton
             // 
             this.Agregarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Agregarbutton.Image")));
@@ -190,6 +198,7 @@
             // 
             this.ImportetextBox.Location = new System.Drawing.Point(327, 17);
             this.ImportetextBox.Name = "ImportetextBox";
+            this.ImportetextBox.ReadOnly = true;
             this.ImportetextBox.Size = new System.Drawing.Size(61, 20);
             this.ImportetextBox.TabIndex = 9;
             // 
@@ -200,6 +209,7 @@
             this.PreciotextBox.Size = new System.Drawing.Size(63, 20);
             this.PreciotextBox.TabIndex = 8;
             this.PreciotextBox.TextChanged += new System.EventHandler(this.PreciotextBox_TextChanged);
+            this.PreciotextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PreciotextBox_KeyPress);
             // 
             // CantidadtextBox
             // 
@@ -208,6 +218,7 @@
             this.CantidadtextBox.Size = new System.Drawing.Size(61, 20);
             this.CantidadtextBox.TabIndex = 7;
             this.CantidadtextBox.TextChanged += new System.EventHandler(this.CantidadtextBox_TextChanged);
+            this.CantidadtextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CantidadtextBox_KeyPress);
             // 
             // ArticuloscomboBox
             // 
@@ -370,13 +381,6 @@
             this.Imprimirbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Imprimirbutton.UseVisualStyleBackColor = true;
             this.Imprimirbutton.Click += new System.EventHandler(this.Imprimirbutton_Click);
-            // 
-            // TamañotextBox
-            // 
-            this.TamañotextBox.Location = new System.Drawing.Point(85, 20);
-            this.TamañotextBox.Name = "TamañotextBox";
-            this.TamañotextBox.Size = new System.Drawing.Size(60, 20);
-            this.TamañotextBox.TabIndex = 11;
             // 
             // rFactura
             // 

@@ -49,6 +49,8 @@
             this.Guardarbutton = new System.Windows.Forms.Button();
             this.Eliminarbutton = new System.Windows.Forms.Button();
             this.Myerror = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label8 = new System.Windows.Forms.Label();
+            this.ConsumotextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.ClienteIDnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Myerror)).BeginInit();
             this.SuspendLayout();
@@ -124,7 +126,7 @@
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(14, 259);
+            this.label7.Location = new System.Drawing.Point(14, 250);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(55, 13);
             this.label7.TabIndex = 6;
@@ -199,7 +201,7 @@
             // 
             this.DirecciontextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.DirecciontextBox.Location = new System.Drawing.Point(70, 259);
+            this.DirecciontextBox.Location = new System.Drawing.Point(70, 247);
             this.DirecciontextBox.Multiline = true;
             this.DirecciontextBox.Name = "DirecciontextBox";
             this.DirecciontextBox.Size = new System.Drawing.Size(188, 73);
@@ -226,7 +228,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Nuevobutton.Image = ((System.Drawing.Image)(resources.GetObject("Nuevobutton.Image")));
             this.Nuevobutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Nuevobutton.Location = new System.Drawing.Point(17, 344);
+            this.Nuevobutton.Location = new System.Drawing.Point(17, 388);
             this.Nuevobutton.Name = "Nuevobutton";
             this.Nuevobutton.Size = new System.Drawing.Size(79, 60);
             this.Nuevobutton.TabIndex = 16;
@@ -241,7 +243,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Guardarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Guardarbutton.Image")));
             this.Guardarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Guardarbutton.Location = new System.Drawing.Point(103, 344);
+            this.Guardarbutton.Location = new System.Drawing.Point(103, 388);
             this.Guardarbutton.Name = "Guardarbutton";
             this.Guardarbutton.Size = new System.Drawing.Size(82, 60);
             this.Guardarbutton.TabIndex = 17;
@@ -256,7 +258,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Eliminarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Eliminarbutton.Image")));
             this.Eliminarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Eliminarbutton.Location = new System.Drawing.Point(199, 345);
+            this.Eliminarbutton.Location = new System.Drawing.Point(199, 389);
             this.Eliminarbutton.Name = "Eliminarbutton";
             this.Eliminarbutton.Size = new System.Drawing.Size(82, 59);
             this.Eliminarbutton.TabIndex = 18;
@@ -269,11 +271,30 @@
             // 
             this.Myerror.ContainerControl = this;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(17, 345);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(45, 13);
+            this.label8.TabIndex = 19;
+            this.label8.Text = "Cosumo";
+            // 
+            // ConsumotextBox
+            // 
+            this.ConsumotextBox.Location = new System.Drawing.Point(68, 338);
+            this.ConsumotextBox.Name = "ConsumotextBox";
+            this.ConsumotextBox.ReadOnly = true;
+            this.ConsumotextBox.Size = new System.Drawing.Size(100, 20);
+            this.ConsumotextBox.TabIndex = 20;
+            // 
             // rCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(314, 416);
+            this.ClientSize = new System.Drawing.Size(314, 460);
+            this.Controls.Add(this.ConsumotextBox);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.Eliminarbutton);
             this.Controls.Add(this.Guardarbutton);
             this.Controls.Add(this.Nuevobutton);
@@ -323,5 +344,7 @@
         private System.Windows.Forms.Button Guardarbutton;
         private System.Windows.Forms.Button Eliminarbutton;
         private System.Windows.Forms.ErrorProvider Myerror;
+        private System.Windows.Forms.TextBox ConsumotextBox;
+        private System.Windows.Forms.Label label8;
     }
 }
