@@ -43,6 +43,7 @@
             this.facturaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Nivellabel = new System.Windows.Forms.Label();
+            this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -117,7 +118,8 @@
             this.consultarClienteToolStripMenuItem,
             this.consultarArticulosToolStripMenuItem,
             this.consultarEventosToolStripMenuItem,
-            this.facturaToolStripMenuItem1});
+            this.facturaToolStripMenuItem1,
+            this.usuariosToolStripMenuItem});
             this.consutasToolStripMenuItem.Name = "consutasToolStripMenuItem";
             this.consutasToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
             this.consutasToolStripMenuItem.Text = "Consutar";
@@ -125,28 +127,28 @@
             // consultarClienteToolStripMenuItem
             // 
             this.consultarClienteToolStripMenuItem.Name = "consultarClienteToolStripMenuItem";
-            this.consultarClienteToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
+            this.consultarClienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.consultarClienteToolStripMenuItem.Text = "Cliente";
             this.consultarClienteToolStripMenuItem.Click += new System.EventHandler(this.consultarClienteToolStripMenuItem_Click);
             // 
             // consultarArticulosToolStripMenuItem
             // 
             this.consultarArticulosToolStripMenuItem.Name = "consultarArticulosToolStripMenuItem";
-            this.consultarArticulosToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
+            this.consultarArticulosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.consultarArticulosToolStripMenuItem.Text = "Articulos";
             this.consultarArticulosToolStripMenuItem.Click += new System.EventHandler(this.consultarArticulosToolStripMenuItem_Click);
             // 
             // consultarEventosToolStripMenuItem
             // 
             this.consultarEventosToolStripMenuItem.Name = "consultarEventosToolStripMenuItem";
-            this.consultarEventosToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
+            this.consultarEventosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.consultarEventosToolStripMenuItem.Text = "Eventos";
             this.consultarEventosToolStripMenuItem.Click += new System.EventHandler(this.consultarEventosToolStripMenuItem_Click);
             // 
             // facturaToolStripMenuItem1
             // 
             this.facturaToolStripMenuItem1.Name = "facturaToolStripMenuItem1";
-            this.facturaToolStripMenuItem1.Size = new System.Drawing.Size(121, 22);
+            this.facturaToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.facturaToolStripMenuItem1.Text = "Factura";
             this.facturaToolStripMenuItem1.Click += new System.EventHandler(this.facturaToolStripMenuItem1_Click);
             // 
@@ -166,6 +168,13 @@
             this.Nivellabel.Name = "Nivellabel";
             this.Nivellabel.Size = new System.Drawing.Size(0, 13);
             this.Nivellabel.TabIndex = 2;
+            // 
+            // usuariosToolStripMenuItem
+            // 
+            this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.usuariosToolStripMenuItem.Text = "Usuarios";
+            this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -209,6 +218,7 @@
         private System.Windows.Forms.Label Nivellabel;
         private System.Windows.Forms.ToolStripMenuItem usuarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem facturaToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
     }
 }
 

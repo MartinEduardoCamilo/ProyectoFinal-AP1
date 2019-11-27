@@ -1,5 +1,6 @@
 ﻿using BLL;
 using Entidades;
+using FotosCopias.UI.Reportes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -406,7 +407,20 @@ namespace FotoStudio.UI.Registro
 
         private void Imprimirbutton_Click(object sender, EventArgs e)
         {
-            
+            FacturaBLL factura = new FacturaBLL();
+            List<DetalleFactura> lista = new List<DetalleFactura>();
+            lista = factura.Buscar((int)FacturaIDnumericUpDown.Value).Detalles;
+
+            if (Detalles.Count > 0)
+            {
+                FacturaReport reporte = new FacturaReport(lista);
+                reporte.ShowDialog();
+            }
+            else
+            {
+                Myerror.Clear();
+                Myerror.SetError(Imprimirbutton, "No hay datos para imprimir.");
+            }
         }
 
         private void PreciotextBox_TextChanged(object sender, EventArgs e)
@@ -449,13 +463,13 @@ namespace FotoStudio.UI.Registro
                 e.Handled = false;
             }
             else
-            if (Char.IsControl(e.KeyChar)) //permitir teclas de control como retroceso
+            if (Char.IsControl(e.KeyChar))
             {
                 e.Handled = false;
             }
             else
             {
-                //el resto de teclas pulsadas se desactivan
+                
                 e.Handled = true;
             }
         }
@@ -467,13 +481,13 @@ namespace FotoStudio.UI.Registro
                 e.Handled = false;
             }
             else
-            if (Char.IsControl(e.KeyChar)) //permitir teclas de control como retroceso
+            if (Char.IsControl(e.KeyChar)) 
             {
                 e.Handled = false;
             }
             else
             {
-                //el resto de teclas pulsadas se desactivan
+                
                 e.Handled = true;
             }
         }
@@ -485,13 +499,13 @@ namespace FotoStudio.UI.Registro
                 e.Handled = false;
             }
             else
-            if (Char.IsControl(e.KeyChar)) //permitir teclas de control como retroceso
+            if (Char.IsControl(e.KeyChar)) 
             {
                 e.Handled = false;
             }
             else
             {
-                //el resto de teclas pulsadas se desactivan
+               
                 e.Handled = true;
             }
         }

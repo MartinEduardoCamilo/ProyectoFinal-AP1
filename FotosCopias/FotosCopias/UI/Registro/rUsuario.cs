@@ -114,7 +114,7 @@ namespace FotoStudio.UI.Registro
             usuarios.Nombre = Convert.ToString(NombretextBox.Text.Trim());
             usuarios.Contraseña = Encriptar(ContraseñatextBox.Text.Trim());
             usuarios.Usuario = NivelAcceso();
-            usuarios.FechaIngreso = FechadateTimePicker.Value;
+            usuarios.FechaIngreso = FechadateTimePicker.Value.Date;
 
             return usuarios;
         }
@@ -251,6 +251,18 @@ namespace FotoStudio.UI.Registro
             catch (Exception)
             {
                 MessageBox.Show("No se pudo eliminar!");
+            }
+        }
+
+        private void NombretextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Myerror.Clear();
+            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar == (char)Keys.Back))
+            {
+                Myerror.SetError(NombretextBox, "Solo se permiten letras");
+                NombretextBox.Focus();
+                e.Handled = true;
+                return;
             }
         }
     }

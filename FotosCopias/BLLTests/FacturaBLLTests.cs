@@ -12,6 +12,7 @@ namespace BLL.Tests
     [TestClass()]
     public class FacturaBLLTests
     {
+
         [TestMethod()]
         public void BuscarTest()
         {

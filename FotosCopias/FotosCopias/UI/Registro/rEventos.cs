@@ -31,10 +31,10 @@ namespace FotoStudio.UI.Registro
         {
             Eventos e = new Eventos();
             e.EventoId = (int)EventoIdnumericUpDown.Value;
-            e.ClienteId = ClientescomboBox.SelectedIndex;
+            e.ClienteId = (int)ClientescomboBox.SelectedValue;
             e.Tipo = TipotextBox.Text;
             e.Direccion = DirecciontextBox.Text;
-            e.Fecha = FechadateTimePicker.Value;
+            e.Fecha = FechadateTimePicker.Value.Date;
             
             return e;
         }
@@ -42,7 +42,7 @@ namespace FotoStudio.UI.Registro
         private void LlenaCampo(Eventos e)
         {
             EventoIdnumericUpDown.Value = e.EventoId;
-            ClientescomboBox.SelectedIndex = e.ClienteId;
+            ClientescomboBox.SelectedValue = e.ClienteId;
             TipotextBox.Text = e.Tipo;
             DirecciontextBox.Text = e.Direccion;
             FechadateTimePicker.Value = e.Fecha;

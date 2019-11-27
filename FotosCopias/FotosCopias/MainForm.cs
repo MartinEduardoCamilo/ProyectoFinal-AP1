@@ -1,5 +1,6 @@
 ﻿using BLL;
 using Entidades;
+using FotosCopias.UI.Consulta;
 //using FotoStudio.UI.Consulta;
 using FotoStudio.UI.Registro;
 using System;
@@ -112,23 +113,23 @@ namespace FotoStudio
 
         private void consultarClienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //cClientes clientes = new cClientes();
-            //clientes.MdiParent = this;
-            //clientes.Show();
+            cClientes clientes = new cClientes();
+            clientes.MdiParent = this;
+            clientes.Show();
         }
 
         private void consultarArticulosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //cArticulos articulos = new cArticulos();
-            //articulos.MdiParent = this;
-            //articulos.Show();
+            cArticulos articulos = new cArticulos();
+            articulos.MdiParent = this;
+            articulos.Show();
         }
 
         private void consultarEventosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //cEventos eventos = new cEventos();
-            //eventos.MdiParent = this;
-            //eventos.Show();
+            cEventos eventos = new cEventos();
+            eventos.MdiParent = this;
+            eventos.Show();
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -160,9 +161,16 @@ namespace FotoStudio
 
         private void facturaToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            //cFactura factura = new cFactura();
-            //factura.MdiParent = this;
-            //factura.Show();
+            cFactura factura = new cFactura();
+            factura.MdiParent = this;
+            factura.Show();
+        }
+
+        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            cUsuarios usuarios = new cUsuarios();
+            usuarios.MdiParent = this;
+            usuarios.Show();
         }
     }
 }

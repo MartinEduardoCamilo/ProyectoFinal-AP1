@@ -111,7 +111,7 @@ namespace BLL.Tests
             Assert.IsTrue(repositorio.Modificar(clientes));
         }
 
-       
+
         [TestMethod()]
         public void BuscarTest3()
         {
@@ -127,12 +127,12 @@ namespace BLL.Tests
             Assert.IsTrue(repositorio.Eliminar(1));
         }
 
-      
+
         [TestMethod()]
         public void GuardarTest3()
         {
-           RepositorioBase<Eventos> repositorio = new RepositorioBase<Eventos>();
-            Eventos eventos = new Eventos(0,1,"Fiesta","El madrigal",DateTime.Now);
+            RepositorioBase<Eventos> repositorio = new RepositorioBase<Eventos>();
+            Eventos eventos = new Eventos(0, 1, "Fiesta", "El madrigal", DateTime.Now);
             Assert.IsTrue(repositorio.Guardar(eventos));
         }
 

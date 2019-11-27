@@ -126,6 +126,7 @@
             this.NombretextBox.Name = "NombretextBox";
             this.NombretextBox.Size = new System.Drawing.Size(184, 20);
             this.NombretextBox.TabIndex = 6;
+            this.NombretextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NombretextBox_KeyPress);
             // 
             // ContraseñatextBox
             // 
