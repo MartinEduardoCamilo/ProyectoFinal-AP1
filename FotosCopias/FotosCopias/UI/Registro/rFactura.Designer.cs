@@ -45,14 +45,13 @@
             this.ImportetextBox = new System.Windows.Forms.TextBox();
             this.PreciotextBox = new System.Windows.Forms.TextBox();
             this.CantidadtextBox = new System.Windows.Forms.TextBox();
-            this.TamañocomboBox = new System.Windows.Forms.ComboBox();
             this.ArticuloscomboBox = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridView = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Removerbutton = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
@@ -61,10 +60,11 @@
             this.Guardarbutton = new System.Windows.Forms.Button();
             this.Eliminarbutton = new System.Windows.Forms.Button();
             this.Imprimirbutton = new System.Windows.Forms.Button();
+            this.TamañotextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.Myerror)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FacturaIDnumericUpDown)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -157,11 +157,11 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.TamañotextBox);
             this.panel1.Controls.Add(this.Agregarbutton);
             this.panel1.Controls.Add(this.ImportetextBox);
             this.panel1.Controls.Add(this.PreciotextBox);
             this.panel1.Controls.Add(this.CantidadtextBox);
-            this.panel1.Controls.Add(this.TamañocomboBox);
             this.panel1.Controls.Add(this.ArticuloscomboBox);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.label8);
@@ -197,7 +197,6 @@
             // 
             this.PreciotextBox.Location = new System.Drawing.Point(247, 18);
             this.PreciotextBox.Name = "PreciotextBox";
-            this.PreciotextBox.ReadOnly = true;
             this.PreciotextBox.Size = new System.Drawing.Size(63, 20);
             this.PreciotextBox.TabIndex = 8;
             this.PreciotextBox.TextChanged += new System.EventHandler(this.PreciotextBox_TextChanged);
@@ -209,20 +208,6 @@
             this.CantidadtextBox.Size = new System.Drawing.Size(61, 20);
             this.CantidadtextBox.TabIndex = 7;
             this.CantidadtextBox.TextChanged += new System.EventHandler(this.CantidadtextBox_TextChanged);
-            // 
-            // TamañocomboBox
-            // 
-            this.TamañocomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.TamañocomboBox.FormattingEnabled = true;
-            this.TamañocomboBox.Items.AddRange(new object[] {
-            "2x2",
-            "3x3",
-            "5x6"});
-            this.TamañocomboBox.Location = new System.Drawing.Point(85, 18);
-            this.TamañocomboBox.Name = "TamañocomboBox";
-            this.TamañocomboBox.Size = new System.Drawing.Size(63, 21);
-            this.TamañocomboBox.TabIndex = 6;
-            this.TamañocomboBox.SelectedIndexChanged += new System.EventHandler(this.TamañocomboBox_SelectedIndexChanged);
             // 
             // ArticuloscomboBox
             // 
@@ -287,13 +272,13 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "Articulos";
             // 
-            // dataGridView1
+            // dataGridView
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(16, 215);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(502, 131);
-            this.dataGridView1.TabIndex = 10;
+            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView.Location = new System.Drawing.Point(16, 215);
+            this.dataGridView.Name = "dataGridView";
+            this.dataGridView.Size = new System.Drawing.Size(502, 131);
+            this.dataGridView.TabIndex = 10;
             // 
             // pictureBox1
             // 
@@ -386,6 +371,13 @@
             this.Imprimirbutton.UseVisualStyleBackColor = true;
             this.Imprimirbutton.Click += new System.EventHandler(this.Imprimirbutton_Click);
             // 
+            // TamañotextBox
+            // 
+            this.TamañotextBox.Location = new System.Drawing.Point(85, 20);
+            this.TamañotextBox.Name = "TamañotextBox";
+            this.TamañotextBox.Size = new System.Drawing.Size(60, 20);
+            this.TamañotextBox.TabIndex = 11;
+            // 
             // rFactura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -400,7 +392,7 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.Removerbutton);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.EventoscomboBox);
             this.Controls.Add(this.label4);
@@ -420,7 +412,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.FacturaIDnumericUpDown)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -435,13 +427,12 @@
         private System.Windows.Forms.NumericUpDown FacturaIDnumericUpDown;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button Agregarbutton;
         private System.Windows.Forms.TextBox ImportetextBox;
         private System.Windows.Forms.TextBox PreciotextBox;
         private System.Windows.Forms.TextBox CantidadtextBox;
-        private System.Windows.Forms.ComboBox TamañocomboBox;
         private System.Windows.Forms.ComboBox ArticuloscomboBox;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
@@ -459,5 +450,6 @@
         private System.Windows.Forms.TextBox TotaltextBox;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button Removerbutton;
+        private System.Windows.Forms.TextBox TamañotextBox;
     }
 }

@@ -51,8 +51,6 @@ namespace BLL
                     if (articulo != null)
                         articulo.Cantidad += item.Cantidad;
                 }
-
-               
                 var eliminar = db.Facturas.Find(id);
                 db.Entry(eliminar).State = EntityState.Deleted;
                 paso = db.SaveChanges() > 0;
@@ -83,9 +81,9 @@ namespace BLL
                         Articulo.Cantidad -= item.Cantidad;
                 }
 
-                //db.Clientes.Find(entity.ClienteId).Consumo += entity.Total;
+                db.Clientes.Find(entity.ClienteId).Consumo += entity.Total;
 
-                if ((db.Facturas.Add(entity) != null))
+                if (db.Facturas.Add(entity)!=null)
                 {
                     paso = db.SaveChanges() > 0;
                 }

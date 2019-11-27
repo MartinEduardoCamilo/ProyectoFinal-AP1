@@ -15,7 +15,7 @@ namespace BLL
 
         public RepositorioBase()
         {
-            db = new Contexto();
+               db = new Contexto();
         }
         public virtual T Buscar(int id)
         {

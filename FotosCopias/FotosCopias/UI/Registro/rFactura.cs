@@ -1,6 +1,5 @@
 ﻿using BLL;
 using Entidades;
-//using FotoStudio.UI.Reportes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -31,12 +30,12 @@ namespace FotoStudio.UI.Registro
             EventoscomboBox.Text = string.Empty;
             FechadateTimePicker.Value = DateTime.Now;
             ArticuloscomboBox.Text = string.Empty;
-            TamañocomboBox.Text = string.Empty;
+            TamañotextBox.Text = string.Empty;
             CantidadtextBox.Text = string.Empty;
             PreciotextBox.Text = string.Empty;
             ImportetextBox.Text = string.Empty;
             TotaltextBox.Text = string.Empty;
-            Myerror.Clear();
+            this.Detalles = new List<DetalleFactura>();
             CargarGrid();
         }
 
@@ -165,14 +164,14 @@ namespace FotoStudio.UI.Registro
             facturas.Fecha = FechadateTimePicker.Value.Date;
             facturas.EventoId = (int)EventoscomboBox.SelectedValue;
             facturas.Total = Convert.ToDecimal(TotaltextBox.Text);
-
+            facturas.Detalles = this.Detalles;
             return facturas;
         }
 
         private void CargarGrid()
         {
-            dataGridView1.DataSource = null;
-            dataGridView1.DataSource = this.Detalles;
+            dataGridView.DataSource = null;
+            dataGridView.DataSource = this.Detalles;
         }
 
         private bool Validar()
@@ -214,7 +213,7 @@ namespace FotoStudio.UI.Registro
         {
             bool paso = true;
             Myerror.Clear();
-            if (dataGridView1.SelectedRows == null)
+            if (dataGridView.SelectedRows == null)
             {
                 Myerror.SetError(Eliminarbutton, "Debe seleccionar al menos una fila.");
                 paso = false;
@@ -277,20 +276,24 @@ namespace FotoStudio.UI.Registro
         private void Agregarbutton_Click(object sender, EventArgs e)
         {
 
-            decimal total = 0;
-            if (dataGridView1.DataSource != null)
-                this.Detalles = (List<DetalleFactura>)dataGridView1.DataSource;
+            if (dataGridView.DataSource != null)
+                this.Detalles = (List<DetalleFactura>)dataGridView.DataSource;
+
             if (!ValidarAgregar())
                 return;
-            Detalles.Add(new DetalleFactura(
-                detalleFacturaId: 0,
-                facturaId: Convert.ToInt32(FacturaIDnumericUpDown.Value),
-                articulosId: Convert.ToInt32(ArticuloscomboBox.SelectedValue),
-                tamaño: TamañocomboBox.Text,
-                precio: Convert.ToDecimal(PreciotextBox.Text),
-                importe: Convert.ToDecimal(ImportetextBox.Text)
+
+            decimal total = 0;
+
+            this.Detalles.Add(new DetalleFactura(
+                        detalleFacturaId: 0,
+                        facturaId: Convert.ToInt32(FacturaIDnumericUpDown.Value),
+                        articulosId: Convert.ToInt32(ArticuloscomboBox.SelectedValue),
+                        tamaño: TamañotextBox.Text,
+                        cantidad: Convert.ToInt32(CantidadtextBox.Text),
+                        precio: Convert.ToDecimal(PreciotextBox.Text),
+                        importe: Convert.ToDecimal(ImportetextBox.Text)
                 ));
-            Myerror.Clear();
+           
             CargarGrid();
             foreach (var item in this.Detalles)
             {
@@ -304,9 +307,9 @@ namespace FotoStudio.UI.Registro
         {
             if (ValidarRemover())
                 return;
-            if (dataGridView1.Rows.Count > 0 && dataGridView1.CurrentRow != null)
+            if (dataGridView.Rows.Count > 0 && dataGridView.CurrentRow != null)
             {
-                Detalles.RemoveAt(dataGridView1.CurrentRow.Index);
+                Detalles.RemoveAt(dataGridView.CurrentRow.Index);
 
                 CargarGrid();
             }
@@ -319,16 +322,19 @@ namespace FotoStudio.UI.Registro
 
         private void Guardarbutton_Click(object sender, EventArgs e)
         {
-            if (!Validar())
-                return;
+
             bool paso;
-            Facturas facturas;
+
             FacturaBLL repositorio = new FacturaBLL();
 
-            facturas = LlenaClase();
+            if (!Validar())
+                return;
+
+            Facturas facturas = LlenaClase();
 
             if (FacturaIDnumericUpDown.Value == 0)
                 paso = repositorio.Guardar(facturas);
+
             else
             {
                 if (!Existe())
@@ -384,58 +390,16 @@ namespace FotoStudio.UI.Registro
 
         private void PreciotextBox_TextChanged(object sender, EventArgs e)
         {
-           
+            if (!(string.IsNullOrWhiteSpace(PreciotextBox.Text) || string.IsNullOrWhiteSpace(CantidadtextBox.Text)))
+            {
+                if (!(PreciotextBox.Text == "-" || CantidadtextBox.Text == "-"))
+                {
+                    ImportetextBox.Text = Convert.ToString(Convert.ToDecimal(PreciotextBox.Text) *
+                        Convert.ToDecimal(CantidadtextBox.Text));
+                }
+            }
         }
 
-        private void TamañocomboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            decimal precio = 0;
-            if(TamañocomboBox.SelectedIndex == 0)
-            {
-               
-                PreciotextBox.Text = precio.ToString();
-                precio = 0;
-            }else if(TamañocomboBox.SelectedIndex == 1)
-            {
-                PreciotextBox.Text = precio.ToString();
-                precio = 0;
-            }
-            else if (TamañocomboBox.SelectedIndex == 2)
-            {
-                PreciotextBox.Text = precio.ToString();
-                precio = 0;
-            }
-            else if (TamañocomboBox.SelectedIndex == 3)
-            {
-                
-                PreciotextBox.Text = precio.ToString();
-                precio = 0;
-            }
-            else if (TamañocomboBox.SelectedIndex == 4)
-            {
-               
-                PreciotextBox.Text = precio.ToString();
-                precio = 0;
-            }
-            else if (TamañocomboBox.SelectedIndex == 5)
-            {
-                
-                PreciotextBox.Text = precio.ToString();
-                precio = 0;
-            }
-            else if (TamañocomboBox.SelectedIndex == 6)
-            {
-            
-                PreciotextBox.Text = precio.ToString();
-                precio = 0;
-            }
-            else if (TamañocomboBox.SelectedIndex == 7)
-            {
-                
-                PreciotextBox.Text = precio.ToString();
-                precio = 0;
-            }
-        }
 
         private void rFactura_Load(object sender, EventArgs e)
         {
@@ -453,11 +417,6 @@ namespace FotoStudio.UI.Registro
                     ImportetextBox.Text = Convert.ToString(Convert.ToDecimal(PreciotextBox.Text) *
                         Convert.ToDecimal(CantidadtextBox.Text));
                 }
-            }
-            else
-            {
-                if(string.IsNullOrWhiteSpace(ImportetextBox.Text))
-                         ImportetextBox.Text = string.Empty;
             }
             
         }

@@ -19,31 +19,14 @@ namespace Entidades
         public int Cantidad { get; set; }
         public decimal Precio { get; set; }
         public decimal Importe { get; set; }
-        public virtual Articulos Articulos { get; set; }
 
-        public DetalleFactura()
-        {
-
-        }
-
-        public DetalleFactura(int detalleFacturaId, int facturaId, int articulosId, string tamaño, int cantidad, decimal precio, decimal importe, Articulos articulos)
+        public DetalleFactura(int detalleFacturaId, int facturaId, int articulosId, string tamaño, int cantidad, decimal precio, decimal importe)
         {
             DetalleFacturaId = detalleFacturaId;
             FacturaId = facturaId;
             ArticulosId = articulosId;
             Tamaño = tamaño ?? throw new ArgumentNullException(nameof(tamaño));
             Cantidad = cantidad;
-            Precio = precio;
-            Importe = importe;
-            Articulos = articulos ?? throw new ArgumentNullException(nameof(articulos));
-        }
-
-        public DetalleFactura(int detalleFacturaId, int facturaId, int articulosId, string tamaño, decimal precio, decimal importe)
-        {
-            DetalleFacturaId = detalleFacturaId;
-            FacturaId = facturaId;
-            ArticulosId = articulosId;
-            Tamaño = tamaño;
             Precio = precio;
             Importe = importe;
         }
