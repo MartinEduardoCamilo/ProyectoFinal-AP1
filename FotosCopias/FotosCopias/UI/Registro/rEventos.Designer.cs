@@ -1,4 +1,4 @@
-﻿namespace FotosCopias.UI.Registro
+﻿namespace FotoStudio.UI.Registro
 {
     partial class rEventos
     {

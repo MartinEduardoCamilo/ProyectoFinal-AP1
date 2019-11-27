@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29424.173
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FotosCopias", "FotosCopias\FotosCopias.csproj", "{0E97F46F-5506-4000-A956-1B00E40A484E}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FotosCopiasTests", "FotosCopiasTests\FotosCopiasTests.csproj", "{ACF0EF9E-269D-431E-904C-1615F99627E0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FotoStudio", "FotosCopias\FotoStudio.csproj", "{0E97F46F-5506-4000-A956-1B00E40A484E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{A84F7572-2839-4E3C-96C2-05C8A67F4F20}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{3D4E010C-E320-401D-80F7-FB8ACDC0EFBB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entidades", "Entidades\Entidades.csproj", "{B0AA11BF-FBB1-40A8-8C6B-D17C39363640}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLLTests", "BLLTests\BLLTests.csproj", "{6C4A0F16-944F-4DA2-AD98-065639B1EE57}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,6 @@ Global
 		{0E97F46F-5506-4000-A956-1B00E40A484E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E97F46F-5506-4000-A956-1B00E40A484E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E97F46F-5506-4000-A956-1B00E40A484E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{ACF0EF9E-269D-431E-904C-1615F99627E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{ACF0EF9E-269D-431E-904C-1615F99627E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{ACF0EF9E-269D-431E-904C-1615F99627E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{ACF0EF9E-269D-431E-904C-1615F99627E0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A84F7572-2839-4E3C-96C2-05C8A67F4F20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A84F7572-2839-4E3C-96C2-05C8A67F4F20}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A84F7572-2839-4E3C-96C2-05C8A67F4F20}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -39,6 +35,10 @@ Global
 		{B0AA11BF-FBB1-40A8-8C6B-D17C39363640}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B0AA11BF-FBB1-40A8-8C6B-D17C39363640}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B0AA11BF-FBB1-40A8-8C6B-D17C39363640}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C4A0F16-944F-4DA2-AD98-065639B1EE57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C4A0F16-944F-4DA2-AD98-065639B1EE57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C4A0F16-944F-4DA2-AD98-065639B1EE57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C4A0F16-944F-4DA2-AD98-065639B1EE57}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

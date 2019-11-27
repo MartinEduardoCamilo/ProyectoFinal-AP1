@@ -1,4 +1,4 @@
-﻿namespace FotosCopias.UI.Registro
+﻿namespace FotoStudio.UI.Registro
 {
     partial class rCliente
     {
@@ -197,10 +197,9 @@
             // 
             // DirecciontextBox
             // 
-            this.DirecciontextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.DirecciontextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.DirecciontextBox.Location = new System.Drawing.Point(70, 252);
+            this.DirecciontextBox.Location = new System.Drawing.Point(70, 259);
             this.DirecciontextBox.Multiline = true;
             this.DirecciontextBox.Name = "DirecciontextBox";
             this.DirecciontextBox.Size = new System.Drawing.Size(188, 73);
@@ -227,7 +226,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Nuevobutton.Image = ((System.Drawing.Image)(resources.GetObject("Nuevobutton.Image")));
             this.Nuevobutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Nuevobutton.Location = new System.Drawing.Point(12, 355);
+            this.Nuevobutton.Location = new System.Drawing.Point(17, 344);
             this.Nuevobutton.Name = "Nuevobutton";
             this.Nuevobutton.Size = new System.Drawing.Size(79, 60);
             this.Nuevobutton.TabIndex = 16;
@@ -242,7 +241,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Guardarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Guardarbutton.Image")));
             this.Guardarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Guardarbutton.Location = new System.Drawing.Point(98, 355);
+            this.Guardarbutton.Location = new System.Drawing.Point(103, 344);
             this.Guardarbutton.Name = "Guardarbutton";
             this.Guardarbutton.Size = new System.Drawing.Size(82, 60);
             this.Guardarbutton.TabIndex = 17;
@@ -257,7 +256,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Eliminarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Eliminarbutton.Image")));
             this.Eliminarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Eliminarbutton.Location = new System.Drawing.Point(194, 356);
+            this.Eliminarbutton.Location = new System.Drawing.Point(199, 345);
             this.Eliminarbutton.Name = "Eliminarbutton";
             this.Eliminarbutton.Size = new System.Drawing.Size(82, 59);
             this.Eliminarbutton.TabIndex = 18;
@@ -274,7 +273,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(314, 446);
+            this.ClientSize = new System.Drawing.Size(314, 416);
             this.Controls.Add(this.Eliminarbutton);
             this.Controls.Add(this.Guardarbutton);
             this.Controls.Add(this.Nuevobutton);

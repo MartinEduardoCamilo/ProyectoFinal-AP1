@@ -19,7 +19,8 @@ namespace Entidades
         public string Email { get; set; }
         public string Direccion { get; set; }
 
-    
+      
+
 
         public Clientes()
         {
@@ -30,13 +31,13 @@ namespace Entidades
             Telefono = string.Empty;
             Email = string.Empty;
             Direccion = string.Empty;
+           
             
         }
 
-        public Clientes(int clienteId,  string nombre, string apellido, string cedula, string telefono, string email, string direccion)
+        public Clientes(int clienteId, string nombre, string apellido, string cedula, string telefono, string email, string direccion)
         {
             ClienteId = clienteId;
-            
             Nombre = nombre ?? throw new ArgumentNullException(nameof(nombre));
             Apellido = apellido ?? throw new ArgumentNullException(nameof(apellido));
             Cedula = cedula ?? throw new ArgumentNullException(nameof(cedula));

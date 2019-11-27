@@ -1,11 +1,11 @@
-﻿using FotosCopias.UI.Registro;
+﻿using FotoStudio.UI.Registro;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FotosCopias
+namespace FotoStudio
 {
     static class Program
     {

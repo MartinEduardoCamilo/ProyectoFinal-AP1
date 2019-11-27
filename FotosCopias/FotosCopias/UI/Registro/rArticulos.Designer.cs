@@ -1,4 +1,4 @@
-﻿namespace FotosCopias.UI.Registro
+﻿namespace FotoStudio.UI.Registro
 {
     partial class rArticulos
     {
@@ -56,8 +56,6 @@
             // 
             // label2
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(12, 62);
             this.label2.Name = "label2";
@@ -67,8 +65,6 @@
             // 
             // label3
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(12, 111);
             this.label3.Name = "label3";
@@ -82,26 +78,22 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.IDnumericUpDown.Location = new System.Drawing.Point(88, 13);
             this.IDnumericUpDown.Name = "IDnumericUpDown";
-            this.IDnumericUpDown.Size = new System.Drawing.Size(143, 20);
+            this.IDnumericUpDown.Size = new System.Drawing.Size(140, 20);
             this.IDnumericUpDown.TabIndex = 3;
             // 
             // DescripciontextBox
             // 
-            this.DescripciontextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.DescripciontextBox.Location = new System.Drawing.Point(88, 54);
+            this.DescripciontextBox.Location = new System.Drawing.Point(88, 58);
             this.DescripciontextBox.Name = "DescripciontextBox";
-            this.DescripciontextBox.Size = new System.Drawing.Size(123, 20);
+            this.DescripciontextBox.Size = new System.Drawing.Size(120, 20);
             this.DescripciontextBox.TabIndex = 4;
             this.DescripciontextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DescripciontextBox_KeyPress);
             // 
             // CantidadtextBox
             // 
-            this.CantidadtextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.CantidadtextBox.Location = new System.Drawing.Point(88, 104);
+            this.CantidadtextBox.Location = new System.Drawing.Point(88, 108);
             this.CantidadtextBox.Name = "CantidadtextBox";
-            this.CantidadtextBox.Size = new System.Drawing.Size(123, 20);
+            this.CantidadtextBox.Size = new System.Drawing.Size(120, 20);
             this.CantidadtextBox.TabIndex = 5;
             this.CantidadtextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CantidadtextBox_KeyPress);
             // 
@@ -109,7 +101,7 @@
             // 
             this.Buscarbutton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Buscarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Buscarbutton.Image")));
-            this.Buscarbutton.Location = new System.Drawing.Point(238, 10);
+            this.Buscarbutton.Location = new System.Drawing.Point(235, 10);
             this.Buscarbutton.Name = "Buscarbutton";
             this.Buscarbutton.Size = new System.Drawing.Size(32, 23);
             this.Buscarbutton.TabIndex = 6;
@@ -118,13 +110,12 @@
             // 
             // Nuevobutton
             // 
-            this.Nuevobutton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Nuevobutton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.Nuevobutton.Image = ((System.Drawing.Image)(resources.GetObject("Nuevobutton.Image")));
             this.Nuevobutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Nuevobutton.Location = new System.Drawing.Point(1, 151);
+            this.Nuevobutton.Location = new System.Drawing.Point(13, 154);
             this.Nuevobutton.Name = "Nuevobutton";
-            this.Nuevobutton.Size = new System.Drawing.Size(80, 50);
+            this.Nuevobutton.Size = new System.Drawing.Size(77, 50);
             this.Nuevobutton.TabIndex = 7;
             this.Nuevobutton.Text = "Nuevo";
             this.Nuevobutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -133,10 +124,10 @@
             // 
             // Guardarbutton
             // 
-            this.Guardarbutton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Guardarbutton.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.Guardarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Guardarbutton.Image")));
             this.Guardarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Guardarbutton.Location = new System.Drawing.Point(102, 151);
+            this.Guardarbutton.Location = new System.Drawing.Point(111, 154);
             this.Guardarbutton.Name = "Guardarbutton";
             this.Guardarbutton.Size = new System.Drawing.Size(75, 50);
             this.Guardarbutton.TabIndex = 8;
@@ -147,10 +138,10 @@
             // 
             // Eliminarbutton
             // 
-            this.Eliminarbutton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Eliminarbutton.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.Eliminarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Eliminarbutton.Image")));
             this.Eliminarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Eliminarbutton.Location = new System.Drawing.Point(195, 151);
+            this.Eliminarbutton.Location = new System.Drawing.Point(204, 154);
             this.Eliminarbutton.Name = "Eliminarbutton";
             this.Eliminarbutton.Size = new System.Drawing.Size(75, 50);
             this.Eliminarbutton.TabIndex = 9;
@@ -167,7 +158,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(300, 213);
+            this.ClientSize = new System.Drawing.Size(297, 227);
             this.Controls.Add(this.Eliminarbutton);
             this.Controls.Add(this.Guardarbutton);
             this.Controls.Add(this.Nuevobutton);

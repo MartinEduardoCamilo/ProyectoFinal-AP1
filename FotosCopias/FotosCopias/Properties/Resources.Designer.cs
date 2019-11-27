@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace FotosCopias.Properties
+namespace FotoStudio.Properties
 {
 
 

@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FotosCopias.UI.Registro
+namespace FotoStudio.UI.Registro
 {
     public partial class rEventos : Form
     {

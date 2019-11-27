@@ -10,19 +10,19 @@ using System.Threading.Tasks;
 
 namespace BLL
 {
-    public class FacturaBLL : RepositorioBase<Articulos>
+    public class FacturaBLL : RepositorioBase<Facturas>
     {
-        public override Articulos Buscar(int id)
+        public override Facturas Buscar(int id)
         {
-            Articulos articulos = new Articulos();
+            Facturas facturas = new Facturas();
             Contexto db = new Contexto();
 
             try
             {
-                articulos = db.Articulos.Find(id);
-                if(articulos != null)
+                facturas = db.Facturas.Find(id);
+                if (facturas != null)
                 {
-                    articulos.DetalleArticulos.Count();
+                    facturas.Detalles.Count();
                 }
             }
             catch (Exception)
@@ -33,31 +33,34 @@ namespace BLL
             {
                 db.Dispose();
             }
-            return articulos;
+            return facturas;
         }
 
         public override bool Eliminar(int id)
         {
             bool paso = false;
-            FacturaBLL repositorio = new FacturaBLL();
-            var Anteriro = repositorio.Buscar(id);
             Contexto db = new Contexto();
+            RepositorioBase<Facturas> repositorio = new RepositorioBase<Facturas>();
 
             try
             {
-                foreach(var item in Anteriro.DetalleArticulos)
+                var Anterior = repositorio.Buscar(id);
+                foreach (var item in Anterior.Detalles)
                 {
-                    var articulos = db.Articulos.Find(item.ArticulosId);
-                    if (articulos != null)
-                        articulos.Cantidad -= item.Cantidad;
+                    var articulo = db.Articulos.Find(item.ArticulosId);
+                    if (articulo != null)
+                        articulo.Cantidad += item.Cantidad;
                 }
 
-                var eliminar = db.Articulos.Find(id);
+               
+                var eliminar = db.Facturas.Find(id);
                 db.Entry(eliminar).State = EntityState.Deleted;
-                paso = -db.SaveChanges() > 0;
-            }catch(Exception)
+                paso = db.SaveChanges() > 0;
+            }
+            catch (Exception)
             {
                 throw;
+
             }
             finally
             {
@@ -66,21 +69,26 @@ namespace BLL
             return paso;
         }
 
-        public override bool Guardar(Articulos entity)
+        public override bool Guardar(Facturas entity)
         {
             bool paso = false;
             Contexto db = new Contexto();
+
             try
             {
-                foreach(var item in entity.DetalleArticulos)
+                foreach (var item in entity.Detalles)
                 {
-                    var articulos = db.Articulos.Find(item.ArticulosId);
-                    if (articulos != null)
-                        articulos.Cantidad -= item.Cantidad;
+                    var Articulo = db.Articulos.Find(item.ArticulosId);
+                    if (Articulo != null)
+                        Articulo.Cantidad -= item.Cantidad;
                 }
 
-                if (db.Articulos.Add(entity) != null)
+                //db.Clientes.Find(entity.ClienteId).Consumo += entity.Total;
+
+                if ((db.Facturas.Add(entity) != null))
+                {
                     paso = db.SaveChanges() > 0;
+                }
             }
             catch (Exception)
             {
@@ -93,41 +101,46 @@ namespace BLL
             return paso;
         }
 
-        public override bool Modificar(Articulos entity)
+        public override bool Modificar(Facturas entity)
         {
             bool paso = false;
+            var Anterior = Buscar(entity.FacturaId);
+            decimal anteriorbalance = Buscar(entity.FacturaId).Total;
             Contexto db = new Contexto();
-            var anterior = Buscar(entity.ArticulosId);
+
             try
             {
-                foreach(var item in anterior.DetalleArticulos)
+                foreach (var item in Anterior.Detalles)
                 {
-                    var articulos = db.Articulos.Find(item.ArticulosId);
-                    if(!entity.DetalleArticulos.Exists(d=>d.DetalleArticuloId == item.DetalleArticuloId))
+                    var articulo = db.Articulos.Find(item.ArticulosId);
+                    if (!entity.Detalles.Exists(d => d.DetalleFacturaId == item.DetalleFacturaId))
                     {
-                        if (articulos != null)
-                        {
-                            articulos.Cantidad += item.Cantidad;
-                            db.Entry(item).State = EntityState.Deleted;
-                        }
+                        if (articulo != null)
+                            articulo.Cantidad += item.Cantidad;
+                        db.Entry(item).State = EntityState.Deleted;
                     }
                 }
 
-                foreach(var item in entity.DetalleArticulos)
+                foreach (var item in entity.Detalles)
                 {
-                    if (item.DetalleArticuloId == 0)
+                    var articulo = db.Articulos.Find(item.ArticulosId);
+                    if (item.DetalleFacturaId == 0)
                     {
-                        var articulos = db.Articulos.Find(item.ArticulosId);
                         db.Entry(item).State = EntityState.Added;
-                        if (articulos != null)
-                            articulos.Cantidad -= item.Cantidad;
+                        if (articulo != null)
+                            articulo.Cantidad -= item.Cantidad;
                     }
                     else
                     {
                         db.Entry(item).State = EntityState.Modified;
-                        paso = db.SaveChanges() > 0;
                     }
+
                 }
+
+              
+
+                db.Entry(entity).State = EntityState.Modified;
+                paso = (db.SaveChanges() > 0);
             }
             catch (Exception)
             {
@@ -140,4 +153,5 @@ namespace BLL
             return paso;
         }
     }
+
 }

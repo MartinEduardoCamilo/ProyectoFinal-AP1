@@ -11,7 +11,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FotosCopias.UI.Registro
+namespace FotoStudio.UI.Registro
 {
     public partial class rCliente : Form
     {
